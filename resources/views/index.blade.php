@@ -117,6 +117,8 @@
             </div>
           </div>
           <div class="container padd100" id="News">
+            <div class="header-news mb-3">News</div>
+            <div class="news-line mb-3"></div>
             <div class="news">
                 <img src="./assets/img/news.png" alt="News">
                 <div class="news-title" mt-3>
@@ -127,6 +129,8 @@
             </div>
           </div>
             <div class="jumbotron padd100" id="Sosmed">
+              <div class="header-sosmed">Sosial Media</div>
+              <div class="sosmed-line mb-3"></div>
                 <div class="row">
                     <div class="col-4">
                         <div class="card">
