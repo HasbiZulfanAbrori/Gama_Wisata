@@ -36,9 +36,12 @@
         </div>
       </div>
     </nav>
-
+    <div class="header">
+      <div class="header-title">
+       Our Produk
+      </div>
+    </div>
     <div class="container padd100" id="Produk">
-        <div class="header-produk mb-3">Our Produk</div>
         <div class="produk mb-3">
             <img src="./assets/img/airplane.svg" alt="Tiket Pesawat">
             <div class="produk-title mb-2" >

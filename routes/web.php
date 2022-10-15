@@ -29,7 +29,11 @@ Route::get('/news', function () {
     return view('news');
 });
 
-Route::get('/news-detail', function () {
-    return view('news-detail');
+Route::get('/artikel', function () {
+    return view('artikel');
+});
+
+Route::get('/news', function () {
+    return view('news');
 });
 

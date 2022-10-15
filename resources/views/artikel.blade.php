@@ -30,7 +30,7 @@
               <a class="nav-link" href="/profil">Profil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#Promo">News</a>
+              <a class="nav-link" href="/news">News</a>
             </li>
           </ul>
         </div>
@@ -41,15 +41,36 @@
        Title
       </div>
     </div>
-    <div class="container" id="News-detail">
-        <div class="news-top-img">
-            <img src="./assets/img/logo gama wisata.png" alt="Logo" style="width: 250px" class="rounded-pill">
+    <div class="container" id="artikel">
+        <div class="artikel-top-img">
+            <img src="./assets/img/83017.jpg" alt="Logo" style="width: 600px" >
         </div>
-        <div class="news-tab-title mt-3">
+        <div class="artikel-title mt-3">
             INI TEMPAT WISATA DI YOGYAKARTA YANG INSTAGRAMABLE
         </div>
-        <div class="news-text mt-3">
-          Kamu seorang petualang, tapi bingung tempat-tempat wisata kekinian di Jogja  yang pengen kamu kunjungi? nggak usah galau deh…..ini ada tempat wisata di Yogyakarta yang lagi nge Hits, instagramable dan kekinian, biar kamu nggak dibilang kudet yukk cekidot gaess…..
+        <div class="artikel-text mt-3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla cumque nesciunt, magni nisi consequuntur doloribus eos, repellendus rerum id tempore repudiandae minima maxime ratione optio explicabo saepe similique deserunt laborum.
+        </div>
+        <div class="sub-artikel mt-3">
+          <div class="title">1. Title</div>
+          <div class="row-artikel">
+            <img src="./assets/img/news.png" alt="News">
+            <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit iste aliquam adipisci ullam, quaerat odit iusto ad quam nulla non excepturi ipsam cum molestias ex eligendi omnis, ut suscipit fuga. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla veritatis quaerat qui molestias porro sunt ex reprehenderit perferendis quos cum, ea quod dolorum molestiae labore! Quisquam commodi modi ratione nulla! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio possimus odio dolores labore, perferendis porro id, delectus aperiam, maxime illum at quo culpa temporibus quas! Eligendi obcaecati dolorem corrupti velit.</div>
+          </div>
+        </div>
+        <div class="sub-artikel mt-3">
+          <div class="title">2. Title</div>
+          <div class="row-artikel">
+            <img src="./assets/img/news.png" alt="News">
+            <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit iste aliquam adipisci ullam, quaerat odit iusto ad quam nulla non excepturi ipsam cum molestias ex eligendi omnis, ut suscipit fuga. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla veritatis quaerat qui molestias porro sunt ex reprehenderit perferendis quos cum, ea quod dolorum molestiae labore! Quisquam commodi modi ratione nulla! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio possimus odio dolores labore, perferendis porro id, delectus aperiam, maxime illum at quo culpa temporibus quas! Eligendi obcaecati dolorem corrupti velit.</div>
+          </div>
+        </div>
+        <div class="sub-artikel mt-3">
+          <div class="title">3. Title</div>
+          <div class="row-artikel">
+            <img src="./assets/img/news.png" alt="News">
+            <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit iste aliquam adipisci ullam, quaerat odit iusto ad quam nulla non excepturi ipsam cum molestias ex eligendi omnis, ut suscipit fuga. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla veritatis quaerat qui molestias porro sunt ex reprehenderit perferendis quos cum, ea quod dolorum molestiae labore! Quisquam commodi modi ratione nulla! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio possimus odio dolores labore, perferendis porro id, delectus aperiam, maxime illum at quo culpa temporibus quas! Eligendi obcaecati dolorem corrupti velit.</div>
+          </div>
         </div>
     </div>
     <footer class="text-center text-white mt-4" id="CostomerService" style="background-color: #e1e1e1;">
