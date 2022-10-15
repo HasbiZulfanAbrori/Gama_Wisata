@@ -20,3 +20,16 @@ Route::get('/', function () {
 Route::get('/produk', function () {
     return view('produk');
 });
+
+Route::get('/profil', function () {
+    return view('profil');
+});
+
+Route::get('/news', function () {
+    return view('news');
+});
+
+Route::get('/news-detail', function () {
+    return view('news-detail');
+});
+

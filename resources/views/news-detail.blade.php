@@ -30,7 +30,7 @@
               <a class="nav-link" href="/profil">Profil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/news">News</a>
+              <a class="nav-link" href="#Promo">News</a>
             </li>
           </ul>
         </div>
@@ -38,65 +38,20 @@
     </nav>
     <div class="header">
       <div class="header-title">
-        PROFIL GAMA WISATA
+       Title
       </div>
     </div>
-    <div class="container mt-4">
-      <div class="row">
-        <div class="col-6">
-          <div class="profile-title">
-            Tentang kami
-          </div>
-          <div class="tentang-kami-line"></div>
-          <div class="profile-text-bg mt-3">
-            <div class="profile-text">
-              PT Gama Wisata adalah badan usaha berbadan hukum dengan bentuk perseroan terbatas yang berkedudukan di Yogyakarta yang bergerak di bidang biro perjalanan wisata. Lahir dan berkembang dilingkungan kampus UGM Yogyakarta, PT Gama Wisata adalah anak perusahaan PT Gama Multi Usaha Mandiri, sebuah holding Company yang merupakan entitas dari Universitas Gadjah Mada.
-            </div>
-          </div>
-          <div class="profile-text-bg mt-3">
-            <div class="visi-misi">Visi</div>
-            <div class="profile-text">
-              Menjadi penyedia pengalaman wisata edukasi yang terkemuka, khususnya untuk kalangan UGM dan stakeholdernya
-            </div>
-          </div>
-          <div class="profile-text-bg mt-3">
-            <div class="visi-misi">Misi</div>
-            <div class="profile-text">
-              Memberikan layanan pada pelanggan dengan berorientasi pada kualitas yang prima dan harga yang kompetitif
-            </div>
-          </div>
+    <div class="container" id="News-detail">
+        <div class="news-top-img">
+            <img src="./assets/img/logo gama wisata.png" alt="Logo" style="width: 250px" class="rounded-pill">
         </div>
-        <div class="col-6">
-          <div class="profile-text-bg">
-            <img class="card-img-top mt-3" src="./assets/img/example.png" alt="Card image" style="width:100%">
-          </div>
-        </div> 
-      </div>
+        <div class="news-tab-title mt-3">
+            INI TEMPAT WISATA DI YOGYAKARTA YANG INSTAGRAMABLE
+        </div>
+        <div class="news-text mt-3">
+          Kamu seorang petualang, tapi bingung tempat-tempat wisata kekinian di Jogja  yang pengen kamu kunjungi? nggak usah galau deh…..ini ada tempat wisata di Yogyakarta yang lagi nge Hits, instagramable dan kekinian, biar kamu nggak dibilang kudet yukk cekidot gaess…..
+        </div>
     </div>
-    <div class="container mt-4">
-      <div class="row">
-        <div class="col-6">
-          <div class="profile-text-bg">
-            <img class="card-img-top mt-3" src="./assets/img/example.png" alt="Card image" style="width:100%">
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="profile-title">
-            Akreditasi
-          </div>
-          <div class="akreditasi-line"></div>
-          <div class="profile-text-bg mt-4">
-            <div class="profile-text">
-              1. Saat ini kami telah menjadi agent resmi IATA (International Air Transport Association) dengan nomor akreditasi 150 8291 1 untuk penjualan pasasi domestik dan 153 1198 4 untuk sektor international.</div>
-            <div class="profile-text">  
-              2. Selain sebagai agen IATA, kami juga merupakan agent resmi dari maskapai-maskapai domestik yang ada di indonesia.</div>
-            <div class="profile-text">  
-              3. PT Gama Wisata juga telah menjadi anggota ASITA (Association of Indonesia Tour & Travel Agencies) sejak tahun 2004 dengan nomor keanggotaan 0139/XI/2004.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-      
     <footer class="text-center text-white mt-4" id="CostomerService" style="background-color: #e1e1e1;">
         <div class="container pt-4">
           <section class="mb-4">

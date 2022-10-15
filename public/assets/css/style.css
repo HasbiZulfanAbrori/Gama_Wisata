@@ -6,6 +6,21 @@ body{
     font-family: 'Montserrat' ;
 }
 
+.header{
+    height: 320px;
+    max-width: 1500px;
+    background-color: rgba(255, 255, 255, 0.5);
+    
+}
+
+.header-title{
+    padding-top: 150px;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #ffffff;
+}
 
 #background{
     padding-top: -120px;
@@ -120,16 +135,27 @@ nav{
 }
 
 .news-text{
-    padding-left: 250px;
+    padding: 0px 40px 0px 40px;
     font-size: 15px;
     font-weight: 400;
 }
 
+.btn-position{
+    padding-left: 245px;
+}
+
 .btn-news{
-    position: relative;
-    float: right;
-    height: 36px;
-    width: 120px;
+    background-color: #0088ff; 
+    border: none;
+    color: white;
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
 }
 
 .header-produk{
@@ -198,5 +224,72 @@ nav{
     border-color: #0088ff;
 }
 
+.profile-title{
+    padding-left: 15px;
+    height: 50px;
+    width: 260px;
+    top: 100px;
+    left: 100px;
+    border-radius: 15px;
+    font-size: 35px;
+    font-weight: bolder;
+    color: #ffffff;
+}
 
+.tentang-kami-line{
+    height: 3px;
+    width: 260px;
+    background-color: #0088ff;
+    border-radius: 15px;
+}
 
+.akreditasi-line{
+    height: 3px;
+    width: 195px;
+    background-color: #0088ff;
+    border-radius: 15px;
+}
+
+.profile-text-bg{
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+}
+
+.profile-text-bg img{
+    padding: 5px 20px 20px 20px;
+}
+
+.profile-text{
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.visi-misi{
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#News-detail{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.news-top-img{
+    max-width: 1500px;
+    max-height: 350px;
+    text-align: center;
+}
+
+.news-tab-title{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.news-tab-sub-title{
+    font-size: 15px;
+    font-weight: bold;
+}

@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-sm fixed-top">
       <div class="container" id="navbar">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/">
             <img src="./assets/img/logo gama wisata.png" alt="Logo" style="width: 250px" class="rounded-pill" />
           </a>
         </div>
@@ -27,10 +27,10 @@
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#Profil">Profil</a>
+              <a class="nav-link" href="/profil">Profil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#Promo">News</a>
+              <a class="nav-link" href="/news">News</a>
             </li>
           </ul>
         </div>
@@ -125,7 +125,9 @@
                   News Title
                 </div>
                 <div class="news-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit iste aliquam adipisci ullam, quaerat odit iusto ad quam nulla non excepturi ipsam cum molestias ex eligendi omnis, ut suscipit fuga. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla veritatis quaerat qui molestias porro sunt ex reprehenderit perferendis quos cum, ea quod dolorum molestiae labore! Quisquam commodi modi ratione nulla! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio possimus odio dolores labore, perferendis porro id, delectus aperiam, maxime illum at quo culpa temporibus quas! Eligendi obcaecati dolorem corrupti velit.</div>
-                <div class="btn btn-primary btn-news" href="#" role="button">Read More</div>
+                <div class="btn-position">
+                  <div class="btn-news" href="#" role="button">Read More</div>
+                </div>
             </div>
           </div>
             <div class="jumbotron padd100" id="Sosmed">

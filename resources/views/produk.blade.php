@@ -27,10 +27,10 @@
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#Profil">Profil</a>
+              <a class="nav-link" href="/profil">Profil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#Promo">News</a>
+              <a class="nav-link" href="/news">News</a>
             </li>
           </ul>
         </div>
