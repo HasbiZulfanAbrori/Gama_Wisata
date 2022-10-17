@@ -6,64 +6,50 @@
     <title>Gama Wisata</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
     <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
     <script src="resources/js/script.js"></script>
   </head>
   <body>
-    <video autoplay muted loop id="myVideo">
-        <source src="./assets/img/HYMNE AIRLANGGA   -   2022.mp4" type="video/mp4">
-    </video>
+    <section id="video">
+      <div class="overlay"></div>
+      <!-- Ubah link dalam "src" sesuai video yang diinginkan -->
+      <video src="./assets/img/HYMNE AIRLANGGA   -   2022.mp4" loop muted autoplay></video>
+    </section>
     <nav class="navbar navbar-expand-sm fixed-top">
       <div class="container" id="navbar">
-        <div class="container-fluid">
           <a class="navbar-brand" href="/">
-            <img src="./assets/img/logo gama wisata.png" alt="Logo" style="width: 250px" class="rounded-pill" />
+            <img src="./assets/img/logo gama wisata.png" alt="Logo" style="width: 250px" />
           </a>
-        </div>
-        <div class="collapse navbar-collapse" id="nav-col">
-          <ul class="navbar-nav navbar-right">
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
             <li class="nav-item">
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/profil">Profil</a>
+              <a class="nav-link" href="/profil">Profile</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/news">News</a>
             </li>
           </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="text" placeholder="Search">
+            <button class="btn btn-primary" type="button">Search</button>
+          </form>
         </div>
       </div>
     </nav>
-    <!-- Carousel -->
-    <div id="demo" class="carousel slide" style="padding-top: 70px" data-bs-ride="carousel">
-
-        <!-- Indicators/dots -->
-        <div class="carousel-indicators">
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-      </div>
-
-      <!-- The slideshow/carousel -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="./assets/img/gama_wisata.png" alt="Logo Gama Wisata" class="d-block a" />
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/img/gama_wisata2.png" alt="Logo Wonderfull Indonesia" class="d-block" />
-        </div>
-      </div>
-
-      <!-- Left and right controls/icons -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
-    </div>
-    <div class="container" id="">
+    <section id="header" class="my-4">
+      <div class="container mx-auto">
+          <h1 class="text-center mb-4">Gama Wisata</h1>
+          <p class="text-center mb-4">Gama Wisata adalah badan usaha berbadan hukum dengan bentuk perseroan terbatas yang berkedudukan di Yogyakarta yang bergerak di bidang biro perjalanan wisata.</p>
+          <div class="mx-auto d-flex justify-content-center">
+              <a class="btn btn-primary" href="#Produk">Explore Now</a>
+          </div>
+      </div>        
+  </section>
+    <div class="container padd500" id="">
         <div class="jumbotron padd100" id="Produk">
             <div class="row">
                 <div class="col-sm-4">

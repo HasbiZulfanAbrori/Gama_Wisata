@@ -1,26 +1,9 @@
-
-
 body{
     margin: 0px;
     background-color: #e5e5e5;
-    font-family: 'Montserrat' ;
+    font-family: "Poppins", sans-serif; ;
 }
 
-.header{
-    height: 320px;
-    max-width: 1500px;
-    background-color: rgba(255, 255, 255, 0.5);
-    
-}
-
-.header-title{
-    padding-top: 150px;
-    text-align: center;
-    border-radius: 15px;
-    font-size: 35px;
-    font-weight: bold;
-    color: #ffffff;
-}
 
 #background{
     padding-top: -120px;
@@ -34,37 +17,45 @@ body{
 
 nav{
     background-color: #ffffff;
-    height: 65px;
+    height: 75px;
     font-size: 30px;
-    font-weight: 900;
+    font-weight: 400;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
+.collapse{
+    padding-left: 95px;
+}
 
 .nav-item{
-    font-size: 16px;
-    font-weight: bolder;
-    padding-right: 35px;
+    color: black;
+    padding: 5px 5px 5px 45px;
+    text-decoration: none;
+    display: block;
 }
 
-.carousel-inner{
-    height: 250px;
-    background-color:  rgba(255, 255, 255, 0.5) ;
-    border-radius: 15px;
+.nav-link{
+    font-size: 17px;
+    font-weight: 400;
 }
 
-.carousel-item{
-    margin-left: 354px;
-    height: 240px;
-    width: 1112px;
+
+.nav-link:hover{
+    color: #073c64;
+    font-weight: bold;
 }
 
-.carousel-indicators{
-    margin-top: 250px;
+.form-control{
+    width: 120px;
+    border-radius: 20px;
 }
 
 #Profil{
     
+}
+
+.padd500{
+    padding-top: 630px;
 }
 
 .padd100{
@@ -75,15 +66,82 @@ nav{
 #more {display: none;}
 
 
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -10;
+#video {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background: black no-repeat center center/cover;
   }
+   
+video {
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+}
+   
+.overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(8, 27, 11, 0.3);
+    z-index: 2;
+}
 
+#header {
+    color: #fff;
+  }
+   
+  #header h1 {
+    font-size: 60px;
+    font-family: "Abhaya Libre", serif;
+    line-height: 0.9;
+  }
+   
+  #header p {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+  }
+   
+  #header a {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px 32px 14px 32px;
+    border-radius: 999px;
+    background-color: #fff;
+    border-color: #fff;
+    color: #212121;
+    font-family: "Poppins", sans-serif;
+  }
+   
+  @media (min-width: 720px) {
+    #header {
+      margin: 0;
+      width: 100%;
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      color: #fff;
+    }
+    #header h1 {
+      font-size: 90px;
+      font-family: "Abhaya Libre", serif;
+      line-height: 0.9;
+    }
+   
+    #header p {
+      font-size: 18px;
+      font-weight: 300;
+      font-family: "Poppins", sans-serif;
+    }
+  }
 
 .jumbotron{
     z-index: -100;
@@ -106,7 +164,7 @@ nav{
 }
 
 .header-news{
-    padding-left: 30px;
+    text-align: center;
     height: 60px;
     width: 170px;
     top: 100px;
@@ -114,7 +172,6 @@ nav{
     border-radius: 15px;
     font-size: 35px;
     font-weight: bold;
-    color: #ffffff;
     border-style: solid;
     border-color: #0088ff;
 }
@@ -159,7 +216,7 @@ nav{
 }
 
 .header-produk{
-    padding-left: 30px;
+    text-align: center;
     height: 60px;
     width: 270px;
     top: 100px;
@@ -167,7 +224,6 @@ nav{
     border-radius: 15px;
     font-size: 35px;
     font-weight: bold;
-    color: #ffffff;
     border-style: solid;
     border-color: #0088ff;
 }
@@ -211,7 +267,7 @@ nav{
 }
 
 .header-sosmed{
-    padding-left: 30px;
+    text-align: center;
     height: 60px;
     width: 280px;
     top: 100px;
@@ -219,9 +275,12 @@ nav{
     border-radius: 15px;
     font-size: 35px;
     font-weight: bold;
-    color: #ffffff;
     border-style: solid;
     border-color: #0088ff;
+}
+
+.center{
+    text-align: center;
 }
 
 .profile-title{
@@ -233,7 +292,6 @@ nav{
     border-radius: 15px;
     font-size: 35px;
     font-weight: bolder;
-    color: #ffffff;
 }
 
 .tentang-kami-line{
@@ -248,6 +306,19 @@ nav{
     width: 195px;
     background-color: #0088ff;
     border-radius: 15px;
+}
+
+.header-profil{
+    text-align: center;
+    height: 60px;
+    width: 400px;
+    top: 100px;
+    left: 100px;
+    border-radius: 15px;
+    font-size: 35px;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #0088ff;
 }
 
 .profile-text-bg{

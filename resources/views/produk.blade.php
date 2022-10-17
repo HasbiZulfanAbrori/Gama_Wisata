@@ -6,42 +6,38 @@
     <title>Gama Wisata</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
     <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
     <script src="resources/js/script.js"></script>
   </head>
   <body>
-    <video autoplay muted loop id="myVideo">
-        <source src="./assets/img/HYMNE AIRLANGGA   -   2022.mp4" type="video/mp4">
-    </video>
     <nav class="navbar navbar-expand-sm fixed-top">
       <div class="container" id="navbar">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="./assets/img/logo gama wisata.png" alt="Logo" style="width: 250px" class="rounded-pill" />
+          <a class="navbar-brand" href="/">
+            <img src="./assets/img/logo gama wisata.png" alt="Logo" style="width: 250px" />
           </a>
-        </div>
-        <div class="collapse navbar-collapse" id="nav-col">
-          <ul class="navbar-nav navbar-right">
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
             <li class="nav-item">
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/profil">Profil</a>
+              <a class="nav-link" href="/profil">Profile</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/news">News</a>
             </li>
           </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="text" placeholder="Search">
+            <button class="btn btn-primary" type="button">Search</button>
+          </form>
         </div>
       </div>
     </nav>
-    <div class="header">
-      <div class="header-title">
-       Our Produk
-      </div>
-    </div>
-    <div class="container padd100" id="Produk">
+    <div class="padd100"></div>
+    <div class="container mt-3" id="Produk">
+      <div class="header-produk mb-3">Our Produk</div>
         <div class="produk mb-3">
             <img src="./assets/img/airplane.svg" alt="Tiket Pesawat">
             <div class="produk-title mb-2" >
