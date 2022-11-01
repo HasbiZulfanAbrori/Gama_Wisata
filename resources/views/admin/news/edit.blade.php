@@ -31,44 +31,48 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">DATA NEWS</li>
+                                <li class="breadcrumb-item active">Edit Data News</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
                 </div><!-- /.container-fluid -->
             </div>
             <!-- /.content-header -->
-
             <!-- Main content -->
             <div class="content">
                 <div class="card card-info card-out-line">
                     <div class="card-header">
-                        <div class="card-tools">
-                            <a href="{{route('news.create')}}" class="btn btn-succes">Tambah Data <i
-                                    class="fas fa-plus-square"></i> </a>
-                        </div>
+                        <h3>Edit Data New</h3>
                     </div>
                     <div class="card-body">
-                        <table class="table table-bordered">
-                            <tr>
-                                <th>No</th>
-                                <th>Nama</th>
-                                <th>Gambar</th>
-                                <th>Keterangan</th>
-                                <th>Aksi</th>
-                            </tr>
-                            @foreach($news as $n)
-                            <tr>
-                                <td>{{$n->id}}.</td>
-                                <td>{{$n->nama}}</td>
-                                <td><img class="img-fluid" src="{{asset('gambar/'.$n->gambar)}}" alt="gambar"></td>
-                                <td>{{$n->keterangan}}</td>
-                                <td>
-                                    <a href="/news/{{$n->id}}/edit">Edit</a>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </table>
+                        <form action="/news/{{$edit->id}}" method="post" enctype="multipart/form-data">
+                            @method('put')
+                            @csrf
+                            <div class="form-group">
+                                <label for="">Nama Tempat</label>
+                                <input type="text" id="nama" name="nama" class="form-control" placeholder="Nama Tempat"
+                                    value="{{$edit->nama}}">
+                            </div>
+                            <input type="file" name="gambar" class="file">
+                            <div class="form-group">
+                                <img src="{{asset('gambar/'.$edit->gambar)}}" alt="">
+                            </div>
+                            <div class="input-group my-3">
+                                <input type="text" class="form-control" disabled placeholder="Upload Gambar" id="file">
+                                <div class="input-group-append">
+                                    <button type="button" id="pilih_gambar" class="browse btn btn-primary">Pilih
+                                        Gambar</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Keterangan</label>
+                                <input type="text" id="keterangan" name="keterangan" class="form-control"
+                                    placeholder="keterangan Tempat" value="{{$edit->keterangan}}">
+                            </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Edit Data</button>
+                        </form>
                     </div>
                 </div>
             </div>

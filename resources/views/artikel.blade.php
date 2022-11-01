@@ -52,7 +52,7 @@
         </div>
         <div class="sub-artikel mt-3">
             @foreach($artikel as $a)
-            <div class="title">{{$loop->iteration}}. {{$a->nama}}</div>
+            <div class="title">{{$a->id}}. {{$a->nama}}</div>
             <div class="row-artikel">
                 <img src="{{asset('gambar/'.$a->gambar)}}" alt="News">
                 <div class="text">{{$a->keterangan}}</div>

@@ -76,7 +76,10 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        //
+        // $news = News::find($id);
+        // return view('admin.news.edit',compact(['news']));
+        $edit = News::find($id);
+        return view('admin.news.edit',compact('edit'));
     }
 
     /**
@@ -88,7 +91,17 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $ubah = News::find($id);
+        $awal = $ubah->gambar;
+        $edit = [
+            'nama' => $request['nama'],
+            'gambar' => $awal,
+            'keterangan' => $request['keterangan'],
+        ];
+        $request->gambar->move(public_path().'/gambar', $awal);
+        $ubah->update($edit);
+        return redirect('/adminnews');
+
     }
 
     /**
