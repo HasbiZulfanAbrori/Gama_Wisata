@@ -53,16 +53,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <input type="text" id="nama" name="nama" class="form-control" placeholder="Nama Tempat"
                                     value="{{$edit->nama}}">
                             </div>
-                            <input type="file" name="gambar" class="file">
                             <div class="form-group">
-                                <img src="{{asset('gambar/'.$edit->gambar)}}" alt="">
-                            </div>
-                            <div class="input-group my-3">
-                                <input type="text" class="form-control" disabled placeholder="Upload Gambar" id="file">
-                                <div class="input-group-append">
-                                    <button type="button" id="pilih_gambar" class="browse btn btn-primary">Pilih
-                                        Gambar</button>
-                                </div>
+                                <img src="{{asset('gambar/'.$edit->gambar)}}" id="image" alt="">
+                                <input type="file" name="image" class="form-control mt-2" accept="image/*"
+                                    onchange="document.getElementById('image').src = window.URL.createObjectURL(this.files[0])">
                             </div>
                             <div class="form-group">
                                 <label for="">Keterangan</label>

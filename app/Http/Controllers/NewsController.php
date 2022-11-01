@@ -112,6 +112,9 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $hapus = News::find($id);
+        // unlink($hapus->gambar);
+        $hapus->delete();
+        return redirect('/adminnews');
     }
 }

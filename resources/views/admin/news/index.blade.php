@@ -64,7 +64,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <td><img class="img-fluid" src="{{asset('gambar/'.$n->gambar)}}" alt="gambar"></td>
                                 <td>{{$n->keterangan}}</td>
                                 <td>
-                                    <a href="/news/{{$n->id}}/edit">Edit</a>
+                                    <a class="btn btn-primary" href="/news/{{$n->id}}/edit">Edit</a>
+                                    <a class="btn btn-danger" href="/news/{{$n->id}}/destroy">Destroy</a>
                                 </td>
                             </tr>
                             @endforeach

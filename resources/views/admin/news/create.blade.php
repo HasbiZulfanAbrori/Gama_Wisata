@@ -51,16 +51,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <label for="">Nama Tempat</label>
                                 <input type="text" id="nama" name="nama" class="form-control" placeholder="Nama Tempat">
                             </div>
-                            <input type="file" name="gambar" class="file">
-                            <div class="input-group my-3">
-                                <input type="text" class="form-control" disabled placeholder="Upload Gambar" id="file">
-                                <div class="input-group-append">
-                                    <button type="button" id="pilih_gambar" class="browse btn btn-primary">Pilih
-                                        Gambar</button>
-                                </div>
-                            </div>
+                            <label for="">Masukkan Gambar</label>
+                            <input type="file" name="gambar" class="form-control">
                             <div class="form-group">
-                                <label for="">Keterangan</label>
+                                <label class="mt-2" for="">Keterangan</label>
                                 <input type="text" id="keterangan" name="keterangan" class="form-control"
                                     placeholder="keterangan Tempat">
                             </div>
