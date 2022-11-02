@@ -37,3 +37,7 @@ Route::get('/news', function () {
     return view('news');
 });
 
+Route::get('/promo', function () {
+    return view('promo');
+});
+

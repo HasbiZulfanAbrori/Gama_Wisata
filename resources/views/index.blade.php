@@ -48,7 +48,7 @@
               <a class="btn btn-primary" href="#Produk">Explore Now</a>
           </div>
       </div>        
-  </section>
+    </section>
     <div class="container padd500" id="">
         <div class="jumbotron padd100" id="Produk">
             <div class="row">
@@ -79,7 +79,7 @@
                           </div>
                           <div class="isi-card">
                               <p>Promo Gamawisata dengan mengklik dibawah ini.</p>
-                              <a class="btn btn-primary" href="https://promo.gamawisata.com/" role="button">Read More</a>
+                              <a class="btn btn-primary" href="/promo" role="button">Read More</a>
                           </div>  
                         </div>
                     </div>

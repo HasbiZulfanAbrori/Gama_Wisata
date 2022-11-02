@@ -42,65 +42,97 @@
     </nav>
     <section id="text-header">
       <div class="container">
-          <h1 class="text-center mb-2">Profil Gama Wisata</h1>
+          <h1 class="text-center mb-2">Promo Gama Wisata</h1>
       </div>        
     </section>
-    <div class="container mt-4">
-      <div class="row">
-        <div class="col-6">
-          <div class="profile-title">
-            Tentang kami
-          </div>
-          <div class="tentang-kami-line"></div>
-          <div class="profile-text-bg mt-3">
-            <div class="profile-text">
-              PT Gama Wisata adalah badan usaha berbadan hukum dengan bentuk perseroan terbatas yang berkedudukan di Yogyakarta yang bergerak di bidang biro perjalanan wisata. Lahir dan berkembang dilingkungan kampus UGM Yogyakarta, PT Gama Wisata adalah anak perusahaan PT Gama Multi Usaha Mandiri, sebuah holding Company yang merupakan entitas dari Universitas Gadjah Mada.
+    <div class="container mt-5">
+        <div class="row">
+            <h2 class="text-center">Kategori</h2>
+            <div class="col-4 mt-2">
+                <div class="card">
+                    <div class="text-center">
+                        <img class="card-img-top mt-3" src="./assets/img/airplane.svg" alt="Card image" style="width:40%">
+                    </div>
+                    <div class="card-body">
+                      <div class="judul-card" >
+                        Tiket Pesawat
+                      </div>
+                      <div class="isi-card">
+                          <a class="btn btn-primary mt-3" href="/promo" role="button">Read More</a>
+                      </div>  
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="profile-text-bg mt-3">
-            <div class="visi-misi">Visi</div>
-            <div class="profile-text">
-              Menjadi penyedia pengalaman wisata edukasi yang terkemuka, khususnya untuk kalangan UGM dan stakeholdernya
+            <div class="col-4 mt-2">
+                <div class="card">
+                    <div class="text-center">
+                        <img class="card-img-top mt-3" src="./assets/img/train-front.svg" alt="Card image" style="width:40%">
+                    </div>
+                    <div class="card-body">
+                      <div class="judul-card" >
+                        Tiket Kereta Api
+                      </div>
+                      <div class="isi-card">
+                          <a class="btn btn-primary mt-3" href="/promo" role="button">Read More</a>
+                      </div>  
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="profile-text-bg mt-3">
-            <div class="visi-misi">Misi</div>
-            <div class="profile-text">
-              Memberikan layanan pada pelanggan dengan berorientasi pada kualitas yang prima dan harga yang kompetitif
+            <div class="col-4 mt-2">
+                <div class="card">
+                    <div class="text-center">
+                        <img class="card-img-top mt-3" src="./assets/img/building.svg" alt="Card image" style="width:40%">
+                    </div>
+                    <div class="card-body">
+                      <div class="judul-card" >
+                        Voucher Hotel
+                      </div>
+                      <div class="isi-card">
+                          <a class="btn btn-primary mt-3" href="/promo" role="button">Read More</a>
+                      </div>  
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="col-6">
-          <div class="profile-text-bg">
-            <img class="card-img-top mt-3" src="./assets/img/example.png" alt="Card image" style="width:100%">
-          </div>
-        </div> 
-      </div>
+        <div class="row mt-5">
+            <h2 class="text-center">Terlaris</h2>
+            <div class="col-3">
+                <div class="card">
+                    <div class="text-center">
+                        <img class="card-img-top mt-3" src="./assets/img/example.png" alt="Card image" style="width:40%">
+                    </div>
+                    <div class="card-body">
+                      <div class="judul-card" >
+                        Judul
+                      </div>
+                      <div class="isi-card">
+                        <p>Harga</p>
+                        <a class="btn btn-primary" href="/promo" role="button">Read More</a>
+                      </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <h2 class="text-center">Promo Terbaru</h2>
+            <div class="col-3">
+                <div class="card">
+                    <div class="text-center">
+                        <img class="card-img-top mt-3" src="./assets/img/example.png" alt="Card image" style="width:40%">
+                    </div>
+                    <div class="card-body">
+                      <div class="judul-card" >
+                        Judul
+                      </div>
+                      <div class="isi-card">
+                        <p>Harga</p>
+                        <a class="btn btn-primary" href="/promo" role="button">Read More</a>
+                      </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="container mt-4">
-      <div class="row">
-        <div class="col-6">
-          <div class="profile-text-bg">
-            <img class="card-img-top mt-3" src="./assets/img/example.png" alt="Card image" style="width:100%">
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="profile-title">
-            Akreditasi
-          </div>
-          <div class="akreditasi-line"></div>
-          <div class="profile-text-bg mt-4">
-            <div class="profile-text">
-              1. Saat ini kami telah menjadi agent resmi IATA (International Air Transport Association) dengan nomor akreditasi 150 8291 1 untuk penjualan pasasi domestik dan 153 1198 4 untuk sektor international.</div>
-            <div class="profile-text">  
-              2. Selain sebagai agen IATA, kami juga merupakan agent resmi dari maskapai-maskapai domestik yang ada di indonesia.</div>
-            <div class="profile-text">  
-              3. PT Gama Wisata juga telah menjadi anggota ASITA (Association of Indonesia Tour & Travel Agencies) sejak tahun 2004 dengan nomor keanggotaan 0139/XI/2004.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-      
     <footer class="text-center text-white mt-4" id="CostomerService" style="background-color: #e1e1e1;">
         <div class="container pt-4">
           <section class="mb-4">

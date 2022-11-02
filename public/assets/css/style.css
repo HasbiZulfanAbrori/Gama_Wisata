@@ -5,15 +5,84 @@ body{
 }
 
 
-#background{
-    padding-top: -120px;
-    background-image:url(assets/img/background.jpeg) no-repeat center fixed;
-    background-size: cover;
-    padding-top: 111px;
-    height: 638px;
-    max-height: 1112px;
-
+#bg-header{
+    padding-top: 80px;
+    position: relative;
+    top: 0;
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    background: black no-repeat center center/cover;
+  }
+   
+image {
+    min-width: 100%;
+    height: 400px;
+    z-index: 1;
 }
+   
+.overlay {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgba(8, 27, 11, 0.3);
+    z-index: 2;
+}
+
+#text-header {
+    color: #fff;
+    padding-bottom: 160px;
+  }
+   
+  #text-header h1 {
+    font-size: 60px;
+    font-family: "Abhaya Libre", serif;
+    line-height: 0.9;
+  }
+   
+  #text-header p {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+  }
+   
+  #text-header a {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px 32px 14px 32px;
+    border-radius: 999px;
+    background-color: #fff;
+    border-color: #fff;
+    color: #212121;
+    font-family: "Poppins", sans-serif;
+  }
+   
+  @media (min-width: 720px) {
+    #text-header {
+      margin: 0;
+      width: 100%;
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      color: #fff;
+    }
+    #text-header h1 {
+      font-size: 90px;
+      font-family: "Abhaya Libre", serif;
+      line-height: 0.9;
+    }
+   
+    #text-header p {
+      font-size: 18px;
+      font-weight: 300;
+      font-family: "Poppins", sans-serif;
+    }
+  }
 
 nav{
     background-color: #ffffff;
@@ -24,12 +93,12 @@ nav{
 }
 
 .collapse{
-    padding-left: 95px;
+    padding-left: 5px;
 }
 
 .nav-item{
     color: black;
-    padding: 5px 5px 5px 45px;
+    padding: 5px 5px 5px 25px;
     text-decoration: none;
     display: block;
 }
@@ -46,9 +115,12 @@ nav{
 }
 
 .form-control{
-    width: 120px;
+    width: 160px;
     border-radius: 20px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.4);
 }
+
 
 #Profil{
     

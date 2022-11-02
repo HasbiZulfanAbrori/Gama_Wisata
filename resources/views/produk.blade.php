@@ -11,6 +11,11 @@
     <script src="resources/js/script.js"></script>
   </head>
   <body>
+    <section id="bg-header">
+      <div class="overlay"></div>
+      <!-- Ubah link dalam "src" sesuai video yang diinginkan -->
+      <img src="./assets/img/background.jpeg" alt="Background">
+    </section>
     <nav class="navbar navbar-expand-sm fixed-top">
       <div class="container" id="navbar">
           <a class="navbar-brand" href="/">
@@ -35,9 +40,12 @@
         </div>
       </div>
     </nav>
-    <div class="padd100"></div>
+    <section id="text-header">
+      <div class="container">
+          <h1 class="text-center mb-2">Produk Kami</h1>
+      </div>        
+    </section>
     <div class="container mt-3" id="Produk">
-      <div class="header-produk mb-3">Our Produk</div>
         <div class="produk mb-3">
             <img src="./assets/img/airplane.svg" alt="Tiket Pesawat">
             <div class="produk-title mb-2" >
