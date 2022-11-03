@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
     <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
     <script src="resources/js/script.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <nav class="navbar navbar-expand-sm fixed-top">
         <div class="container" id="navbar">
             <a class="navbar-brand" href="/">
@@ -39,7 +40,8 @@
     </nav>
     <div class="padd100"></div>
     <div class="container">
-      <div class="header-news mb-3">News</div>
+        <div class="header-news mb-3">News</div>
+        @foreach($berita as $b)
         <div class="news mt-3">
             <img src="{{asset('gambar/'.$b->gambar)}}" alt="News">
             <div class="news-title" mt-3>
