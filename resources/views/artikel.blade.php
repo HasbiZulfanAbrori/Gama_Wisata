@@ -47,13 +47,13 @@
     <div class="container padd100" id="artikel">
         @foreach($artikel as $a)
         <div class="artikel-top-img">
-            <img src="{{asset('gambar/'.$a->gambar)}}" alt="Logo" style="width: 600px">
+            <img src="{{asset('gambar_news/'.$a->gambar_news)}}" alt="Logo" style="width: 600px">
         </div>
         <div class="artikel-title mt-3">
-            {{$a->nama}}
+            {{$a->judul_news}}
         </div>
         <div class="artikel-text mt-3">
-            {{$a->keterangan}}
+            {{$a->keterangan_news}}
         </div>
         @endforeach
         {{-- <div class="sub-artikel mt-3">

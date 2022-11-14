@@ -85,7 +85,7 @@
                           </div>
                           <div class="isi-card">
                               <p>Promo Gamawisata dengan mengklik dibawah ini.</p>
-                              <a class="btn btn-primary" href="/promo" role="button">Read More</a>
+                              <a class="btn btn-primary" href="https://promo.gamawisata.com/produk/" role="button">Read More</a>
                           </div>  
                         </div>
                     </div>

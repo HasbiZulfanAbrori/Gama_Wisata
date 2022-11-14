@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\Models\News;
 
 class NewsController extends Controller
@@ -23,7 +24,7 @@ class NewsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($id)
+    public function create(News $id)
     {
         return view('admin.news.create', [
             'news' => News::where($id->id)->get(),

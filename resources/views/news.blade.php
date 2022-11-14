@@ -49,11 +49,11 @@
         <div class="header-news mb-3">News</div>
         @foreach($berita as $b)
         <div class="news mt-3">
-            <img src="{{asset('gambar/'.$b->gambar)}}" alt="News">
+            <img src="{{asset('gambar_news/'.$b->gambar_news)}}" alt="News">
             <div class="news-title" mt-3>
-                {{$b->nama}}
+                {{$b->judul_news}}
             </div>
-            <div class="news-text">{{$b->keterangan}}</div>
+            <div class="news-text">{{Illuminate\Support\Str::of($b->keterangan_news)->words(30)}}</div>
             <div class="btn-position">
                 <a href="/artikel" class="btn-news">Read More</a>
             </div>
