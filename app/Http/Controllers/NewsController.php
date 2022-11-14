@@ -98,13 +98,13 @@ class NewsController extends Controller
     {
         $ubah = News::find($id);
         $awal = $ubah->gambar_news;
-        $edit = [
-            'judul_news' => $request['judul_news'],
-            'gambar_news' => $awal,
-            'keterangan_news' => $request['keterangan_news'],
-        ];
-        $request->gambar_news->move(public_path().'/gambar_news', $awal);
-        $ubah->update($edit);
+        if($request->gambar_news){
+            $ubah->gambar_news = $awal;
+            $request->gambar_news->move(public_path().'/gambar_news', $awal);
+        }
+        $ubah->judul_news = $request->judul_news;
+        $ubah->keterangan_news = $request->keterangan_news;
+        $ubah->save();
         return redirect('/adminnews')->with('updateSucces','Data Berhasil di Update');
 
     }

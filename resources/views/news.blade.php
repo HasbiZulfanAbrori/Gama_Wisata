@@ -52,8 +52,8 @@
     <section id="text-header">
         <div class="container">
             <h1 class="text-center mb-2">News</h1>
-        </div>        
-      </section>
+        </div>
+    </section>
     <div class="container">
         @foreach($berita as $b)
         <div class="news mt-3">
@@ -63,7 +63,7 @@
             </div>
             <div class="news-text">{{Illuminate\Support\Str::of($b->keterangan_news)->words(30)}}</div>
             <div class="btn-position">
-                <a href="/artikel" class="btn-news">Read More</a>
+                <a href="{{ route('artikel', $b->id) }}" class="btn-news">Read More</a>
             </div>
         </div>
         @endforeach

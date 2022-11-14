@@ -37,7 +37,7 @@ Route::get('/promo', function () {
 // });
 
 Route::get('news',[BeritaController::class,'index'])->name('berita');
-Route::get('artikel',[ArtikelController::class,'index'])->name('artikel');
+Route::get('artikel/{id}',[ArtikelController::class,'show'])->name('artikel');
 
 // Route::get('/artikel', function () {
 //     return view('artikel');

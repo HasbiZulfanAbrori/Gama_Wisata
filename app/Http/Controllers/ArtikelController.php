@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class ArtikelController extends Controller
 {
-    public function index()
+    public function show($id)
     {
-        $artikel = News::all();
+        $artikel = News::find($id);
         return view('artikel',compact('artikel'));
     }
 }
