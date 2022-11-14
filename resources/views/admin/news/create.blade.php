@@ -49,7 +49,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @csrf
                             <div class="form-group">
                                 <label for="nama">Judul Berita</label>
-                                <input type="text" id="judul_news" name="judul_news" class="form-control" placeholder="Judul Berita" required autofocus value="{{ old('nama') }}">
+                                <input type="text" id="judul_news" name="judul_news" class="form-control"
+                                    placeholder="Judul Berita" required autofocus value="{{ old('nama') }}">
                             </div>
                             <div class="form-group">
                                 <label for="">Masukkan Gambar</label>
@@ -57,7 +58,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
                             <div class="form-group">
                                 <label class="mt-2" for="">Keterangan</label>
-                                <textarea name="keterangan_news" class="form-control" placeholder="Keterangan Artikel"></textarea>
+                                <textarea name="keterangan_news" class="form-control"
+                                    placeholder="Keterangan Artikel"></textarea>
                             </div>
                     </div>
                     <div class="card-footer">

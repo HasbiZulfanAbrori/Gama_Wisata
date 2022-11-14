@@ -57,8 +57,8 @@
                     </ul>
                     {{-- <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('adminpromo')}}" class="nav-link">
-                                Data Promo
+                            <a href="{{route('adminindex')}}" class="nav-link">
+                                Data Header
                             </a>
                         </li>
                     </ul> --}}
