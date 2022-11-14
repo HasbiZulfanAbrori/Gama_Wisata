@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Index;
+use App\Models\News;
 use Illuminate\Http\Request;
 
 
@@ -18,6 +19,10 @@ class IndexController extends Controller
     {
         $index = Index::all();
         return view('admin.index.index',compact('index'));
+    }
+
+    public function datanews(){
+        return view('frontend.index')->with(['news' => News::paginate(5)]);
     }
 
     /**

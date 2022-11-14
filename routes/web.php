@@ -68,7 +68,7 @@ Route::put('/produk/{id}', [ProdukController::class, 'update'])->name('produk.up
 Route::get('/produk/{id}/destroy', [ProdukController::class, 'destroy'])->name('produk.destroy');
 
 //Route Index
-// Route::get('/', [IndexController::class, 'index'])->name('');
+Route::get('/', [IndexController::class, 'datanews'])->name('');
 Route::get('/adminindex', [IndexController::class, 'index'])->name('adminindex');
 Route::get('/index/create', [IndexController::class, 'create'])->name('index.create');
 Route::post('/index/store', [IndexController::class, 'store'])->name('index.store');
