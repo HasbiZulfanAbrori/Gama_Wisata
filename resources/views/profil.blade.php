@@ -13,6 +13,11 @@
     <script src="resources/js/script.js"></script>
   </head>
   <body>
+    <section id="bg-header">
+        <div class="overlay"></div>
+        <!-- Ubah link dalam "src" sesuai video yang diinginkan -->
+        <img src="./assets/img/background.jpeg" alt="Background">
+      </section>
     <nav class="navbar navbar-expand-sm fixed-top">
         <div class="container" id="navbar">
             <a class="navbar-brand" href="/">
@@ -29,6 +34,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/news">News</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/produk">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/promo">Promo</a>
+                    </li>
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="text" placeholder="Search">
@@ -38,12 +49,11 @@
         </div>
     </nav>
     <section id="text-header">
-      <div class="container">
-          <h1 class="text-center mb-2">Profil Gama Wisata</h1>
-      </div>        
-    </section>
+        <div class="container">
+            <h1 class="text-center mb-2">Profil Gama Wisata</h1>
+        </div>        
+      </section>
     <div class="container mt-4">
-      <div class="header-profil mb-4">Profil Gama Wisata</div>
       <div class="row">
         <div class="col-6">
           <div class="profile-title">

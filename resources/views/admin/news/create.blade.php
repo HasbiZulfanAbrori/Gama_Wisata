@@ -48,15 +48,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <form action="{{route('news.store')}}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <label for="">Nama Tempat</label>
-                                <input type="text" id="nama" name="nama" class="form-control" placeholder="Nama Tempat">
+                                <label for="nama">Judul Berita</label>
+                                <input type="text" id="judul_news" name="judul_news" class="form-control" placeholder="Judul Berita" required autofocus value="{{ old('nama') }}">
                             </div>
-                            <label for="">Masukkan Gambar</label>
-                            <input type="file" name="gambar" class="form-control">
+                            <div class="form-group">
+                                <label for="">Masukkan Gambar</label>
+                                <input type="file" name="gambar_news" class="form-control">
+                            </div>
                             <div class="form-group">
                                 <label class="mt-2" for="">Keterangan</label>
-                                <input type="text" id="keterangan" name="keterangan" class="form-control"
-                                    placeholder="keterangan Tempat">
+                                <textarea name="keterangan_news" class="form-control" placeholder="Keterangan Artikel"></textarea>
                             </div>
                     </div>
                     <div class="card-footer">

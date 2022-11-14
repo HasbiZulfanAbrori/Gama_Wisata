@@ -32,6 +32,12 @@
             <li class="nav-item">
               <a class="nav-link" href="/news">News</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/produk">Produk</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/promo">Promo</a>
+            </li>
           </ul>
           <form class="d-flex">
             <input class="form-control me-2" type="text" placeholder="Search">

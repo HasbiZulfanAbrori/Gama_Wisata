@@ -32,6 +32,12 @@
             <li class="nav-item">
               <a class="nav-link" href="/news">News</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/produk">Produk</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/promo">Promo</a>
+            </li>
           </ul>
           <form class="d-flex">
             <input class="form-control me-2" type="text" placeholder="Search">
@@ -46,54 +52,6 @@
       </div>        
     </section>
     <div class="container mt-5">
-        <div class="row">
-            <h2 class="text-center">Kategori</h2>
-            <div class="col-4 mt-2">
-                <div class="card">
-                    <div class="text-center">
-                        <img class="card-img-top mt-3" src="./assets/img/airplane.svg" alt="Card image" style="width:40%">
-                    </div>
-                    <div class="card-body">
-                      <div class="judul-card" >
-                        Tiket Pesawat
-                      </div>
-                      <div class="isi-card">
-                          <a class="btn btn-primary mt-3" href="/promo" role="button">Read More</a>
-                      </div>  
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 mt-2">
-                <div class="card">
-                    <div class="text-center">
-                        <img class="card-img-top mt-3" src="./assets/img/train-front.svg" alt="Card image" style="width:40%">
-                    </div>
-                    <div class="card-body">
-                      <div class="judul-card" >
-                        Tiket Kereta Api
-                      </div>
-                      <div class="isi-card">
-                          <a class="btn btn-primary mt-3" href="/promo" role="button">Read More</a>
-                      </div>  
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 mt-2">
-                <div class="card">
-                    <div class="text-center">
-                        <img class="card-img-top mt-3" src="./assets/img/building.svg" alt="Card image" style="width:40%">
-                    </div>
-                    <div class="card-body">
-                      <div class="judul-card" >
-                        Voucher Hotel
-                      </div>
-                      <div class="isi-card">
-                          <a class="btn btn-primary mt-3" href="/promo" role="button">Read More</a>
-                      </div>  
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="row mt-5">
             <h2 class="text-center">Terlaris</h2>
             <div class="col-3">

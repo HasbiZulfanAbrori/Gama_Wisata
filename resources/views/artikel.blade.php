@@ -30,6 +30,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/news">News</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/produk">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/promo">Promo</a>
+                    </li>
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="text" placeholder="Search">
@@ -39,18 +45,18 @@
         </div>
     </nav>
     <div class="container padd100" id="artikel">
+        @foreach($artikel as $a)
         <div class="artikel-top-img">
-            <img src="./assets/img/83017.jpg" alt="Logo" style="width: 600px">
+            <img src="{{asset('gambar/'.$a->gambar)}}" alt="Logo" style="width: 600px">
         </div>
         <div class="artikel-title mt-3">
-            INI TEMPAT WISATA DI YOGYAKARTA YANG INSTAGRAMABLE
+            {{$a->nama}}
         </div>
         <div class="artikel-text mt-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla cumque nesciunt, magni nisi consequuntur
-            doloribus eos, repellendus rerum id tempore repudiandae minima maxime ratione optio explicabo saepe
-            similique deserunt laborum.
+            {{$a->keterangan}}
         </div>
-        <div class="sub-artikel mt-3">
+        @endforeach
+        {{-- <div class="sub-artikel mt-3">
             @foreach($artikel as $a)
             <div class="title">{{$a->id}}. {{$a->nama}}</div>
             <div class="row-artikel">
@@ -58,7 +64,7 @@
                 <div class="text">{{$a->keterangan}}</div>
             </div>
             @endforeach
-        </div>
+        </div> --}}
     </div>
     <footer class="text-center text-white mt-4" id="CostomerService" style="background-color: #e1e1e1;">
         <div class="container pt-4">

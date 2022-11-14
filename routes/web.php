@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\PromoController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +29,10 @@ Route::get('/produk', function () {
 
 Route::get('/profil', function () {
     return view('profil');
+});
+
+Route::get('/promo', function () {
+    return view('promo');
 });
 
 // Route::get('/news', function () {
@@ -60,3 +66,11 @@ Route::post('/news/store', [NewsController::class, 'store'])->name('news.store')
 Route::get('/news/{id}/edit', [NewsController::class, 'edit'])->name('news.edit');
 Route::put('/news/{id}', [NewsController::class, 'update'])->name('news.update');
 Route::get('/news/{id}/destroy', [NewsController::class, 'destroy'])->name('news.destroy');
+
+// Route Promo
+Route::get('/adminpromo', [PromoController::class, 'index'])->name('adminpromo');
+Route::get('/promo/create', [PromoController::class, 'create'])->name('promo.create');
+Route::post('/promo/store', [PromoController::class, 'store'])->name('promo.store');
+Route::get('/promo/{id}/edit', [PromoController::class, 'edit'])->name('promo.edit');
+Route::put('/promo/{id}', [PromoController::class, 'update'])->name('promo.update');
+Route::get('/promo/{id}/destroy', [PromoController::class, 'destroy'])->name('promo.destroy');

@@ -98,13 +98,13 @@ nav{
 
 .nav-item{
     color: black;
-    padding: 5px 5px 5px 25px;
+    padding: 5px 5px 5px 17px;
     text-decoration: none;
     display: block;
 }
 
 .nav-link{
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 400;
 }
 

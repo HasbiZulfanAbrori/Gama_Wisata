@@ -52,7 +52,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <table class="table table-bordered">
                             <tr>
                                 <th>No</th>
-                                <th>Nama</th>
+                                <th>Judul</th>
                                 <th>Gambar</th>
                                 <th>Keterangan</th>
                                 <th>Aksi</th>
@@ -60,9 +60,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @foreach($news as $n)
                             <tr>
                                 <td>{{$n->id}}.</td>
-                                <td>{{$n->nama}}</td>
-                                <td><img class="img-fluid" src="{{asset('gambar/'.$n->gambar)}}" alt="gambar"></td>
-                                <td>{{$n->keterangan}}</td>
+                                <td>{{$n->judul_news}}</td>
+                                <td><img class="img-fluid" src="{{asset('gambar_news/'.$n->gambar_news)}}" style="width : 70%" alt="gambar"></td>
+                                <td>{{$n->keterangan_news}}</td>
                                 <td>
                                     <a class="btn btn-primary" href="/news/{{$n->id}}/edit">Edit</a>
                                     <a class="btn btn-danger" href="/news/{{$n->id}}/destroy">Destroy</a>

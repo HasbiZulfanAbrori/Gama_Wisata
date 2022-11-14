@@ -32,6 +32,12 @@
             <li class="nav-item">
               <a class="nav-link" href="/news">News</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/produk">Produk</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/promo">Promo</a>
+            </li>
           </ul>
           <form class="d-flex">
             <input class="form-control me-2" type="text" placeholder="Search">
@@ -120,42 +126,81 @@
               <div class="header-sosmed">Sosial Media</div>
               <div class="sosmed-line mb-3"></div>
                 <div class="row">
-                    <div class="col-4">
-                        <div class="card">
-                            <div class="text-center">
-                                <img class="card-img-top mt-3" src="./assets/img/Sosmed.png" alt="Card image" style="width:70%">
-                            </div>
-                            <div class="card-body">
-                            <h4 class="card-title">Instagram</h4>
-                            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, sed!</p>
-                            <button type="button" class="btn btn-primary">Read More...</button>
-                            </div>
+                  <div class="col-4">
+                    <div class="card">
+                        <div class="text-center">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="text-center mt-2">Instagram</h3>
+                            <div class="embedsocial-hashtag" data-ref="1ab4dff5751ee7ee202f3630578c32b6837281fd"> <a
+                                    class="feed-powered-by-es feed-powered-by-es-feed-new"
+                                    href="https://embedsocial.com/social-media-aggregator/" target="_blank"
+                                    title="Widget by EmbedSocial"><span>→</span> </a> </div>
+                            <script>
+                            (function(d, s, id) {
+                                var js;
+                                if (d.getElementById(id)) {
+                                    return;
+                                }
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = "https://embedsocial.com/cdn/ht.js";
+                                d.getElementsByTagName("head")[0].appendChild(js);
+                            }(document, "script", "EmbedSocialHashtagScript"));
+                            </script>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="card">
-                            <div class="text-center">
-                                <img class="card-img-top mt-3" src="./assets/img/Sosmed.png" alt="Card image" style="width:70%">
-                            </div>
-                            <div class="card-body">
-                            <h4 class="card-title">Facebook</h4>
-                            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, sed!</p>
-                            <button type="button" class="btn btn-primary">Read More...</button>
-                            </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="card">
+                        <div class="text-center">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="text-center mt-4">Facebook</h3>
+                            <div class="embedsocial-hashtag" data-ref="1ab4dff5751ee7ee202f3630578c32b6837281fd"> <a
+                                    class="feed-powered-by-es feed-powered-by-es-feed-new"
+                                    href="https://embedsocial.com/social-media-aggregator/" target="_blank"
+                                    title="Widget by EmbedSocial"><span>→</span> </a> </div>
+                            <script>
+                            (function(d, s, id) {
+                                var js;
+                                if (d.getElementById(id)) {
+                                    return;
+                                }
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = "https://embedsocial.com/cdn/ht.js";
+                                d.getElementsByTagName("head")[0].appendChild(js);
+                            }(document, "script", "EmbedSocialHashtagScript"));
+                            </script>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="card">
-                            <div class="text-center">
-                                <img class="card-img-top mt-3" src="./assets/img/Sosmed.png" alt="Card image" style="width:70%">
-                            </div>
-                            <div class="card-body">
-                            <h4 class="card-title">Tiktok</h4>
-                            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, sed!</p>
-                            <button type="button" class="btn btn-primary">Read More...</button>
-                            </div>
+                  </div>
+                <div class="col-4">
+                    <div class="card">
+                        <div class="text-center">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="text-center mt-2">Instagram</h3>
+                            <div class="embedsocial-hashtag" data-ref="1ab4dff5751ee7ee202f3630578c32b6837281fd"> <a
+                                    class="feed-powered-by-es feed-powered-by-es-feed-new"
+                                    href="https://embedsocial.com/social-media-aggregator/" target="_blank"
+                                    title="Widget by EmbedSocial"><span>→</span> </a> </div>
+                            <script>
+                            (function(d, s, id) {
+                                var js;
+                                if (d.getElementById(id)) {
+                                    return;
+                                }
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = "https://embedsocial.com/cdn/ht.js";
+                                d.getElementsByTagName("head")[0].appendChild(js);
+                            }(document, "script", "EmbedSocialHashtagScript"));
+                            </script>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </div>

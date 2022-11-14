@@ -12,7 +12,7 @@ class NewsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(News $id)
     {
         $news = News::all();
         return view('admin.news.index',compact('news'));
@@ -23,9 +23,11 @@ class NewsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        return view('admin.news.create');
+        return view('admin.news.create', [
+            'news' => News::where($id->id)->get(),
+        ]);
     }
 
     /**
@@ -40,13 +42,13 @@ class NewsController extends Controller
         // return redirect('/adminnews');
         // return $request;
         $tambah = new News;
-        $tambah->nama=$request->get('nama');
-        $tambah->keterangan=$request->get('keterangan');
-        if ($request->hasFile('gambar')) {
-            $gambar = $request->file('gambar');
-            $filename = date('His').'.'.$request->file('gambar')->extension();
-            if ($gambar->move('gambar',$filename)) {
-                $tambah->gambar=$filename;
+        $tambah->judul_news=$request->get('judul_news');
+        $tambah->keterangan_news=$request->get('keterangan_news');
+        if ($request->hasFile('gambar_news')) {
+            $gambar_news = $request->file('gambar_news');
+            $filename = date('His').'.'.$request->file('gambar_news')->extension();
+            if ($gambar_news->move('gambar_news',$filename)) {
+                $tambah->gambar_news=$filename;
             } else {
                 # code...
             }
@@ -78,8 +80,10 @@ class NewsController extends Controller
     {
         // $news = News::find($id);
         // return view('admin.news.edit',compact(['news']));
-        $edit = News::find($id);
-        return view('admin.news.edit',compact('edit'));
+        $editnews = News::find($id);
+        return view('admin.news.edit',[
+            'editnews' => $editnews,]
+        );
     }
 
     /**
@@ -92,15 +96,15 @@ class NewsController extends Controller
     public function update(Request $request, $id)
     {
         $ubah = News::find($id);
-        $awal = $ubah->gambar;
+        $awal = $ubah->gambar_news;
         $edit = [
-            'nama' => $request['nama'],
-            'gambar' => $awal,
-            'keterangan' => $request['keterangan'],
+            'judul_news' => $request['judul_news'],
+            'gambar_news' => $awal,
+            'keterangan_news' => $request['keterangan_news'],
         ];
-        $request->gambar->move(public_path().'/gambar', $awal);
+        $request->gambar_news->move(public_path().'/gambar_news', $awal);
         $ubah->update($edit);
-        return redirect('/adminnews');
+        return redirect('/adminnews')->with('updateSucces','Data Berhasil di Update');
 
     }
 
@@ -117,4 +121,19 @@ class NewsController extends Controller
         $hapus->delete();
         return redirect('/adminnews');
     }
+
+    public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+ 
+    		// mengambil data dari table pegawai sesuai pencarian data
+		$news = News::table('news')
+		->where('nama','like',"%".$cari."%")
+		->paginate();
+ 
+    		// mengirim data pegawai ke view index
+		return view('index',['news' => $news]);
+ 
+	}
 }
