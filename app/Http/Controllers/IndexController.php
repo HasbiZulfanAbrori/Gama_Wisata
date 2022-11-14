@@ -14,7 +14,7 @@ class IndexController extends Controller
      */
     public function index()
     {
-        return view('index')->with(['news' => News::paginate(10)]);
+        return view('index')->with(['news' => News::paginate(5)]);
     }
 
     /**
