@@ -14,7 +14,13 @@ class ProdukController extends Controller
      */
     public function index()
     {
-        //
+        $produk = Produk::all();
+        return view('admin.produk.index',compact('produk'));
+    }
+
+    public function tampil_produk(){
+        $produk = Produk::all();
+        return view('frontend.produk', compact('produk'));
     }
 
     /**
@@ -22,9 +28,11 @@ class ProdukController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Produk $id)
     {
-        //
+        return view('admin.produk.create', [
+            'produk' => Produk::where($id->id)->get(),
+        ]);
     }
 
     /**
@@ -35,7 +43,21 @@ class ProdukController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tambah = new Produk;
+        $tambah->nama_produk=$request->get('nama_produk');
+        $tambah->deskripsi_produk=$request->get('deskripsi_produk');
+        if ($request->hasFile('gambar_produk')) {
+            $gambar_produk = $request->file('gambar_produk');
+            $filename = date('His').'.'.$request->file('gambar_produk')->extension();
+            if ($gambar_produk->move('gambar_produk',$filename)) {
+                $tambah->gambar_produk=$filename;
+            } else {
+                # code...
+            }
+            
+        }
+        $tambah->save();
+        return redirect('/adminproduk');
     }
 
     /**
@@ -55,9 +77,12 @@ class ProdukController extends Controller
      * @param  \App\Models\Produk  $produk
      * @return \Illuminate\Http\Response
      */
-    public function edit(Produk $produk)
+    public function edit( $id)
     {
-        //
+        $editproduk = Produk::find($id);
+        return view('admin.produk.edit',[
+            'editproduk' => $editproduk,]
+        );
     }
 
     /**
@@ -67,9 +92,18 @@ class ProdukController extends Controller
      * @param  \App\Models\Produk  $produk
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Produk $produk)
+    public function update(Request $request, $id)
     {
-        //
+        $ubah = Produk::find($id);
+        $awal = $ubah->gambar_produk;
+        if($request->gambar_produk){
+            $ubah->gambar_produk = $awal;
+            $request->gambar_produk->move(public_path().'/gambar_produk', $awal);
+        }
+        $ubah->nama_produk = $request->nama_produk;
+        $ubah->deskripsi_produk = $request->deskripsi_produk;
+        $ubah->save();
+        return redirect('/adminproduk')->with('updateSucces','Data Berhasil di Update');
     }
 
     /**
@@ -78,8 +112,11 @@ class ProdukController extends Controller
      * @param  \App\Models\Produk  $produk
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Produk $produk)
+    public function destroy($id)
     {
-        //
+        $hapus = Produk::find($id);
+        // unlink($hapus->gambar);
+        $hapus->delete();
+        return redirect('/adminproduk');
     }
 }

@@ -1,3 +1,6 @@
+<?php
+use Illuminate\Support\Str;
+?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -31,41 +34,53 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Edit Data News</li>
+                                <li class="breadcrumb-item active">DATA PRODUK</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
                 </div><!-- /.container-fluid -->
             </div>
             <!-- /.content-header -->
+
             <!-- Main content -->
             <div class="content">
                 <div class="card card-info card-out-line">
                     <div class="card-header">
-                        <h3>Edit Data News {{$editnews->nama}}</h3>
+                        <div class="card-tools">
+                            <a href="{{route('produk.create')}}" class="btn btn-succes">Tambah Data <i
+                                    class="fas fa-plus-square"></i> </a>
+                        </div>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="{{ route('news.update', $editnews->id) }}" enctype="multipart/form-data">
-                            @method('put')
-                            @csrf
-                            <div class="form-group">
-                                <label for="">Judul News</label>
-                                <input type="text" id="judul_news" name="judul_news" class="form-control" placeholder="Judul News"
-                                    value="{{$editnews->judul_news}}">
-                            </div>
-                            <div class="form-group">
-                                <label for="">Gambar</label><br>
-                                <img src="{{asset('gambar_news/'.$editnews->gambar_news)}}" style="width: 70%" id="image" alt="">
-                                <input type="file" name="gambar_news" class="form-control mt-2" accept="gambar_news/*"
-                                    onchange="document.getElementById('gambar_news').src = window.URL.createObjectURL(this.files[0])">
-                            </div>
-                            <div class="form-group">
-                                <label for="">Keterangan</label>
-                                <textarea id="keterangan_news" name="keterangan_news" class="form-control" value="{{$editnews->keterangan_news}}">{{$editnews->keterangan_news}}</textarea>
-                            </div>
-                         <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">Edit Data</button>
-                        </form>
+                        <table class="table table-bordered" id="Table">
+                            <thead>
+                                <tr>
+                                    {{-- <th>No</th> --}}
+                                    <th>Nama Produk</th>
+                                    <th>Gambar Produk</th>
+                                    <th>Deskripsi</th>
+                                    <th>created_at</th>
+                                    <th>updated_at</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($produk as $n)
+                                <tr>
+                                    {{-- <td>{{$n->id}}.</td> --}}
+                                    <td>{{$n->nama_produk}}</td>
+                                    <td><img class="img-fluid" src="{{asset('gambar_produk/'.$n->gambar_produk)}}" style="width : 70%" alt="gambar"></td>
+                                    <td>{{$n->deskripsi_produk}}</td>
+                                    <td>{{$n->created_at}}</td>
+                                    <td>{{$n->updated_at}}</td>
+                                    <td>
+                                        <a class="btn btn-primary" href="/produk/{{$n->id}}/edit">Edit</a>
+                                        <a class="btn btn-danger" href="/produk/{{$n->id}}/destroy">Destroy</a>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

@@ -14,49 +14,33 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm fixed-top">
-        <div class="container" id="navbar">
-            <a class="navbar-brand" href="/">
-                <img src="./assets/img/logo gama wisata.png" alt="Logo" style="width: 250px" />
-            </a>
-            <div class="collapse navbar-collapse" id="mynavbar">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/profil">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/news">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/produk">Produk</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/promo">Promo</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="text" placeholder="Search">
-                    <button class="btn btn-primary" type="button">Search</button>
-                </form>
+    <section id="bg-header">
+        <div class="overlay"></div>
+        <!-- Ubah link dalam "src" sesuai video yang diinginkan -->
+        <img src="./assets/img/background.jpeg" alt="Background">
+    </section>
+    {{-- navbar --}}
+    @include('frontend.template.navbar')
+    {{-- ------ --}}
+    <section id="text-header">
+        <div class="container">
+            <h1 class="text-center mb-2">News</h1>
+        </div>
+    </section>
+    <div class="container">
+        @foreach($berita as $b)
+        <div class="news mt-3">
+            <img src="{{asset('gambar_news/'.$b->gambar_news)}}" alt="News">
+            <div class="news-title" mt-3>
+                {{$b->judul_news}}
+            </div>
+            <div class="news-text">{{Illuminate\Support\Str::of($b->keterangan_news)->words(30)}}</div>
+            <div class="btn-position">
+                <a href="{{ route('artikel', $b->id) }}" class="btn-news">Read More</a>
             </div>
         </div>
-    </nav>
-    <div class="container padd100" id="artikel">
-        <div class="artikel-title mb-1">
-            {{$artikel->judul_news}}
-        </div>
-        <div class="artikel-date mb-4">
-            {{$artikel->created_at}}
-        </div>
-        <div class="artikel-top-img mb-3">
-            <img src="{{asset('gambar_news/'.$artikel->gambar_news)}}" alt="Logo" style="width: 600px">
-        </div>
-        <div class="artikel-text mt-3">
-            {{$artikel->keterangan_news}}
-        </div>
+        @endforeach
+    </div>
     </div>
     <footer class="text-center text-white mt-4" id="CostomerService" style="background-color: #e1e1e1;">
         <div class="container pt-4">

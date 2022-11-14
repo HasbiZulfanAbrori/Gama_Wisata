@@ -16,51 +16,25 @@
       <!-- Ubah link dalam "src" sesuai video yang diinginkan -->
       <img src="./assets/img/background.jpeg" alt="Background">
     </section>
-    <nav class="navbar navbar-expand-sm fixed-top">
-      <div class="container" id="navbar">
-          <a class="navbar-brand" href="/">
-            <img src="./assets/img/logo gama wisata.png" alt="Logo" style="width: 250px" />
-          </a>
-        <div class="collapse navbar-collapse" id="mynavbar">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/profil">Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/news">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/produk">Produk</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/promo">Promo</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="text" placeholder="Search">
-            <button class="btn btn-primary" type="button">Search</button>
-          </form>
-        </div>
-      </div>
-    </nav>
+    {{-- navbar --}}
+    @include('frontend.template.navbar')
+    {{-- ------ --}}
     <section id="text-header">
       <div class="container">
           <h1 class="text-center mb-2">Produk Kami</h1>
       </div>        
     </section>
     <div class="container mt-3" id="Produk">
+        @foreach($produk as $p)
         <div class="produk mb-3">
-            <img src="./assets/img/airplane.svg" alt="Tiket Pesawat">
+            <img src="{{asset('gambar_produk/'.$p->gambar_produk)}}" alt="Tiket Pesawat">
             <div class="produk-title mb-2" >
-              Tiket Pesawat
+              {{$p->nama_produk}}
             </div>
-            <div class="produk-text">Gama Wisata menyediakan layanan untuk pembelian tiket pesawat baik untuk tujuan domestik maupun internasional. Saat ini Gama Wisata telah menjadi agent resmi IATA (International Air Transport Association) yang merupakan organisasi perdagangan internasional yang terdiri dari maskapai-maskapai penerbangan.
-                Pelayanan tiket pesawat kami lakukan dari hari Senin sampai dengan hari Minggu jam 08.00 - 21.00 WIB, Selain Tiket Pesawat Gama Wisata juga menyediakan tiket kereta untuk tujuan di seluruh Indonesia.</div>
+            <div class="produk-text">{{$p->deskripsi_produk}}</div>
         </div>
-        <div class="produk  mb-3">
+        @endforeach
+        {{-- <div class="produk  mb-3">
             <img src="./assets/img/train-front.svg" alt="Tiket Kereta Api">
             <div class="produk-title mb-2" >
                 Tiket Kereta Api
@@ -75,7 +49,7 @@
             <div class="produk-text">Gama Wisata kini menyediakan fasilitas agar para pelanggan dapat melakukan pemeanan kamar di 250.000 hotel yang tersebar di seluruh penjuru dunia dengan lebih cepat, lebih mudah, lebih murah.
                 Dengan jaringan global dan koneksi yang kuat di Singapura, Kuala Lumpur, Beijing, Hongkong, Dubai, Bangkok, Osaka, Sydney, Melbourne, Paris, London, Roma serta ratusan kota-kota besar di seluruh dunia, pemesanan hotel melalui Gama Wisata adalah pilihan yang bijak dan tepat.
                 Sebagai biro perjalanan wisata yang berpengalaman dan berdiri sejak tahun 2002,  kami siap memberikan pelayanan penuh kepada pelanggan yang mengalami kendala dan permasalahan dangan reservasi hotel</div>
-        </div>
+        </div> --}}
     </div>
     <footer class="text-center text-white mt-4" id="CostomerService" style="background-color: #e1e1e1;">
         <div class="container pt-4">

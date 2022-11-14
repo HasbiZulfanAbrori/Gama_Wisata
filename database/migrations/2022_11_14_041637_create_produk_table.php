@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('gambar_produk');
             $table->string('nama_produk');
-            $table->string('deskripsi_produk');
+            $table->text('deskripsi_produk');
             $table->timestamps();
         });
     }

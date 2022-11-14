@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\ProdukController;
 
 
 /*
@@ -20,17 +21,10 @@ use App\Http\Controllers\IndexController;
 */
 
 
-Route::get('/produk', function () {
-    return view('produk');
-});
-
 Route::get('/profil', function () {
-    return view('profil');
+    return view('frontend.profil');
 });
 
-Route::get('/promo', function () {
-    return view('promo');
-});
 
 // Route::get('/news', function () {
 //     return view('news');
@@ -64,13 +58,14 @@ Route::get('/news/{id}/edit', [NewsController::class, 'edit'])->name('news.edit'
 Route::put('/news/{id}', [NewsController::class, 'update'])->name('news.update');
 Route::get('/news/{id}/destroy', [NewsController::class, 'destroy'])->name('news.destroy');
 
-// Route Promo
-Route::get('/adminpromo', [PromoController::class, 'index'])->name('adminpromo');
-Route::get('/promo/create', [PromoController::class, 'create'])->name('promo.create');
-Route::post('/promo/store', [PromoController::class, 'store'])->name('promo.store');
-Route::get('/promo/{id}/edit', [PromoController::class, 'edit'])->name('promo.edit');
-Route::put('/promo/{id}', [PromoController::class, 'update'])->name('promo.update');
-Route::get('/promo/{id}/destroy', [PromoController::class, 'destroy'])->name('promo.destroy');
+// Route Produk
+Route::get('/adminproduk', [ProdukController::class, 'index'])->name('adminproduk');
+Route::get('/produk', [ProdukController::class, 'tampil_produk'])->name('produk');
+Route::get('/produk/create', [ProdukController::class, 'create'])->name('produk.create');
+Route::post('/produk/store', [ProdukController::class, 'store'])->name('produk.store');
+Route::get('/produk/{id}/edit', [ProdukController::class, 'edit'])->name('produk.edit');
+Route::put('/produk/{id}', [ProdukController::class, 'update'])->name('produk.update');
+Route::get('/produk/{id}/destroy', [ProdukController::class, 'destroy'])->name('produk.destroy');
 
 //Route Index
 Route::get('/', [IndexController::class, 'index'])->name('');

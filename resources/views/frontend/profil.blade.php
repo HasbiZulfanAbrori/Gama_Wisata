@@ -18,36 +18,9 @@
         <!-- Ubah link dalam "src" sesuai video yang diinginkan -->
         <img src="./assets/img/background.jpeg" alt="Background">
       </section>
-    <nav class="navbar navbar-expand-sm fixed-top">
-        <div class="container" id="navbar">
-            <a class="navbar-brand" href="/">
-                <img src="./assets/img/logo gama wisata.png" alt="Logo" style="width: 250px" />
-            </a>
-            <div class="collapse navbar-collapse" id="mynavbar">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/profil">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/news">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/produk">Produk</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/promo">Promo</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="text" placeholder="Search">
-                    <button class="btn btn-primary" type="button">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
+    {{-- navbar --}}
+    @include('frontend.template.navbar')
+    {{-- ------ --}}
     <section id="text-header">
         <div class="container">
             <h1 class="text-center mb-2">Profil Gama Wisata</h1>

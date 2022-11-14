@@ -10,6 +10,6 @@ class ArtikelController extends Controller
     public function show($id)
     {
         $artikel = News::find($id);
-        return view('artikel',compact('artikel'));
+        return view('frontend.artikel',compact('artikel'));
     }
 }

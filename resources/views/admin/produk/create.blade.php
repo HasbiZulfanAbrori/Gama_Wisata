@@ -31,7 +31,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Edit Data News</li>
+                                <li class="breadcrumb-item active">Data News</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -42,29 +42,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="content">
                 <div class="card card-info card-out-line">
                     <div class="card-header">
-                        <h3>Edit Data News {{$editnews->nama}}</h3>
+                        <h3>Masukkan Data New</h3>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="{{ route('news.update', $editnews->id) }}" enctype="multipart/form-data">
-                            @method('put')
+                        <form action="{{route('produk.store')}}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <label for="">Judul News</label>
-                                <input type="text" id="judul_news" name="judul_news" class="form-control" placeholder="Judul News"
-                                    value="{{$editnews->judul_news}}">
+                                <label for="nama">Nama Produk</label>
+                                <input type="text" id="nama_produk" name="nama_produk" class="form-control" placeholder="Nama Produk" required autofocus value="{{ old('nama') }}">
                             </div>
                             <div class="form-group">
-                                <label for="">Gambar</label><br>
-                                <img src="{{asset('gambar_news/'.$editnews->gambar_news)}}" style="width: 70%" id="image" alt="">
-                                <input type="file" name="gambar_news" class="form-control mt-2" accept="gambar_news/*"
-                                    onchange="document.getElementById('gambar_news').src = window.URL.createObjectURL(this.files[0])">
+                                <label for="">Masukkan Gambar</label>
+                                <input type="file" name="gambar_produk" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="">Keterangan</label>
-                                <textarea id="keterangan_news" name="keterangan_news" class="form-control" value="{{$editnews->keterangan_news}}">{{$editnews->keterangan_news}}</textarea>
+                                <label class="mt-2" for="">Deskripsi Produk</label>
+                                <textarea name="deskripsi_produk" class="form-control" placeholder="Deskripsi Produk"></textarea>
                             </div>
-                         <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">Edit Data</button>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Simpan</button>
                         </form>
                     </div>
                 </div>

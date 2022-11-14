@@ -10,6 +10,6 @@ class BeritaController extends Controller
     public function index()
     {
         $berita = News::all();
-        return view('news',compact('berita'));
+        return view('frontend.news',compact('berita'));
     }
 }

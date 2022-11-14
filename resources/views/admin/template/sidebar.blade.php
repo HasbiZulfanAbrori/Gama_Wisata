@@ -55,10 +55,17 @@
                             </a>
                         </li>
                     </ul>
-                    <ul class="nav nav-treeview">
+                    {{-- <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{route('adminpromo')}}" class="nav-link">
                                 Data Promo
+                            </a>
+                        </li>
+                    </ul> --}}
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('adminproduk')}}" class="nav-link">
+                                Data Produk
                             </a>
                         </li>
                     </ul>
