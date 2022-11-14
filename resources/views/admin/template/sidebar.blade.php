@@ -58,18 +58,25 @@
                     {{-- <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{route('adminindex')}}" class="nav-link">
-                                Data Header
-                            </a>
-                        </li>
-                    </ul> --}}
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{route('adminproduk')}}" class="nav-link">
-                                Data Produk
-                            </a>
-                        </li>
-                    </ul>
+                    Data Header
+                    </a>
                 </li>
+            </ul> --}}
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{route('adminproduk')}}" class="nav-link">
+                        Data Produk
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{route('adminindex')}}" class="nav-link">
+                        Data Index
+                    </a>
+                </li>
+            </ul>
+            </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
