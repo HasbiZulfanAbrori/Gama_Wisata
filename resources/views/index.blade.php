@@ -111,16 +111,18 @@
           <div class="container padd100" id="News">
             <div class="header-news mb-3">News</div>
             <div class="news-line mb-3"></div>
-            <div class="news">
-                <img src="./assets/img/news.png" alt="News">
-                <div class="news-title" mt-3>
-                  News Title
-                </div>
-                <div class="news-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit iste aliquam adipisci ullam, quaerat odit iusto ad quam nulla non excepturi ipsam cum molestias ex eligendi omnis, ut suscipit fuga. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla veritatis quaerat qui molestias porro sunt ex reprehenderit perferendis quos cum, ea quod dolorum molestiae labore! Quisquam commodi modi ratione nulla! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio possimus odio dolores labore, perferendis porro id, delectus aperiam, maxime illum at quo culpa temporibus quas! Eligendi obcaecati dolorem corrupti velit.</div>
-                <div class="btn-position">
-                  <div class="btn-news" href="#" role="button">Read More</div>
-                </div>
-            </div>
+              @foreach($news as $b)
+              <div class="news mt-3">
+                  <img src="{{asset('gambar_news/'.$b->gambar_news)}}" alt="News">
+                  <div class="news-title" mt-3>
+                      {{$b->judul_news}}
+                  </div>
+                  <div class="news-text">{{Illuminate\Support\Str::of($b->keterangan_news)->words(30)}}</div>
+                  <div class="btn-position">
+                      <a href="/artikel" class="btn-news">Read More</a>
+                  </div>
+              </div>
+              @endforeach
           </div>
             <div class="jumbotron padd100" id="Sosmed">
               <div class="header-sosmed">Sosial Media</div>

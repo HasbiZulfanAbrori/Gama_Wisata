@@ -54,7 +54,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="card-body">
                         <table class="table table-bordered">
                             <tr>
-                                <th>No</th>
+                                {{-- <th>No</th> --}}
                                 <th>Judul</th>
                                 <th>Gambar</th>
                                 <th>Keterangan</th>
@@ -62,7 +62,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </tr>
                             @foreach($news as $n)
                             <tr>
-                                <td>{{$n->id}}.</td>
+                                {{-- <td>{{$n->id}}.</td> --}}
                                 <td>{{$n->judul_news}}</td>
                                 <td><img class="img-fluid" src="{{asset('gambar_news/'.$n->gambar_news)}}" style="width : 70%" alt="gambar"></td>
                                 <td>{{$n->keterangan_news}}</td>

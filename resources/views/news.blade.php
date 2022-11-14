@@ -14,6 +14,11 @@
 </head>
 
 <body>
+    <section id="bg-header">
+        <div class="overlay"></div>
+        <!-- Ubah link dalam "src" sesuai video yang diinginkan -->
+        <img src="./assets/img/background.jpeg" alt="Background">
+    </section>
     <nav class="navbar navbar-expand-sm fixed-top">
         <div class="container" id="navbar">
             <a class="navbar-brand" href="/">
@@ -44,9 +49,12 @@
             </div>
         </div>
     </nav>
-    <div class="padd100"></div>
+    <section id="text-header">
+        <div class="container">
+            <h1 class="text-center mb-2">News</h1>
+        </div>        
+      </section>
     <div class="container">
-        <div class="header-news mb-3">News</div>
         @foreach($berita as $b)
         <div class="news mt-3">
             <img src="{{asset('gambar_news/'.$b->gambar_news)}}" alt="News">

@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ArtikelController;
-use App\Http\Controllers\PromoController;
+use App\Http\Controllers\IndexController;
 
 
 /*
@@ -19,9 +19,6 @@ use App\Http\Controllers\PromoController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
 
 Route::get('/produk', function () {
     return view('produk');
@@ -74,3 +71,6 @@ Route::post('/promo/store', [PromoController::class, 'store'])->name('promo.stor
 Route::get('/promo/{id}/edit', [PromoController::class, 'edit'])->name('promo.edit');
 Route::put('/promo/{id}', [PromoController::class, 'update'])->name('promo.update');
 Route::get('/promo/{id}/destroy', [PromoController::class, 'destroy'])->name('promo.destroy');
+
+//Route Index
+Route::get('/', [IndexController::class, 'index'])->name('');

@@ -15,10 +15,4 @@ class News extends Model
         'nama','gambar,','keterangan'
     ];
     
-
-    
-    public function kategori(): BelongsTo
-    {
-        return $this->belongsTo(Kategori::class);
-    }
 }

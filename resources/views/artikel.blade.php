@@ -46,25 +46,19 @@
     </nav>
     <div class="container padd100" id="artikel">
         @foreach($artikel as $a)
-        <div class="artikel-top-img">
-            <img src="{{asset('gambar_news/'.$a->gambar_news)}}" alt="Logo" style="width: 600px">
-        </div>
-        <div class="artikel-title mt-3">
+        <div class="artikel-title mb-1">
             {{$a->judul_news}}
+        </div>
+        <div class="artikel-date mb-4">
+            {{$a->created_at}}
+        </div>
+        <div class="artikel-top-img mb-3">
+            <img src="{{asset('gambar_news/'.$a->gambar_news)}}" alt="Logo" style="width: 600px">
         </div>
         <div class="artikel-text mt-3">
             {{$a->keterangan_news}}
         </div>
         @endforeach
-        {{-- <div class="sub-artikel mt-3">
-            @foreach($artikel as $a)
-            <div class="title">{{$a->id}}. {{$a->nama}}</div>
-            <div class="row-artikel">
-                <img src="{{asset('gambar/'.$a->gambar)}}" alt="News">
-                <div class="text">{{$a->keterangan}}</div>
-            </div>
-            @endforeach
-        </div> --}}
     </div>
     <footer class="text-center text-white mt-4" id="CostomerService" style="background-color: #e1e1e1;">
         <div class="container pt-4">
