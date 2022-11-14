@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Index;
 use Illuminate\Http\Request;
-use App\Models\News;
+
 
 class IndexController extends Controller
 {
@@ -12,9 +13,10 @@ class IndexController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Index $id)
     {
-        return view('index')->with(['news' => News::paginate(5)]);
+        $index = Index::all();
+        return view('admin.index.index',compact('index'));
     }
 
     /**
@@ -22,9 +24,11 @@ class IndexController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Index $id)
     {
-        //
+        return view('admin.index.create', [
+            'index' => Index::where($id->id)->get(),
+        ]);
     }
 
     /**
@@ -35,8 +39,24 @@ class IndexController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tambah = new Index;
+        $tambah->judul=$request->get('judul');
+        $tambah->branding=$request->get('branding');
+        if ($request->hasFile('video')) {
+            $video = $request->file('video');
+            $filename = date('His').'.'.$request->file('video')->extension();
+            if ($video->move('video',$filename)) {
+                $tambah->video=$filename;
+            } else {
+                # code...
+            }
+            
+        }
+        $tambah->save();
+        return redirect('/adminindex');
+
     }
+    
 
     /**
      * Display the specified resource.
@@ -57,7 +77,10 @@ class IndexController extends Controller
      */
     public function edit($id)
     {
-        //
+        $editindex = Index::find($id);
+        return view('admin.index.edit',[
+            'editindex' => $editindex,]
+        );
     }
 
     /**
@@ -69,7 +92,16 @@ class IndexController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $ubah = Index::find($id);
+        $awal = $ubah->video;
+        if($request->video){
+            $ubah->video = $awal;
+            $request->video->move(public_path().'/video', $awal);
+        }
+        $ubah->judul = $request->judul;
+        $ubah->branding = $request->branding;
+        $ubah->save();
+        return redirect('/adminindex')->with('updateSucces','Data Berhasil di Update');
     }
 
     /**
@@ -80,6 +112,9 @@ class IndexController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $hapus = Index::find($id);
+        // unlink($hapus->gambar);
+        $hapus->delete();
+        return redirect('/adminindex');
     }
 }

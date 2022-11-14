@@ -1,3 +1,6 @@
+<?php
+use Illuminate\Support\Str;
+?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -31,44 +34,44 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Edit Data News</li>
+                                <li class="breadcrumb-item active">DATA INDEX</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
                 </div><!-- /.container-fluid -->
             </div>
             <!-- /.content-header -->
+
             <!-- Main content -->
             <div class="content">
                 <div class="card card-info card-out-line">
                     <div class="card-header">
-                        <h3>Edit Data News {{$editnews->nama}}</h3>
+                        <div class="card-tools">
+                            <a href="{{route('index.create')}}" class="btn btn-succes">Tambah Data <i
+                                    class="fas fa-plus-square"></i> </a>
+                        </div>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="{{ route('news.update', $editnews->id) }}"
-                            enctype="multipart/form-data">
-                            @method('put')
-                            @csrf
-                            <div class="form-group">
-                                <label for="">Judul News</label>
-                                <input type="text" id="judul_news" name="judul_news" class="form-control"
-                                    placeholder="Judul News" value="{{$editnews->judul_news}}">
-                            </div>
-                            <div class="form-group">
-                                <label for="">Gambar</label><br>
-                                <img src="{{asset('gambar_news/'.$editnews->gambar_news)}}" style="width: 70%"
-                                    id="image" alt="">
-                                <input type="file" name="gambar_news" class="form-control mt-2" accept="gambar_news/*"
-                                    onchange="document.getElementById('gambar_news').src = window.URL.createObjectURL(this.files[0])">
-                            </div>
-                            <div class="form-group">
-                                <label for="">Keterangan</label>
-                                <textarea id="keterangan_news" name="keterangan_news" class="form-control"
-                                    value="{{$editnews->keterangan_news}}">{{$editnews->keterangan_news}}</textarea>
-                            </div>
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Edit Data</button>
-                        </form>
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>Video</th>
+                                <th>Judul</th>
+                                <th>Branding</th>
+                                <th>Aksi</th>
+                            </tr>
+                            @foreach($index as $i)
+                            <tr>
+                                <td><img class="img-fluid" src="{{asset('video/'.$i->video)}}" style="width : 70%"
+                                        alt="video"></td>
+                                <td>{{$i->judul}}</td>
+                                <td>{{$i->branding}}</td>
+                                <td>
+                                    <a class="btn btn-primary" href="/index/{{$i->id}}/edit">Edit</a>
+                                    <a class="btn btn-danger" href="/index/{{$i->id}}/destroy">Destroy</a>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </table>
                     </div>
                 </div>
             </div>

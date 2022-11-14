@@ -73,4 +73,10 @@ Route::put('/promo/{id}', [PromoController::class, 'update'])->name('promo.updat
 Route::get('/promo/{id}/destroy', [PromoController::class, 'destroy'])->name('promo.destroy');
 
 //Route Index
-Route::get('/', [IndexController::class, 'index'])->name('');
+// Route::get('/', [IndexController::class, 'index'])->name('');
+Route::get('/adminindex', [IndexController::class, 'index'])->name('adminindex');
+Route::get('/index/create', [IndexController::class, 'create'])->name('index.create');
+Route::post('/index/store', [IndexController::class, 'store'])->name('index.store');
+Route::get('/index/{id}/edit', [IndexController::class, 'edit'])->name('index.edit');
+Route::put('/index/{id}', [IndexController::class, 'update'])->name('index.update');
+Route::get('/index/{id}/destroy', [IndexController::class, 'destroy'])->name('index.destroy');
