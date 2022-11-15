@@ -468,6 +468,8 @@ video {
     font-weight: 400;
 }
 
-
+.table-bordered{
+    background-color: #ffffff;
+}
 
 

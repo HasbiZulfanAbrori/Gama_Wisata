@@ -47,7 +47,7 @@ class NewsController extends Controller
         $tambah->keterangan_news=$request->get('keterangan_news');
         if ($request->hasFile('gambar_news')) {
             $gambar_news = $request->file('gambar_news');
-            $filename = date('His').'.'.$request->file('gambar_news')->extension();
+            $filename = date('dmY').'.'.$request->file('gambar_news')->getClientOriginalName();
             if ($gambar_news->move('gambar_news',$filename)) {
                 $tambah->gambar_news=$filename;
             } else {

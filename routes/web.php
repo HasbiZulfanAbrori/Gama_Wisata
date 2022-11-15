@@ -7,6 +7,7 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\DownloadController;
 
 
 /*
@@ -75,3 +76,12 @@ Route::post('/index/store', [IndexController::class, 'store'])->name('index.stor
 Route::get('/index/{id}/edit', [IndexController::class, 'edit'])->name('index.edit');
 Route::put('/index/{id}', [IndexController::class, 'update'])->name('index.update');
 Route::get('/index/{id}/destroy', [IndexController::class, 'destroy'])->name('index.destroy');
+
+// Route Download
+Route::get('/admindownload', [DownloadController::class, 'index'])->name('admindownload');
+Route::get('/download', [DownloadController::class, 'tampil'])->name('download');
+Route::get('/download/create', [DownloadController::class, 'create'])->name('download.create');
+Route::post('/download/store', [DownloadController::class, 'store'])->name('download.store');
+Route::get('/download/{id}/edit', [DownloadController::class, 'edit'])->name('download.edit');
+Route::put('/download/{id}', [DownloadController::class, 'update'])->name('download.update');
+Route::get('/download/{id}/destroy', [DownloadController::class, 'destroy'])->name('download.destroy');

@@ -22,7 +22,8 @@ class IndexController extends Controller
     }
 
     public function datanews(){
-        return view('frontend.index')->with(['news' => News::paginate(5)]);
+        return view('frontend.index')
+        ->with(['news' => News::paginate(5)]);
     }
 
     /**
