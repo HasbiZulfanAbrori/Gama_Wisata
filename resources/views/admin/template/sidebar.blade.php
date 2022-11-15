@@ -69,14 +69,9 @@
                             </a>
                         </li>
                     </ul>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{route('admindownload')}}" class="nav-link">
-                                Data File Download
-                            </a>
-                        </li>
-                    </ul>
                 </li>
+            </ul>
+            </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

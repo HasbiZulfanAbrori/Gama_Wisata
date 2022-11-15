@@ -9,18 +9,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html lang="en">
 
 <head>
-    @include('admin.head')
+    @include('admin.template.head')
 </head>
 
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
 
         <!-- Navbar -->
-        @include('admin.navbar')
+        @include('admin.template.navbar')
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        @include('admin.sidebar')
+        @include('admin.template.sidebar')
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -61,8 +61,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </tr>
                             @foreach($index as $i)
                             <tr>
-                                <td><img class="img-fluid" src="{{asset('video/'.$i->video)}}" style="width : 70%"
-                                        alt="video"></td>
+                                <td>
+                                    <video width="320" height="240" type="video/mp4" src="{{asset('video/'.$i->video)}}"
+                                        autoplay muted></video>
+                                </td>
+                                <!-- <td><img class="img-fluid" src="{{asset('video/'.$i->video)}}" style="width : 70%"
+                                        alt="video"></td> -->
                                 <td>{{$i->judul}}</td>
                                 <td>{{$i->branding}}</td>
                                 <td>
@@ -92,13 +96,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Main Footer -->
         <footer class="main-footer">
             <!-- To the right -->
-            @include('admin.footer')
+            @include('admin.template.footer')
         </footer>
     </div>
     <!-- ./wrapper -->
 
     <!-- REQUIRED SCRIPTS -->
-    @include('admin.script')
+    @include('admin.template.script')
 
 </body>
 

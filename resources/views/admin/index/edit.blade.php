@@ -6,18 +6,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html lang="en">
 
 <head>
-    @include('admin.head')
+    @include('admin.template.head')
 </head>
 
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
 
         <!-- Navbar -->
-        @include('admin.navbar')
+        @include('admin.template.navbar')
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        @include('admin.sidebar')
+        @include('admin.template.sidebar')
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -42,7 +42,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="content">
                 <div class="card card-info card-out-line">
                     <div class="card-header">
-                        <h3>Masukkan Data Header{{$editindex->judul}}</h3>
+                        <h3>Masukkan Data Header <b>{{$editindex->judul}}</b></h3>
                     </div>
                     <div class="card-body">
                         <form method="post" action="{{ route('index.update', $editindex->id) }}"
@@ -51,7 +51,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @csrf
                             <div class="form-group">
                                 <label for="">Video</label><br>
-                                <img src="{{asset('video/'.$editindex->video)}}" style="width: 70%" id="image" alt="">
+                                <video width="320" height="240" type="video/mp4"
+                                    src="{{asset('video/'.$editindex->video)}}" autoplay muted></video>
                                 <input type="file" name="video" class="form-control">
                             </div>
                             <div class="form-group">
@@ -88,13 +89,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Main Footer -->
         <footer class="main-footer">
             <!-- To the right -->
-            @include('admin.footer')
+            @include('admin.template.footer')
         </footer>
     </div>
     <!-- ./wrapper -->
 
     <!-- REQUIRED SCRIPTS -->
-    @include('admin.script')
+    @include('admin.template.script')
 
 </body>
 

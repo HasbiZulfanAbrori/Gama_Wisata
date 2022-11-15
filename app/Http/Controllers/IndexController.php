@@ -49,6 +49,9 @@ class IndexController extends Controller
         $tambah = new Index;
         $tambah->judul=$request->get('judul');
         $tambah->branding=$request->get('branding');
+        $request->validate([
+            'video'=>'required|mimes:mp4,ogx,oga,ogv,ogg,webm'
+        ]);
         if ($request->hasFile('video')) {
             $video = $request->file('video');
             $filename = date('His').'.'.$request->file('video')->extension();
@@ -88,6 +91,7 @@ class IndexController extends Controller
         return view('admin.index.edit',[
             'editindex' => $editindex,]
         );
+        
     }
 
     /**
@@ -102,6 +106,9 @@ class IndexController extends Controller
         $ubah = Index::find($id);
         $awal = $ubah->video;
         if($request->video){
+            $request->validate([
+                'video'=>'required|mimes:mp4,ogx,oga,ogv,ogg,webm'
+            ]);
             $ubah->video = $awal;
             $request->video->move(public_path().'/video', $awal);
         }
