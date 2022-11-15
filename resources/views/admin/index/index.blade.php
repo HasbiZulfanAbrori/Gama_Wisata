@@ -61,8 +61,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </tr>
                             @foreach($index as $i)
                             <tr>
-                                <td><img class="img-fluid" src="{{asset('video/'.$i->video)}}" style="width : 70%"
-                                        alt="video"></td>
+                                <td>
+                                    <video width="320" height="240" type="video/mp4" src="{{asset('video/'.$i->video)}}"
+                                        autoplay muted></video>
+                                </td>
+                                <!-- <td><img class="img-fluid" src="{{asset('video/'.$i->video)}}" style="width : 70%"
+                                        alt="video"></td> -->
                                 <td>{{$i->judul}}</td>
                                 <td>{{$i->branding}}</td>
                                 <td>
