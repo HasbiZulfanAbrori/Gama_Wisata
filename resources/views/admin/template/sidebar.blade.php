@@ -55,13 +55,13 @@
                             </a>
                         </li>
                     </ul>
-                    <ul class="nav nav-treeview">
+                    {{-- <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{route('adminindex')}}" class="nav-link">
                                 Data Header
                             </a>
                         </li>
-                    </ul>
+                    </ul> --}}
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{route('adminproduk')}}" class="nav-link">
@@ -80,6 +80,13 @@
                         <li class="nav-item">
                             <a href="{{route('admincontact')}}" class="nav-link">
                                 Data Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('adminprofile')}}" class="nav-link">
+                                Data Profile
                             </a>
                         </li>
                     </ul>
