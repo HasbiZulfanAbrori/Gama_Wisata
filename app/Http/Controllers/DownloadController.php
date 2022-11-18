@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Download;
+use App\Models\Contact_Us;
 use Illuminate\Http\Request;
 
 class DownloadController extends Controller
@@ -20,8 +21,8 @@ class DownloadController extends Controller
 
     public function tampil(Download $id)
     {
-        $download = Download::all();
-        return view('frontend.download',compact('download'));
+        return view('frontend.download')
+        ->with(['download' => Download::all(),'contact_us' => Contact_Us::paginate(1)]);
     }
 
     /**

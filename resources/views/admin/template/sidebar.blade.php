@@ -55,17 +55,31 @@
                             </a>
                         </li>
                     </ul>
-                    {{-- <ul class="nav nav-treeview">
+                    <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{route('adminindex')}}" class="nav-link">
                                 Data Header
                             </a>
                         </li>
-                    </ul> --}}
+                    </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{route('adminproduk')}}" class="nav-link">
                                 Data Produk
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('admindownload')}}" class="nav-link">
+                                Data File Download
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('admincontact')}}" class="nav-link">
+                                Data Contact Us
                             </a>
                         </li>
                     </ul>

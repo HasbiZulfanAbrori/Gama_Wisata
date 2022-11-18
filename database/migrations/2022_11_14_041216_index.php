@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('index', function (Blueprint $table) {
             $table->id();
-            $table->file('video');
+            $table->string('video');
             $table->string('judul');
             $table->string('branding');
             $table->timestamps();

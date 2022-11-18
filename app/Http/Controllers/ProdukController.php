@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Produk;
+use App\Models\Contact_Us;
 use Illuminate\Http\Request;
 
 class ProdukController extends Controller
@@ -19,8 +20,8 @@ class ProdukController extends Controller
     }
 
     public function tampil_produk(){
-        $produk = Produk::all();
-        return view('frontend.produk', compact('produk'));
+        return view('frontend.produk')
+        ->with(['produk' => Produk::all(),'contact_us' => Contact_Us::paginate(1)]);
     }
 
     /**

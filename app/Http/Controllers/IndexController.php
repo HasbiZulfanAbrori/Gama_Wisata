@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Contact_Us;
 use App\Models\Index;
 use App\Models\News;
 use Illuminate\Http\Request;
@@ -23,8 +23,9 @@ class IndexController extends Controller
 
     public function datanews(){
         return view('frontend.index')
-        ->with(['news' => News::paginate(5)]);
+        ->with(['news' => News::paginate(5),'contact_us' => Contact_Us::paginate(1), 'index'=>Index::paginate(1)]);
     }
+
 
     /**
      * Show the form for creating a new resource.

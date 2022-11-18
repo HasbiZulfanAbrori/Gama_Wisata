@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\News;
+use App\Models\Contact_Us;
 
 class NewsController extends Controller
 {
@@ -17,6 +18,11 @@ class NewsController extends Controller
     {
         $news = News::all();
         return view('admin.news.index',compact('news'));
+    }
+
+    public function contact(){
+        return view('frontend.index')
+        ->with(['contact_us' => Contact_Us::paginate(1)]);
     }
 
     /**

@@ -42,34 +42,7 @@
         @endforeach
     </div>
     </div>
-    <footer class="text-center text-white mt-4" id="CostomerService" style="background-color: #e1e1e1;">
-        <div class="container pt-4">
-            <section class="mb-4">
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.facebook.com/PT.Gama.Wisata"
-                    role="button" data-mdb-ripple-color="dark">
-                    <img src="./assets/img/facebook.svg" style="height: 35px;">
-                </a>
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1"
-                    href="https://www.instagram.com/gama_wisata/?hl=id" role="button" data-mdb-ripple-color="dark">
-                    <img src="./assets/img/instagram.svg" style="height: 35px;">
-                </a>
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1"
-                    href="https://api.whatsapp.com/send?phone=6287845664888" role="button" data-mdb-ripple-color="dark">
-                    <img src="./assets/img/whatsapp.svg" style="height: 35px;">
-                </a>
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.tiktok.com/@gama_wisata"
-                    role="button" data-mdb-ripple-color="dark">
-                    <img src="./assets/img/tiktok.svg" style="height: 35px;">
-                </a>
-            </section>
-        </div>
-
-        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2022 Copyright:
-            <a class="text-dark" href="https://gamawisata.com/">gamawisata.com</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
+    @include('frontend.template.footer')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>

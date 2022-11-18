@@ -8,6 +8,7 @@ use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\DownloadController;
+use App\Http\Controllers\ContactUsController;
 
 
 /*
@@ -33,6 +34,7 @@ Route::get('/profil', function () {
 
 Route::get('news',[BeritaController::class,'index'])->name('berita');
 Route::get('artikel/{id}',[ArtikelController::class,'show'])->name('artikel');
+
 
 // Route::get('/artikel', function () {
 //     return view('artikel');
@@ -85,3 +87,11 @@ Route::post('/download/store', [DownloadController::class, 'store'])->name('down
 Route::get('/download/{id}/edit', [DownloadController::class, 'edit'])->name('download.edit');
 Route::put('/download/{id}', [DownloadController::class, 'update'])->name('download.update');
 Route::get('/download/{id}/destroy', [DownloadController::class, 'destroy'])->name('download.destroy');
+
+//Route Contact Us
+Route::get('/admincontact', [ContactUsController::class, 'index'])->name('admincontact');
+Route::get('/contact/create', [ContactUsController::class, 'create'])->name('contact.create');
+Route::post('/contact/store', [ContactUsController::class, 'store'])->name('contact.store');
+Route::get('/contact/{id}/edit', [ContactUsController::class, 'edit'])->name('contact.edit');
+Route::put('/contact/{id}', [ContactUsController::class, 'update'])->name('contact.update');
+Route::get('/contact/{id}/destroy', [ContactUsController::class, 'destroy'])->name('contact.destroy');

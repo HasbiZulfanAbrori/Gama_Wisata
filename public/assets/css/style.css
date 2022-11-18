@@ -166,16 +166,17 @@ video {
 
 #header {
     color: #fff;
+    padding-top: 250px;
   }
    
-  #header h1 {
+  #header h2 {
     font-size: 60px;
     font-family: "Abhaya Libre", serif;
     line-height: 0.9;
   }
    
   #header p {
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 300;
     font-family: "Poppins", sans-serif;
   }
@@ -221,10 +222,6 @@ video {
 
 .card{
     background-color: #eeeeee;
-}
-
-#CostomerService{
-    z-index: -100;
 }
 
 .news{
@@ -472,4 +469,32 @@ video {
     background-color: #ffffff;
 }
 
+footer{
+    height: 340px;
+    background-color: #e1e1e1e1;
+}
 
+footer h3{
+    font-weight: bold;
+    font-size: 35px;
+}
+
+footer img{
+    width: 9%;
+    opacity: 0.7;
+}
+
+footer .row-top{
+    padding-top: 25px;
+}
+
+footer p{
+    font-size: 15px;
+}
+
+.footer-line{
+    height: 3px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #0088ff;
+}
