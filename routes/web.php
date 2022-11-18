@@ -8,6 +8,7 @@ use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\DownloadController;
+use App\Http\Controllers\ProfileController;
 
 
 /*
@@ -85,3 +86,11 @@ Route::post('/download/store', [DownloadController::class, 'store'])->name('down
 Route::get('/download/{id}/edit', [DownloadController::class, 'edit'])->name('download.edit');
 Route::put('/download/{id}', [DownloadController::class, 'update'])->name('download.update');
 Route::get('/download/{id}/destroy', [DownloadController::class, 'destroy'])->name('download.destroy');
+
+// Route Profile
+Route::get('/adminprofile', [ProfileController::class, 'index'])->name('adminprofile');
+Route::get('/profile/create', [ProfileController::class, 'create'])->name('profile.create');
+Route::post('/profile/store', [ProfileController::class, 'store'])->name('profile.store');
+Route::get('/profile/{id}/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::put('/profile/{id}', [ProfileController::class, 'update'])->name('profile.update');
+Route::get('/profile/{id}/destroy', [ProfileController::class, 'destroy'])->name('profile.destroy');

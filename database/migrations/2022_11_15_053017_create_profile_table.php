@@ -13,11 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('index', function (Blueprint $table) {
+        Schema::create('profile', function (Blueprint $table) {
             $table->id();
-            $table->string('video');
-            $table->string('judul');
-            $table->string('branding');
+            $table->text('tentang_kami');
+            $table->text('visi');
+            $table->text('misi');
+            $table->text('gambar1');
+            $table->text('akreditasi');
+            $table->text('gambar2');
             $table->timestamps();
         });
     }
@@ -29,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('index');
+        Schema::dropIfExists('profile');
     }
 };
