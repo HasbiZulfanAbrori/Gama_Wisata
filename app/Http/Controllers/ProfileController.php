@@ -19,6 +19,12 @@ class ProfileController extends Controller
         return view('admin.profile.index',compact('profile'));
     }
 
+    public function profilefrontend(Profile $id)
+    {
+        $profilefrontend = Profile::all();
+        return view('frontend.profil',compact('profilefrontend'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

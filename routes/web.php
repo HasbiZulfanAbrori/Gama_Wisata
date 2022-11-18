@@ -23,9 +23,8 @@ use App\Http\Controllers\ProfileController;
 */
 
 
-Route::get('/profil', function () {
-    return view('frontend.profil');
-});
+Route::get('/profile', [ProfileController::class, 'profilefrontend'])->name('profile');
+
 
 
 // Route::get('/news', function () {
