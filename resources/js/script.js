@@ -14,6 +14,16 @@ function ReadMore() {
     }
 }
 
+document.querySelectorAll(".nav-item").forEach((ele) =>
+  ele.addEventListener("click", function (event) {
+    event.preventDefault();
+    document
+      .querySelectorAll(".nav-item")
+      .forEach((ele) => ele.classList.remove("active"));
+    this.classList.add("active")
+  })
+);
+
 function readMore(produk) {
   let readmore = document.querySelector(`.content[content-name="${produk}"] .readmore`);
   let moreText = document.querySelector(`.content[content-name="${produk}"] .more`);

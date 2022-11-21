@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model
 {
-    use HasFactory;
+    protected $table = "profile";
+    protected $guarded = ['id'];
+    protected $fillable = [
+        'tentang_kami','visi,','misi', 'gambar1', 'akreditasi', 'gambar2'
+    ];
 }

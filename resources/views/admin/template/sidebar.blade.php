@@ -90,6 +90,13 @@
                             </a>
                         </li>
                     </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('adminindex')}}" class="nav-link">
+                                Data Header Index
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
             </li>

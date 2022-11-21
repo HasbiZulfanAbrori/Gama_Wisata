@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\Profile;
+use App\Models\Contact_Us;
 
 class ProfileController extends Controller
 {
@@ -22,7 +23,8 @@ class ProfileController extends Controller
     public function profilefrontend(Profile $id)
     {
         $profilefrontend = Profile::all();
-        return view('frontend.profil',compact('profilefrontend'));
+        return view('frontend.profil')
+        ->with(['profilefrontend' => Profile::all(), 'contact_us' => Contact_Us::all()]);
     }
 
     /**

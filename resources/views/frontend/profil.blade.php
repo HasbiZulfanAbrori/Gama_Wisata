@@ -73,9 +73,11 @@
                 <div class="profile-title">
                     Akreditasi
                 </div>
-                <div class="akreditasi-line"></div>
-                <div class="profile-text-bg mt-4">
-                    {{$pf->akreditasi}}
+                <div class="akreditasi-line mb-3"></div>
+                <div class="profile-text-bg">
+                    <div class="profile-text">
+                        {{$pf->akreditasi}}
+                    </div>
                 </div>
             </div>
         </div>

@@ -79,6 +79,14 @@ Route::get('/index/{id}/edit', [IndexController::class, 'edit'])->name('index.ed
 Route::put('/index/{id}', [IndexController::class, 'update'])->name('index.update');
 Route::get('/index/{id}/destroy', [IndexController::class, 'destroy'])->name('index.destroy');
 
+// Route Profile
+Route::get('/adminprofile', [ProfileController::class, 'index'])->name('adminprofile');
+Route::get('/profile/create', [ProfileController::class, 'create'])->name('profile.create');
+Route::post('/profile/store', [ProfileController::class, 'store'])->name('profile.store');
+Route::get('/profile/{id}/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::put('/profile/{id}', [ProfileController::class, 'update'])->name('profile.update');
+Route::get('/profile/{id}/destroy', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
 // Route Download
 Route::get('/admindownload', [DownloadController::class, 'index'])->name('admindownload');
 Route::get('/download', [DownloadController::class, 'tampil'])->name('download');
@@ -87,3 +95,11 @@ Route::post('/download/store', [DownloadController::class, 'store'])->name('down
 Route::get('/download/{id}/edit', [DownloadController::class, 'edit'])->name('download.edit');
 Route::put('/download/{id}', [DownloadController::class, 'update'])->name('download.update');
 Route::get('/download/{id}/destroy', [DownloadController::class, 'destroy'])->name('download.destroy');
+
+//Route Contact Us
+Route::get('/admincontact', [ContactUsController::class, 'index'])->name('admincontact');
+Route::get('/contact/create', [ContactUsController::class, 'create'])->name('contact.create');
+Route::post('/contact/store', [ContactUsController::class, 'store'])->name('contact.store');
+Route::get('/contact/{id}/edit', [ContactUsController::class, 'edit'])->name('contact.edit');
+Route::put('/contact/{id}', [ContactUsController::class, 'update'])->name('contact.update');
+Route::get('/contact/{id}/destroy', [ContactUsController::class, 'destroy'])->name('contact.destroy');

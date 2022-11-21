@@ -92,6 +92,11 @@ nav{
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
+.active{
+    color: #073c64;
+    font-weight: bold;
+}
+
 .collapse{
     padding-left: 5px;
 }
