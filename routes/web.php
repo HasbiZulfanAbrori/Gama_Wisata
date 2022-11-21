@@ -96,6 +96,14 @@ Route::get('/download/{id}/edit', [DownloadController::class, 'edit'])->name('do
 Route::put('/download/{id}', [DownloadController::class, 'update'])->name('download.update');
 Route::get('/download/{id}/destroy', [DownloadController::class, 'destroy'])->name('download.destroy');
 
+// Route Profile
+Route::get('/adminprofile', [ProfileController::class, 'index'])->name('adminprofile');
+Route::get('/profile/create', [ProfileController::class, 'create'])->name('profile.create');
+Route::post('/profile/store', [ProfileController::class, 'store'])->name('profile.store');
+Route::get('/profile/{id}/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::put('/profile/{id}', [ProfileController::class, 'update'])->name('profile.update');
+Route::get('/profile/{id}/destroy', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
 //Route Contact Us
 Route::get('/admincontact', [ContactUsController::class, 'index'])->name('admincontact');
 Route::get('/contact/create', [ContactUsController::class, 'create'])->name('contact.create');
@@ -103,3 +111,4 @@ Route::post('/contact/store', [ContactUsController::class, 'store'])->name('cont
 Route::get('/contact/{id}/edit', [ContactUsController::class, 'edit'])->name('contact.edit');
 Route::put('/contact/{id}', [ContactUsController::class, 'update'])->name('contact.update');
 Route::get('/contact/{id}/destroy', [ContactUsController::class, 'destroy'])->name('contact.destroy');
+Route::get('/download/{id}/destroy', [DownloadController::class, 'destroy'])->name('download.destroy');

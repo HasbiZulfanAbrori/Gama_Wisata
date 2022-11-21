@@ -26,6 +26,7 @@ class ProfileController extends Controller
         return view('frontend.profil')
         ->with(['profilefrontend' => Profile::all(), 'contact_us' => Contact_Us::all()]);
     }
+    
 
     /**
      * Show the form for creating a new resource.

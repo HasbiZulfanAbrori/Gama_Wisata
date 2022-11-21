@@ -24,7 +24,7 @@
     {{-- ------ --}}
     <section id="text-header">
         <div class="container">
-            <h1 class="text-center mb-2">Profil Gama Wisata</h1>
+            <h1 class="text-center mb-2">Profile Gama Wisata</h1>
         </div>
     </section>
     @foreach($profilefrontend as $pf)
@@ -82,7 +82,7 @@
             </div>
         </div>
     </div>
-    @endforeach    @include('frontend.template.footer')
+    @endforeach @include('frontend.template.footer')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
