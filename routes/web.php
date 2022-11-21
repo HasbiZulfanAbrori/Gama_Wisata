@@ -79,14 +79,6 @@ Route::get('/index/{id}/edit', [IndexController::class, 'edit'])->name('index.ed
 Route::put('/index/{id}', [IndexController::class, 'update'])->name('index.update');
 Route::get('/index/{id}/destroy', [IndexController::class, 'destroy'])->name('index.destroy');
 
-// Route Profile
-Route::get('/adminprofile', [ProfileController::class, 'index'])->name('adminprofile');
-Route::get('/profile/create', [ProfileController::class, 'create'])->name('profile.create');
-Route::post('/profile/store', [ProfileController::class, 'store'])->name('profile.store');
-Route::get('/profile/{id}/edit', [ProfileController::class, 'edit'])->name('profile.edit');
-Route::put('/profile/{id}', [ProfileController::class, 'update'])->name('profile.update');
-Route::get('/profile/{id}/destroy', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
 // Route Download
 Route::get('/admindownload', [DownloadController::class, 'index'])->name('admindownload');
 Route::get('/download', [DownloadController::class, 'tampil'])->name('download');
