@@ -45,21 +45,34 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <h3>Edit Data File Download {{$editfile->nama_file}}</h3>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="{{ route('download.update', $editfile->id) }}" enctype="multipart/form-data">
+                        <form method="post" action="{{ route('download.update', $editfile->id) }}"
+                            enctype="multipart/form-data">
                             @method('put')
                             @csrf
                             <div class="form-group">
                                 <label for="">Nama File</label>
-                                <input type="text" id="nama_file" name="nama_file" class="form-control"  value="{{$editfile->nama_file}}">
+                                <input type="text" id="nama_file" name="nama_file" class="form-control"
+                                    value="{{$editfile->nama_file}}">
                             </div>
                             <div class="form-group">
                                 <label for="">File Download</label><br>
-                                <img src="{{asset('file_download/'.$editfile->file_download)}}" style="width: 70%" id="image" alt="">
-                                <input type="file" name="file_download" class="form-control mt-2" accept="file_download/*"
+                                <img src="{{asset('file_download/'.$editfile->file_download)}}" style="width: 70%"
+                                    id="image" alt="">
+                                <input type="file" name="file_download" class="form-control mt-2"
+                                    accept="file_download/*"
                                     onchange="document.getElementById('file_download').src = window.URL.createObjectURL(this.files[0])">
                             </div>
-                         <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">Edit Data</button>
+                            <div class="form-group">
+                                <select class="form-select" name="is_active" id="is_active" required>
+                                    <option disabled selected>--pilih status--</option>
+                                    <option value="1" {{ $editfile->is_active == '1' ? 'selected' : '' }}>Publish
+                                    </option>
+                                    <option value="0" {{ $editfile->is_active == '0' ? 'selected' : '' }}>Unpublish
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary">Edit Data</button>
                         </form>
                     </div>
                 </div>

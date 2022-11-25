@@ -22,7 +22,7 @@ class DownloadController extends Controller
     public function tampil(Download $id)
     {
         return view('frontend.download')
-        ->with(['download' => Download::all(),'contact_us' => Contact_Us::paginate(1)]);
+        ->with(['download' => Download::where('is_active', 1)->get(),'contact_us' => Contact_Us::where('is_active', 1)->get()]);
     }
 
     /**
@@ -47,6 +47,7 @@ class DownloadController extends Controller
     {
         $tambah = new Download();
         $tambah->nama_file=$request->get('nama_file');
+        $tambah->is_active=$request->get('is_active');
         if ($request->hasFile('file_download')) {
             $file_download = $request->file('file_download');
             $filename = date('dmY').'.'.$request->file('file_download')->getClientOriginalName();
@@ -102,6 +103,7 @@ class DownloadController extends Controller
             $request->file_download->move(public_path().'/file_download', $awal);
         }
         $ubah->nama_file = $request->nama_file;
+        $ubah->is_active = $request->is_active;
         $ubah->save();
         return redirect('/admindownload')->with('updateSucces','Data Berhasil di Update');
     }

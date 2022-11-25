@@ -49,11 +49,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @csrf
                             <div class="form-group">
                                 <label for="nama">Nama file</label>
-                                <input type="text" id="nama_file" name="nama_file" class="form-control" placeholder="Nama File" required autofocus value="{{ old('nama') }}">
+                                <input type="text" id="nama_file" name="nama_file" class="form-control"
+                                    placeholder="Nama File" required autofocus value="{{ old('nama') }}">
                             </div>
                             <div class="form-group">
                                 <label for="">Masukkan File</label>
                                 <input type="file" name="file_download" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <select class="form-select @error('is_active') is-invalid @enderror" name="is_active"
+                                    id="category">
+                                    <option disabled selected>--Pilih Kategori Upload--</option>
+                                    <option value="1">Publish</option>
+                                    <option value="0">Unpublish</option>
+                                </select>
                             </div>
                     </div>
                     <div class="card-footer">
