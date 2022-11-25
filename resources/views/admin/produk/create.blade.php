@@ -49,7 +49,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @csrf
                             <div class="form-group">
                                 <label for="nama">Nama Produk</label>
-                                <input type="text" id="nama_produk" name="nama_produk" class="form-control" placeholder="Nama Produk" required autofocus value="{{ old('nama') }}">
+                                <input type="text" id="nama_produk" name="nama_produk" class="form-control"
+                                    placeholder="Nama Produk" required autofocus value="{{ old('nama') }}">
                             </div>
                             <div class="form-group">
                                 <label for="">Masukkan Gambar</label>
@@ -57,7 +58,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
                             <div class="form-group">
                                 <label class="mt-2" for="">Deskripsi Produk</label>
-                                <textarea name="deskripsi_produk" class="form-control" placeholder="Deskripsi Produk"></textarea>
+                                <textarea name="deskripsi_produk" class="form-control"
+                                    placeholder="Deskripsi Produk"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-select @error('is_active') is-invalid @enderror" name="is_active"
+                                    id="category">
+                                    <option disabled selected>--Pilih Kategori Upload--</option>
+                                    <option value="1">Publish</option>
+                                    <option value="0">Unpublish</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <select class="form-select @error('is_active') is-invalid @enderror" name="is_active"

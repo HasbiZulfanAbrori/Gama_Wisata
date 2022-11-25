@@ -49,7 +49,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @csrf
                             <div class="form-group">
                                 <label for="nama">Nama file</label>
-                                <input type="text" id="nama_file" name="nama_file" class="form-control" placeholder="Nama File" required autofocus value="{{ old('nama') }}">
+                                <input type="text" id="nama_file" name="nama_file" class="form-control"
+                                    placeholder="Nama File" required autofocus value="{{ old('nama') }}">
                             </div>
                             <div class="form-group">
                                 <label for="">Masukkan File</label>

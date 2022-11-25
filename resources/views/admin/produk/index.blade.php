@@ -69,7 +69,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <tr>
                                     {{-- <td>{{$n->id}}.</td> --}}
                                     <td>{{$n->nama_produk}}</td>
-                                    <td><img class="img-fluid" src="{{asset('gambar_produk/'.$n->gambar_produk)}}" style="width : 70%" alt="gambar"></td>
+                                    <td><img class="img-fluid" src="{{asset('gambar_produk/'.$n->gambar_produk)}}"
+                                            style="width : 70%" alt="gambar"></td>
                                     <td>{{$n->deskripsi_produk}}</td>
                                     <td>{{$n->created_at}}</td>
                                     <td>{{$n->updated_at}}</td>

@@ -6,7 +6,6 @@ use App\Models\Contact_Us;
 use App\Models\Index;
 use App\Models\News;
 use Illuminate\Http\Request;
-use Psy\CodeCleaner\ReturnTypePass;
 
 
 class IndexController extends Controller
@@ -51,7 +50,6 @@ class IndexController extends Controller
         $tambah = new Index;
         $tambah->judul=$request->get('judul');
         $tambah->branding=$request->get('branding');
-        $tambah->is_active=$request->get('is_active');
         $request->validate([
             'video'=>'required|mimes:mp4,ogx,oga,ogv,ogg,webm'
         ]);
@@ -117,7 +115,6 @@ class IndexController extends Controller
         }
         $ubah->judul = $request->judul;
         $ubah->branding = $request->branding;
-        $ubah->is_active = $request->is_active;
         $ubah->save();
         return redirect('/adminindex')->with('updateSucces','Data Berhasil di Update');
     }

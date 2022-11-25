@@ -104,6 +104,7 @@ class DownloadController extends Controller
             $request->file_download->move(public_path().'/file_download', $awal);
         }
         $ubah->nama_file = $request->nama_file;
+        $ubah->is_active = $request->is_active;
         $ubah->save();
         return redirect('/admindownload')->with('updateSucces','Data Berhasil di Update');
     }

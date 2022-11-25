@@ -54,12 +54,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="card-body">
                         <table class="table table-bordered" id="Table">
                             <thead>
-                            <tr>
-                                <th>Video</th>
-                                <th>Judul</th>
-                                <th>Branding</th>
-                                <th>Aksi</th>
-                            </tr>
+                                <tr>
+                                    <th>Video</th>
+                                    <th>Judul</th>
+                                    <th>Branding</th>
+                                    <th>Aksi</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 @foreach($index as $i)
