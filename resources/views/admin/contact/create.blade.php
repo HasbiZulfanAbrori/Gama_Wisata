@@ -54,8 +54,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
                             <div class="form-group">
                                 <label for="nama">Alamat</label>
-                                <input type="text" id="alamat" name="alamat" class="form-control"
-                                    placeholder="Alamat" required autofocus value="{{ old('no_telp') }}">
+                                <input type="text" id="alamat" name="alamat" class="form-control" placeholder="Alamat"
+                                    required autofocus value="{{ old('no_telp') }}">
+                            </div>
+                            <div class="form-group">
+                                <select class="form-select @error('is_active') is-invalid @enderror" name="is_active"
+                                    id="category">
+                                    <option disabled selected>--Pilih Kategori Upload--</option>
+                                    <option value="1">Publish</option>
+                                    <option value="0">Unpublish</option>
+                                </select>
                             </div>
                     </div>
                     <div class="card-footer">

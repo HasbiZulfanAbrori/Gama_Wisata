@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama_file');
             $table->string('file_download');
+            $table->boolean('is_active');
             $table->timestamps();
         });
     }

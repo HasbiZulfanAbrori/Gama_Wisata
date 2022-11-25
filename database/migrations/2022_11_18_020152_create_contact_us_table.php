@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('no_telp');
             $table->string('alamat');
+            $table->boolean('is_active');
             $table->timestamps();
         });
     }

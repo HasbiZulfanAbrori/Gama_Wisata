@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('judul_news',100);
             $table->string('gambar_news')->nullable();
             $table->text('keterangan_news');
+            $table->boolean('is_active');
             $table->timestamps();
         });
     }

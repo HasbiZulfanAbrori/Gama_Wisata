@@ -34,6 +34,9 @@
             <div class="news-title" mt-3>
                 {{$b->judul_news}}
             </div>
+            <div class="artikel-date mb-4">
+                {{$b->created_at}}
+            </div>
             <div class="news-text">{{Illuminate\Support\Str::of($b->keterangan_news)->words(30)}}</div>
             <div class="btn-position">
                 <a href="{{ route('artikel', $b->id) }}" class="btn-news">Read More</a>

@@ -54,30 +54,37 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="card-body">
                         <table class="table table-bordered" id="Table">
                             <thead>
-                            <tr>
-                                <th>Video</th>
-                                <th>Judul</th>
-                                <th>Branding</th>
-                                <th>Aksi</th>
-                            </tr>
+                                <tr>
+                                    <th>Video</th>
+                                    <th>Judul</th>
+                                    <th>Branding</th>
+                                    <th>Aksi</th>
+                                </tr>
                             </thead>
                             <tbody>
-                            @foreach($index as $i)
-                            <tr>
-                                <td>
-                                    <video width="320" height="240" type="video/mp4" src="{{asset('video/'.$i->video)}}"
-                                        autoplay muted></video>
-                                </td>
-                                <!-- <td><img class="img-fluid" src="{{asset('video/'.$i->video)}}" style="width : 70%"
+                                @foreach($index as $i)
+                                <tr>
+                                    <td>
+                                        <video width="320" height="240" type="video/mp4"
+                                            src="{{asset('video/'.$i->video)}}" autoplay muted></video>
+                                    </td>
+                                    <!-- <td><img class="img-fluid" src="{{asset('video/'.$i->video)}}" style="width : 70%"
                                         alt="video"></td> -->
-                                <td>{{$i->judul}}</td>
-                                <td>{{$i->branding}}</td>
-                                <td>
-                                    <a class="btn btn-primary" href="/index/{{$i->id}}/edit">Edit</a>
-                                    <a class="btn btn-danger" href="/index/{{$i->id}}/destroy">Destroy</a>
-                                </td>
-                            </tr>
-                            @endforeach
+                                    <td>{{$i->judul}}</td>
+                                    <td>{{$i->branding}}</td>
+                                    <td>
+                                        <a class="btn btn-primary" href="/index/{{$i->id}}/edit">Edit</a>
+                                        <a class="btn btn-danger" href="/index/{{$i->id}}/destroy">Destroy</a>
+                                        <div>
+                                            @if($i->is_active == 1)
+                                            <span style="color:green">Publish</span>
+                                            @else
+                                            <span style="color:red">Unpublish</span>
+                                            @endif
+                                        </div>
+                                    </td>
+                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

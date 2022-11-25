@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('gambar_produk');
             $table->string('nama_produk');
             $table->text('deskripsi_produk');
+            $table->boolean('is_active');
             $table->timestamps();
         });
     }
