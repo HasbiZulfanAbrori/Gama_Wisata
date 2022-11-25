@@ -63,8 +63,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
                             <div class="form-group">
                                 <label for="">Keterangan</label>
-                                <textarea id="keterangan_news" name="keterangan_news" class="form-control"
-                                    value="{{$editnews->keterangan_news}}">{{$editnews->keterangan_news}}</textarea>
+                                <input type="hidden" id="keterangan_news" name="keterangan_news" class="form-control" value="{{$editnews->keterangan_news}}">
+                                <trix-editor input="keterangan_news">{!!$editnews->keterangan_news!!}</trix-editor>    
+                            </div>
+                            <div class="form-group">
+                                <select class="form-select" name="is_active" id="is_active" required>
+                                    <option disabled selected>--pilih status--</option>
+                                    <option value="1" {{ $editnews->is_active == '1' ? 'selected' : '' }}>Publish
+                                    </option>
+                                    <option value="0" {{ $editnews->is_active == '0' ? 'selected' : '' }}>Unpublish
+                                    </option>
+                                </select>
                             </div>
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Edit Data</button>

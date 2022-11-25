@@ -5,8 +5,4 @@
 <!-- AdminLTE App -->
 <script src="{{asset('')}}admin/dist/js/adminlte.min.js"></script>
 <script src="//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready( function () {
-            $('#Table').DataTable();
-        } );
-    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.js"></script>

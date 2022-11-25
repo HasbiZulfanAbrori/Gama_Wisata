@@ -65,6 +65,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <textarea id="branding" name="branding" class="form-control"
                                     value="{{$editindex->branding}}">{{$editindex->branding}}</textarea>
                             </div>
+                            <div class="form-group">
+                                <select class="form-select" name="is_active" id="is_active" required>
+                                    <option disabled selected>--pilih status--</option>
+                                    <option value="1" {{ $editindex->is_active == '1' ? 'selected' : '' }}>Publish
+                                    </option>
+                                    <option value="0" {{ $editindex->is_active == '0' ? 'selected' : '' }}>Unpublish
+                                    </option>
+                                </select>
+                            </div>
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Simpan</button>

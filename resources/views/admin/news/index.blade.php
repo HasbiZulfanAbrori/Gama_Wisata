@@ -70,12 +70,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     {{-- <td>{{$n->id}}.</td> --}}
                                     <td>{{$n->judul_news}}</td>
                                     <td><img class="img-fluid" src="{{asset('gambar_news/'.$n->gambar_news)}}" style="width : 70%" alt="gambar"></td>
-                                    <td>{{$n->keterangan_news}}</td>
+                                    <td>{!!$n->keterangan_news!!}</td>
                                     <td>{{$n->created_at}}</td>
                                     <td>{{$n->updated_at}}</td>
                                     <td>
                                         <a class="btn btn-primary" href="/news/{{$n->id}}/edit">Edit</a>
                                         <a class="btn btn-danger" href="/news/{{$n->id}}/destroy">Destroy</a>
+                                        <div>
+                                            @if($n->is_active == 1)
+                                            <span style="color:green">Publish</span>
+                                            @else
+                                            <span style="color:red">Unpublish</span>
+                                            @endif
+                                        </div>
                                     </td>
                                 </tr>
                                 @endforeach

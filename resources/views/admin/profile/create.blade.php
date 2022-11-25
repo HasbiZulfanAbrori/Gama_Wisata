@@ -68,7 +68,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
                             <div class="form-group">
                                 <label class="mt-2" for="">Akreditasi</label>
-                                <textarea name="akreditasi" class="form-control" placeholder="Akreditasi"></textarea>
+                                <input type="hidden" id="akreditasi" name="akreditasi" class="form-control">
+                                <trix-editor input="akreditasi"></trix-editor>
                             </div>
                             <div class="form-group">
                                 <label for="">Masukkan Gambar 2</label>

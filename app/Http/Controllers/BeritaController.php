@@ -12,6 +12,6 @@ class BeritaController extends Controller
     public function index()
     {
         return view('frontend.news')
-        ->with(['berita'=>News::all(), 'contact_us' => Contact_Us::paginate(1)]);
+        ->with(['berita'=>News::where('is_active', 1)->get(), 'contact_us' => Contact_Us::where('is_active', 1)->get()]);
     }
 }

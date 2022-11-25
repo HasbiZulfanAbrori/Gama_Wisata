@@ -76,6 +76,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <td>
                                         <a class="btn btn-primary" href="/produk/{{$n->id}}/edit">Edit</a>
                                         <a class="btn btn-danger" href="/produk/{{$n->id}}/destroy">Destroy</a>
+                                        <div>
+                                            @if($n->is_active == 1)
+                                            <span style="color:green">Publish</span>
+                                            @else
+                                            <span style="color:red">Unpublish</span>
+                                            @endif
+                                        </div>
                                     </td>
                                 </tr>
                                 @endforeach

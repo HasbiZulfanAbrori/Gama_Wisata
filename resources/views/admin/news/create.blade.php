@@ -58,8 +58,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
                             <div class="form-group">
                                 <label class="mt-2" for="">Keterangan</label>
-                                <textarea name="keterangan_news" class="form-control"
-                                    placeholder="Keterangan Artikel"></textarea>
+                                <input type="hidden" id="keterangan_news" name="keterangan_news" class="form-control">
+                                <trix-editor input="keterangan_news"></trix-editor>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-select @error('is_active') is-invalid @enderror" name="is_active"
+                                    id="category">
+                                    <option disabled selected>--Pilih Kategori Upload--</option>
+                                    <option value="1">Publish</option>
+                                    <option value="0">Unpublish</option>
+                                </select>
                             </div>
                     </div>
                     <div class="card-footer">

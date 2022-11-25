@@ -41,6 +41,7 @@ class ContactUsController extends Controller
         $tambah = new Contact_Us;
         $tambah->no_telp=$request->get('no_telp');
         $tambah->alamat=$request->get('alamat');
+        $tambah->is_active=$request->get('is_active');
         $tambah->save();
         return redirect('/admincontact');
     }
@@ -82,6 +83,7 @@ class ContactUsController extends Controller
         $ubah = Contact_Us::find($id);
         $ubah->no_telp = $request->no_telp;
         $ubah->alamat = $request->alamat;
+        $ubah->is_active = $request->is_active;
         $ubah->save();
         return redirect('/admincontact')->with('updateSucces','Data Berhasil di Update');
     }

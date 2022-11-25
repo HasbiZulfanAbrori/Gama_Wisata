@@ -73,8 +73,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
                             <div class="form-group">
                                 <label for="">Akreditasi</label>
-                                <textarea id="akreditasi" name="akreditasi" class="form-control"
-                                    value="{{$editprofile->akreditasi}}">{{$editprofile->akreditasi}}</textarea>
+                                <input type="hidden" id="akreditasi" name="akreditasi" class="form-control" value="{{$editprofile->akreditasi}}">
+                                <trix-editor input="akreditasi">{!!$editprofile->akreditasi!!}</trix-editor>
                             </div>
                             <div class="form-group">
                                 <label for="">Gambar 2</label><br>

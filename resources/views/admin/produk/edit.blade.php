@@ -62,6 +62,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <label for="">Deskripsi Produk</label>
                                 <textarea id="deskripsi_produk" name="deskripsi_produk" class="form-control" value="{{$editproduk->deskripsi_produk}}">{{$editproduk->deskripsi_produk}}</textarea>
                             </div>
+                            <div class="form-group">
+                                <select class="form-select" name="is_active" id="is_active" required>
+                                    <option disabled selected>--pilih status--</option>
+                                    <option value="1" {{ $editproduk->is_active == '1' ? 'selected' : '' }}>Publish
+                                    </option>
+                                    <option value="0" {{ $editproduk->is_active == '0' ? 'selected' : '' }}>Unpublish
+                                    </option>
+                                </select>
+                            </div>
                          <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Edit Data</button>
                         </form>

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('video');
             $table->string('judul');
             $table->string('branding');
+            $table->boolean('is_active');
             $table->timestamps();
         });
     }

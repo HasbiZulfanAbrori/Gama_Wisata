@@ -9,3 +9,4 @@
 <!-- Theme style -->
 <link rel="stylesheet" href="{{asset('')}}admin/dist/css/adminlte.min.css">
 <link rel="stylesheet" href="//cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.3.1/trix.css">

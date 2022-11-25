@@ -22,7 +22,7 @@ class NewsController extends Controller
 
     public function contact(){
         return view('frontend.index')
-        ->with(['contact_us' => Contact_Us::paginate(1)]);
+        ->with(['contact_us' => Contact_Us::where('is_active', 1)->get()]);
     }
 
     /**
@@ -51,6 +51,7 @@ class NewsController extends Controller
         $tambah = new News;
         $tambah->judul_news=$request->get('judul_news');
         $tambah->keterangan_news=$request->get('keterangan_news');
+        $tambah->is_active=$request->get('is_active');
         if ($request->hasFile('gambar_news')) {
             $gambar_news = $request->file('gambar_news');
             $filename = date('dmY').'.'.$request->file('gambar_news')->getClientOriginalName();
@@ -110,6 +111,7 @@ class NewsController extends Controller
         }
         $ubah->judul_news = $request->judul_news;
         $ubah->keterangan_news = $request->keterangan_news;
+        $ubah->is_active = $request->is_active;
         $ubah->save();
         return redirect('/adminnews')->with('updateSucces','Data Berhasil di Update');
 

@@ -74,7 +74,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <td>{{$p->misi}}</td>
                                     <td><img class="img-fluid" src="{{asset('gambar1/'.$p->gambar1)}}"
                                             style="width : 70%" alt="gambar1"></td>
-                                    <td>{{$p->akreditasi}}</td>
+                                    <td>{!!$p->akreditasi!!}</td>
                                     <td><img class="img-fluid" src="{{asset('gambar2/'.$p->gambar2)}}"
                                             style="width : 70%" alt="gambar2"></td>
                                     <td>

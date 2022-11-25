@@ -10,6 +10,6 @@ class Index extends Model
     protected $table = "index";
     protected $guarded = ['id'];
     protected $fillable = [
-        'video','judul,','branding'
+        'video','judul,','branding','is_active'
     ];
 }

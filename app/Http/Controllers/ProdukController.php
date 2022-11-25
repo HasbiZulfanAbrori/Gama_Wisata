@@ -21,7 +21,7 @@ class ProdukController extends Controller
 
     public function tampil_produk(){
         return view('frontend.produk')
-        ->with(['produk' => Produk::all(),'contact_us' => Contact_Us::paginate(1)]);
+        ->with(['produk' => Produk::where('is_active', 1)->get(),'contact_us' => Contact_Us::where('is_active', 1)->get()]);
     }
 
     /**
@@ -47,6 +47,7 @@ class ProdukController extends Controller
         $tambah = new Produk;
         $tambah->nama_produk=$request->get('nama_produk');
         $tambah->deskripsi_produk=$request->get('deskripsi_produk');
+        $tambah->is_active=$request->get('is_active');
         if ($request->hasFile('gambar_produk')) {
             $gambar_produk = $request->file('gambar_produk');
             $filename = date('His').'.'.$request->file('gambar_produk')->extension();
@@ -103,6 +104,7 @@ class ProdukController extends Controller
         }
         $ubah->nama_produk = $request->nama_produk;
         $ubah->deskripsi_produk = $request->deskripsi_produk;
+        $ubah->is_active = $request->is_active;
         $ubah->save();
         return redirect('/adminproduk')->with('updateSucces','Data Berhasil di Update');
     }
