@@ -10,6 +10,7 @@ use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\HighlightController;
 
 
 /*
@@ -43,7 +44,6 @@ Route::get('artikel/{id}',[ArtikelController::class,'show'])->name('artikel');
 // Route::get('/news', function () {
 //     return view('news');
 // });
-
 
 // // ini punyaku
 // // Route::get('/halamanadmin', function () {
@@ -104,3 +104,12 @@ Route::get('/contact/{id}/edit', [ContactUsController::class, 'edit'])->name('co
 Route::put('/contact/{id}', [ContactUsController::class, 'update'])->name('contact.update');
 Route::get('/contact/{id}/destroy', [ContactUsController::class, 'destroy'])->name('contact.destroy');
 Route::get('/download/{id}/destroy', [DownloadController::class, 'destroy'])->name('download.destroy');
+
+// Route Highlight
+Route::get('/adminhighlight', [HighlightController::class, 'index'])->name('adminhighlight');
+// Route::get('/produk', [HighlightController::class, 'tampil_produk'])->name('produk');
+Route::get('/highlight/create', [HighlightController::class, 'create'])->name('highlight.create');
+Route::post('/highlight/store', [HighlightController::class, 'store'])->name('highlight.store');
+Route::get('/highlight/{id}/edit', [HighlightController::class, 'edit'])->name('highlight.edit');
+Route::put('/highlight/{id}', [HighlightController::class, 'update'])->name('highlight.update');
+Route::get('/highlight/{id}/destroy', [HighlightController::class, 'destroy'])->name('highlight.destroy');

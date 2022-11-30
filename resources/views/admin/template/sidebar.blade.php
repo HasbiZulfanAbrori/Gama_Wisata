@@ -97,6 +97,13 @@
                             </a>
                         </li>
                     </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('adminhighlight')}}" class="nav-link">
+                                Data Highlight Index
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
             </li>

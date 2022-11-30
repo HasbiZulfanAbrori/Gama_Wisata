@@ -31,7 +31,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Edit Data News</li>
+                                <li class="breadcrumb-item active">Edit Data Highlight</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -42,41 +42,47 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="content">
                 <div class="card card-info card-out-line">
                     <div class="card-header">
-                        <h3>Edit Data News {{$editnews->nama}}</h3>
+                        <h3>Edit Data Highlight {{$edithighlight->nama_produk}}</h3>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="{{ route('news.update', $editnews->id) }}"
+                        <form method="post" action="{{ route('highlight.update', $edithighlight->id) }}"
                             enctype="multipart/form-data">
                             @method('put')
                             @csrf
                             <div class="form-group">
-                                <label for="">Judul News</label>
-                                <input type="text" id="judul_news" name="judul_news" class="form-control"
-                                    placeholder="Judul News" value="{{$editnews->judul_news}}">
+                                <label for="">Judul</label>
+                                <input type="text" id="judul_highlight" name="judul_highlight" class="form-control"
+                                    value="{{$edithighlight->judul_highlight}}">
                             </div>
                             <div class="form-group">
                                 <label for="">Gambar</label><br>
-                                <img src="{{asset('gambar_news/'.$editnews->gambar_news)}}" style="width: 70%"
+                                <img src="{{asset('gambar_highlight/'.$edithighlight->gambar_highlight)}}" style="width: 70%"
                                     id="image" alt="">
-                                <input type="file" name="gambar_news" class="form-control mt-2" accept="gambar_news/*"
-                                    onchange="document.getElementById('gambar_news').src = window.URL.createObjectURL(this.files[0])">
+                                <input type="file" name="gambar_highlight" class="form-control mt-2"
+                                    accept="gambar_highlight/*"
+                                    onchange="document.getElementById('gambar_highlight').src = window.URL.createObjectURL(this.files[0])">
                             </div>
                             <div class="form-group">
-                                <label for="">Keterangan</label>
-                                <input type="hidden" id="keterangan_news" name="keterangan_news" class="form-control" value="{{$editnews->keterangan_news}}">
-                                <trix-editor input="keterangan_news">{!!$editnews->keterangan_news!!}</trix-editor>    
+                                <label for="">Deskripsi</label>
+                                <textarea id="deskripsi_highlight" name="deskripsi_highlight" class="form-control"
+                                    value="{{$edithighlight->deskripsi_highlight}}">{{$edithighlight->deskripsi_highlight}}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Link</label>
+                                <textarea id="link" name="link" class="form-control"
+                                    value="{{$edithighlight->link}}">{{$edithighlight->link}}</textarea>
                             </div>
                             <div class="form-group">
                                 <select class="form-select" name="is_active" id="is_active" required>
                                     <option disabled selected>--pilih status--</option>
-                                    <option value="1" {{ $editnews->is_active == '1' ? 'selected' : '' }}>Publish
+                                    <option value="1" {{ $edithighlight->is_active == '1' ? 'selected' : '' }}>Publish
                                     </option>
-                                    <option value="0" {{ $editnews->is_active == '0' ? 'selected' : '' }}>Unpublish
+                                    <option value="0" {{ $edithighlight->is_active == '0' ? 'selected' : '' }}>Unpublish
                                     </option>
                                 </select>
                             </div>
-                            <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Edit Data</button>
+                         <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Edit Data</button>
                         </form>
                     </div>
                 </div>

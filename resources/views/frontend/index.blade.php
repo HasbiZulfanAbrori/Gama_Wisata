@@ -86,7 +86,7 @@
         <div class="container padd100" id="News">
             <div class="header-news mb-3">News</div>
             <div class="news-line mb-3"></div>
-            @foreach($news as $b)
+            @foreach($news->take(5) as $b)
             <div class="news mt-3">
                 <img src="{{asset('gambar_news/'.$b->gambar_news)}}" alt="News">
                 <div class="news-title" mt-3>

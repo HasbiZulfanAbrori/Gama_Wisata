@@ -21,13 +21,13 @@
         @foreach($berita as $b)
         <div class="news mt-3">
             <img src="{{asset('gambar_news/'.$b->gambar_news)}}" alt="News">
-            <div class="news-title" mt-3>
+            <div class="news-title">
                 {{$b->judul_news}}
             </div>
-            <div class="artikel-date mb-4">
+            <div class="artikel-date mb-2">
                 {{$b->created_at}}
             </div>
-            <div class="news-text">{!! Str::limit($b->keterangan_news, 200)!!}</div>
+            <div class="news-text">{!! Str::words($b->keterangan_news, 28)!!}</div>
             <div class="btn-position">
                 <a href="{{ route('artikel', $b->id) }}" class="btn-news">Read More</a>
             </div>

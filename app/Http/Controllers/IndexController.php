@@ -6,6 +6,7 @@ use App\Models\Contact_Us;
 use App\Models\Index;
 use App\Models\News;
 use Illuminate\Http\Request;
+use Psy\CodeCleaner\ReturnTypePass;
 
 
 class IndexController extends Controller
@@ -23,7 +24,7 @@ class IndexController extends Controller
 
     public function datanews(){
         return view('frontend.index')
-        ->with(['news' => News::paginate(5),'contact_us' => Contact_Us::where('is_active', 1)->get(), 'index'=>Index::where('is_active', 1)->get()]);
+        ->with(['news' => News::where('is_active', 1)->get(),'contact_us' => Contact_Us::where('is_active', 1)->get(), 'index'=>Index::where('is_active', 1)->get()]);
     }
 
 
