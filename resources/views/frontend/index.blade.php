@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    @include('frontend.template.head')
+@include('frontend.template.head')
 
 <body>
     @foreach($index as $index)
@@ -29,23 +29,23 @@
         <div class="jumbotron padd100" id="Produk">
             <div class="row" style="justify-content: center">
                 @foreach($highlight as $hl)
-                    <div class="col-sm-4">
-                        <div class="card">
-                            <div class="text-center">
-                                <img class="card-img-top mt-3" src="{{asset('gambar_highlight/'.$hl->gambar_highlight)}}" alt="Card image"
-                                    style="width:150px">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="text-center">
+                            <img class="card-img-top mt-3" src="{{asset('gambar_highlight/'.$hl->gambar_highlight)}}"
+                                alt="Card image" style="width:150px">
+                        </div>
+                        <div class="card-body">
+                            <div class="judul-card">
+                                {{$hl->judul_highlight}}
                             </div>
-                            <div class="card-body">
-                                <div class="judul-card">
-                                    {{$hl->judul_highlight}}
-                                </div>
-                                <div class="isi-card">
-                                    <p>{{$hl->deskripsi_highlight}}</p>
-                                    <a class="btn btn-primary" href="{{$hl->link}}" role="button">Read More</a>
-                                </div>
+                            <div class="isi-card">
+                                <p>{{$hl->deskripsi_highlight}}</p>
+                                <a class="btn btn-primary" href="{{$hl->link}}" role="button">Read More</a>
                             </div>
                         </div>
                     </div>
+                </div>
                 @endforeach
             </div>
         </div>
@@ -60,7 +60,7 @@
                 </div>
                 <div class="news-text">{!!Illuminate\Support\Str::of($b->keterangan_news)->words(25)!!}</div>
                 <div class="btn-position">
-                    <a href="/artikel{id}" class="btn-news">Read More</a>
+                    <a href="/artikel" class="btn-news">Read More</a>
                 </div>
             </div>
             @endforeach

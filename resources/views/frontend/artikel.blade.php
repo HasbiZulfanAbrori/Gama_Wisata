@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    @include('frontend.template.head')
+@include('frontend.template.head')
 
 <body>
     {{-- navbar --}}
@@ -24,4 +24,5 @@
     @include('frontend.template.footer')
     @include('frontend.template.script')
 </body>
+
 </html>
