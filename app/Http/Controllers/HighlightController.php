@@ -44,10 +44,10 @@ class HighlightController extends Controller
         $tambah->link=$request->get('link');
         $tambah->is_active=$request->get('is_active');
         if ($request->hasFile('gambar_highlight')) {
-            $gambar_highlight = $request->file('gambar_highlight');
+            $gambar_produk = $request->file('gambar_highlight');
             $filename = date('His').'.'.$request->file('gambar_highlight')->extension();
-            if ($gambar_highlight->move('gambar_highlight',$filename)) {
-                $tambah->gambar_highlight=$filename;
+            if ($gambar_produk->move('gambar_highlight',$filename)) {
+                $tambah->gambar_produk=$filename;
             } else {
                 # code...
             }
@@ -78,7 +78,7 @@ class HighlightController extends Controller
     {
         $edithighlight = Highlight::find($id);
         return view('admin.highlight.edit',[
-            'edithighlight' => $edithighlight,]
+            'edithighlight' => $edithighlight]
         );
     }
 

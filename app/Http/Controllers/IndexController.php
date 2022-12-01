@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact_Us;
+use App\Models\Highlight;
 use App\Models\Index;
 use App\Models\News;
 use Illuminate\Http\Request;
@@ -24,7 +25,7 @@ class IndexController extends Controller
 
     public function datanews(){
         return view('frontend.index')
-        ->with(['news' => News::where('is_active', 1)->get(),'contact_us' => Contact_Us::where('is_active', 1)->get(), 'index'=>Index::where('is_active', 1)->get()]);
+        ->with(['news' => News::where('is_active', 1)->get(),'contact_us' => Contact_Us::where('is_active', 1)->get(), 'index'=>Index::where('is_active', 1)->get(), 'highlight' => Highlight::where('is_active', 1)->get()]);
     }
 
 

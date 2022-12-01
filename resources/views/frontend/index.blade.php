@@ -27,60 +27,26 @@
     {{-- ------ --}}
     <div class="container padd500" id="">
         <div class="jumbotron padd100" id="Produk">
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="card">
-                        <div class="text-center">
-                            <img class="card-img-top mt-3" src="./assets/img/box-seam.svg" alt="Card image"
-                                style="width:20%">
-                        </div>
-                        <div class="card-body">
-                            <div class="judul-card">
-                                Produk Kami
+            <div class="row" style="justify-content: center">
+                @foreach($highlight as $hl)
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="text-center">
+                                <img class="card-img-top mt-3" src="{{asset('gambar_highlight/'.$hl->gambar_highlight)}}" alt="Card image"
+                                    style="width:150px">
                             </div>
-                            <div class="isi-card">
-                                <p>Produk Kami biro ticketing , perjalanan wisata dan Sewa Internet Java Mivi.</p>
-                                <a class="btn btn-primary" href="/produk" role="button">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <div class="text-center">
-                            <img class="card-img-top mt-3" src="./assets/img/tag.svg" alt="Card image"
-                                style="width:20%">
-                        </div>
-                        <div class="card-body">
-                            <div class="judul-card">
-                                Promo Gamawisata
-                            </div>
-                            <div class="isi-card">
-                                <p>Promo Gamawisata dengan mengklik dibawah ini.</p>
-                                <a class="btn btn-primary" href="https://promo.gamawisata.com/produk/"
-                                    role="button">Read More</a>
+                            <div class="card-body">
+                                <div class="judul-card">
+                                    {{$hl->judul_highlight}}
+                                </div>
+                                <div class="isi-card">
+                                    <p>{{$hl->deskripsi_highlight}}</p>
+                                    <a class="btn btn-primary" href="{{$hl->link}}" role="button">Read More</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <div class="text-center">
-                            <img class="card-img-top mt-3" src="./assets/img/whatsapp.svg" alt="Card image"
-                                style="width:20%">
-                        </div>
-                        <div class="card-body">
-                            <div class="judul-card">
-                                Customer Service
-                            </div>
-                            <div class="isi-card">
-                                <p>Pertanyaan beserta Order bisa melalui CS Solusi wisata dan perjalanan anda</p>
-                                <a class="btn btn-primary" href="https://api.whatsapp.com/send?phone=6287845664888"
-                                    role="button">Whatsapp</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
         <div class="container padd100" id="News">
@@ -94,7 +60,7 @@
                 </div>
                 <div class="news-text">{!!Illuminate\Support\Str::of($b->keterangan_news)->words(25)!!}</div>
                 <div class="btn-position">
-                    <a href="/artikel" class="btn-news">Read More</a>
+                    <a href="/artikel{id}" class="btn-news">Read More</a>
                 </div>
             </div>
             @endforeach
