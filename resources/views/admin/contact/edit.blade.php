@@ -69,15 +69,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <select class="form-select" name="is_active" id="is_active" required>
-                                    <option disabled selected>--pilih status--</option>
-                                    <option value="1" {{ $editcontact->is_active == '1' ? 'selected' : '' }}>Publish
-                                    </option>
-                                    <option value="0" {{ $editcontact->is_active == '0' ? 'selected' : '' }}>Unpublish
-                                    </option>
-                                </select>
-                            </div>
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Edit Data</button>
                         </form>
