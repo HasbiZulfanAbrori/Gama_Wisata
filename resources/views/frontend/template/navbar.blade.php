@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-sm fixed-top">
     <div class="container" id="navbar">
         <a class="navbar-brand" href="/">
-            <img src="./assets/img/logo gama wisata.png" alt="Logo" style="width: 250px" />
+            <img src="{{('/assets/img/logo gama wisata.png')}}" alt="Logo" style="width: 250px" />
         </a>
         <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav me-auto">

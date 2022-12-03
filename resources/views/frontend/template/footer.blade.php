@@ -11,7 +11,7 @@
             </div>
             <div class="col-6">
                 <div style="text-align: center">
-                    <img src="./assets/img/geo-alt.svg">
+                    <img src="{{asset('/assets/img/geo-alt.svg')}}">
                     <p class="mt-3">{{$contact->alamat}}</p>
                 </div>
             </div>
@@ -21,17 +21,17 @@
         <div class="row d-flex justify-content-center mt-4 mb-4">
             <div class="col-4 text-align: center" style="width: 80px">
                 <a href="https://www.facebook.com/PT.Gama.Wisata" role="button">
-                    <img src="./assets/img/facebook.svg" style="width: 30px">
+                    <img src="{{('/assets/img/facebook.svg')}}" style="width: 30px">
                 </a>
             </div>
             <div class="col-4 text-align: center" style="width: 80px">
                 <a href="https://www.instagram.com/gama_wisata/?hl=id" role="button">
-                    <img src="./assets/img/instagram.svg" style="width: 30px">
+                    <img src="{{('/assets/img/instagram.svg')}}" style="width: 30px">
                 </a>
             </div>
             <div class="col-4 text-align: center" style="width: 80px">
                 <a href="https://www.tiktok.com/@gama_wisata" role="button">
-                    <img src="./assets/img/tiktok.svg" style="width: 30px">
+                    <img src="{{('/assets/img/tiktok.svg')}}" style="width: 30px">
                 </a>
             </div>
         </div>
