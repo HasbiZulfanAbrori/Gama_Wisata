@@ -73,7 +73,7 @@ class ProfileController extends Controller
             }   
         }
         $tambah->save();
-        return redirect('/adminprofile');
+        return redirect('/adminprofile')->with('success', 'Data Berhasil Diupdate');
     }
 
     /**

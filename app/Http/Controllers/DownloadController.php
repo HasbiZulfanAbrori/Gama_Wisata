@@ -59,7 +59,7 @@ class DownloadController extends Controller
             
         }
         $tambah->save();
-        return redirect('/admindownload');
+        return redirect('/admindownload')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**
@@ -106,7 +106,7 @@ class DownloadController extends Controller
         $ubah->nama_file = $request->nama_file;
         $ubah->is_active = $request->is_active;
         $ubah->save();
-        return redirect('/admindownload')->with('updateSucces','Data Berhasil di Update');
+        return redirect('/admindownload')->with('success', 'Data Berhasil Diupdate');
     }
 
     /**

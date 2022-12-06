@@ -62,8 +62,11 @@ class NewsController extends Controller
             }
             
         }
-        $tambah->save();
-        return redirect('/adminnews');
+        if($tambah->save()){
+            return redirect('/adminnews')->with('success', 'Data Berhasil Ditambahkan');
+        } else
+            return back()->with('error','Data Gagal Ditambah');
+        
 
     }
 
@@ -113,7 +116,7 @@ class NewsController extends Controller
         $ubah->keterangan_news = $request->keterangan_news;
         $ubah->is_active = $request->is_active;
         $ubah->save();
-        return redirect('/adminnews')->with('updateSucces','Data Berhasil di Update');
+        return redirect('/adminnews')->with('success', 'Data Berhasil Diupdate');
 
     }
 

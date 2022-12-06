@@ -59,7 +59,7 @@ class ProdukController extends Controller
             
         }
         $tambah->save();
-        return redirect('/adminproduk');
+        return redirect('/adminproduk')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**
@@ -106,7 +106,7 @@ class ProdukController extends Controller
         $ubah->deskripsi_produk = $request->deskripsi_produk;
         $ubah->is_active = $request->is_active;
         $ubah->save();
-        return redirect('/adminproduk')->with('updateSucces','Data Berhasil di Update');
+        return redirect('/adminproduk')->with('success', 'Data Berhasil Diupdate');
     }
 
     /**

@@ -43,7 +43,7 @@ class ContactUsController extends Controller
         $tambah->alamat=$request->get('alamat');
         $tambah->is_active=$request->get('is_active');
         $tambah->save();
-        return redirect('/admincontact');
+        return redirect('/admincontact')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**
@@ -85,7 +85,7 @@ class ContactUsController extends Controller
         $ubah->alamat = $request->alamat;
         $ubah->is_active = $request->is_active;
         $ubah->save();
-        return redirect('/admincontact')->with('updateSucces','Data Berhasil di Update');
+        return redirect('/admincontact')->with('success', 'Data Berhasil Diupdate');
     }
 
     /**

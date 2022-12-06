@@ -24,7 +24,7 @@
             <div class="produk-title mb-2" >
               {{$p->nama_produk}}
             </div>
-            <div class="produk-text">{{$p->deskripsi_produk}}</div>
+            <div class="produk-text">{!!$p->deskripsi_produk!!}</div>
         </div>
         @endforeach
     </div>

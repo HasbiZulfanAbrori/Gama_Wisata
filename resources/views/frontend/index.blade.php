@@ -9,7 +9,7 @@
         <section id="video">
             <div class="overlay"></div>
             <!-- Ubah link dalam "src" sesuai video yang diinginkan -->
-            <video src="{{asset('video/'.$index->video)}}" loop muted autoplay></video>
+            <video src="{{asset('video/'.$index->video)}}" class="img-fluid" loop muted autoplay></video>
         </section>
         <section id="header" class="my-4">
             <div class="container mx-auto">
@@ -26,14 +26,14 @@
     @include('frontend.template.navbar')
     {{-- ------ --}}
     <div class="container padd500" id="">
-        <div class="jumbotron padd100" id="Produk">
+        <div class="jumbotron" id="Produk">
             <div class="row" style="justify-content: center">
                 @foreach($highlight as $hl)
                 <div class="col-sm-4">
                     <div class="card">
                         <div class="text-center">
                             <img class="card-img-top mt-3" src="{{asset('gambar_highlight/'.$hl->gambar_highlight)}}"
-                                alt="Card image" style="width:150px">
+                                alt="Card image" style="width:25%">
                         </div>
                         <div class="card-body">
                             <div class="judul-card">
@@ -58,11 +58,11 @@
                 <div class="news-title" mt-3>
                     {{$b->judul_news}}
                 </div>
-                <div class="artikel-date mb-2">
+                <div class="news-date mb-2">
                     {{$b->created_at}}
                 </div>
                 <div class="news-text">{!!Illuminate\Support\Str::of($b->keterangan_news)->words(25)!!}</div>
-                <div class="btn-position">
+                <div class="btn">
                     <a href="{{ route('artikel', $b->id) }}" class="btn-news">Read More</a>
                 </div>
             </div>

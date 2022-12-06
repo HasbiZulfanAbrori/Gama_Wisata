@@ -44,17 +44,17 @@ class HighlightController extends Controller
         $tambah->link=$request->get('link');
         $tambah->is_active=$request->get('is_active');
         if ($request->hasFile('gambar_highlight')) {
-            $gambar_produk = $request->file('gambar_highlight');
+            $gambar_highlight = $request->file('gambar_highlight');
             $filename = date('His').'.'.$request->file('gambar_highlight')->extension();
-            if ($gambar_produk->move('gambar_highlight',$filename)) {
-                $tambah->gambar_produk=$filename;
+            if ($gambar_highlight->move('gambar_highlight',$filename)) {
+                $tambah->gambar_highlight=$filename;
             } else {
                 # code...
             }
             
         }
         $tambah->save();
-        return redirect('/adminhighlight');
+        return redirect('/adminhighlight')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**
@@ -102,7 +102,7 @@ class HighlightController extends Controller
         $ubah->link = $request->link;
         $ubah->is_active = $request->is_active;
         $ubah->save();
-        return redirect('/adminhighlight')->with('updateSucces','Data Berhasil di Update');
+        return redirect('/adminhighlight')->with('success', 'Data Berhasil Diupdate');
     }
 
     /**

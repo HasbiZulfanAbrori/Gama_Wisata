@@ -10,6 +10,6 @@ class Highlight extends Model
     protected $table = "highlight";
     protected $guarded = ['id'];
     protected $fillable = [
-        'gambar_highlight','judul_highlight', 'deskripsi_highlight', 'link'
+        'gambar_highlight','judul_highlight', 'deskripsi_highlight', 'link','is_active'
     ];
 }

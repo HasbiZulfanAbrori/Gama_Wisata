@@ -24,10 +24,10 @@
             <div class="news-title m-2">
                 {{$b->judul_news}}
             </div>
-            <div class="artikel-date mb-2 m-2">
+            <div class="news-date mb-2 m-2">
                 {{$b->created_at}}
             </div>
-            <div class="news-text m-2">{!! Str::words($b->keterangan_news, 10)!!}</div>
+            <div class="news-text m-2">{!! Str::words($b->keterangan_news, 25)!!}</div>
             <div class="btn">
                 <a href="{{ route('artikel', $b->id) }}" class="btn-news">Read More</a>
             </div>

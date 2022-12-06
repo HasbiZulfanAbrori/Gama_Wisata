@@ -73,7 +73,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <td>{{$n->updated_at}}</td>
                                     <td>
                                         <a class="btn btn-primary" href="/contact/{{$n->id}}/edit">Edit</a>
-                                        <a class="btn btn-danger" href="/contact/{{$n->id}}/destroy">Destroy</a>
+                                        <a class="btn btn-danger mt-1" href="/contact/{{$n->id}}/destroy">Destroy</a>
                                         <div>
                                             @if($n->is_active == 1)
                                             <span style="color:green">Publish</span>
@@ -113,6 +113,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- REQUIRED SCRIPTS -->
     @include('admin.template.script')
+
+    @include('sweetalert::alert')
 
 </body>
 

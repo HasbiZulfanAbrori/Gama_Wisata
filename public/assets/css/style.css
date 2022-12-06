@@ -87,6 +87,7 @@ image {
 nav{
     background-color: #ffffff;
     height: 75px;
+    min-height: 30px;
     font-size: 30px;
     font-weight: 400;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -230,7 +231,7 @@ video {
 }
 
 .news{
-    height: 180px;
+    height: 200px;
     width: 1112px;
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -257,15 +258,20 @@ video {
     float: left;
 }
 
+.news-date{
+    font-size: 14px;
+    padding-left: 285px;
+}
+
 .news-title{
-    padding-left: 250px;
+    padding-left: 285px;
     padding-top: 15px;
     font-weight: bolder;
     font-size: 20px;
 }
 
 .news-text{
-    padding-left: 250px;
+    padding-left: 285px;
     padding-right: 1px;
     font-size: 15px;
     font-weight: 400;
@@ -326,6 +332,7 @@ video {
 
 .produk-text{
     padding-left: 190px;
+    margin-right: 10px;
     font-size: 15px;
     font-weight: 400;
 }
@@ -432,18 +439,18 @@ video {
 .artikel-title{
     font-size: 30px;
     font-weight: bold;
-    padding-left: 40px;
 }
 
 .artikel-date{
     font-size: 14px;
-    padding-left: 250px;
+    padding-left: 90px;
 }
 
 .artikel-text{
-    padding: 0px 40px 0px 40px;
+    padding: 20px 40px 20px 40px;
     font-size: 15px;
     font-weight: 400;
+    margin: 40px;
 }
 
 

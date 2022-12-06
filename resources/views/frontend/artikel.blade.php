@@ -8,7 +8,7 @@
     @include('frontend.template.navbar')
     {{-- ------ --}}
     <div class="container padd100" id="artikel">
-        <div class="artikel-title mb-1">
+        <div class="artikel-title mb-1" style="text-align: center">
             {{$artikel->judul_news}}
         </div>
         <div class="artikel-date mb-4">
