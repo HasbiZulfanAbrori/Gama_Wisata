@@ -68,7 +68,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <label for="">Gambar 1</label><br>
                                 <img src="{{asset('gambar1/'.$editprofile->gambar1)}}" style="width: 70%" id="image"
                                     alt="">
-                                <input type="file" name="gambar1" class="form-control mt-2" accept="gambar1/*" required
+                                <input type="file" name="gambar1" class="form-control mt-2" accept="gambar1/*"
                                     onchange="document.getElementById('gambar1').src = window.URL.createObjectURL(this.files[0])">
                             </div>
                             <div class="form-group">
@@ -80,7 +80,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <label for="">Gambar 2</label><br>
                                 <img src="{{asset('gambar2/'.$editprofile->gambar2)}}" style="width: 70%" id="image"
                                     alt="">
-                                <input type="file" name="gambar2" class="form-control mt-2" accept="gambar2/*" required
+                                <input type="file" name="gambar2" class="form-control mt-2" accept="gambar2/*"
                                     onchange="document.getElementById('gambar2').src = window.URL.createObjectURL(this.files[0])">
                             </div>
                             <div class="card-footer">

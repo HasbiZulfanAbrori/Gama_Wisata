@@ -49,17 +49,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @csrf
                             <div class="form-group">
                                 <label for="nama">Judul Berita</label>
-                                <input type="text" id="judul_news" name="judul_news" class="form-control"
-                                    placeholder="Judul Berita" required >
+                                <input type="text" id="judul_news" name="judul_news" class="form-control" placeholder="Judul Berita" required >
                             </div>
                             <div class="form-group">
                                 <label for="">Masukkan Gambar</label>
-                                <input type="file" name="gambar_news" class="form-control">
+                                <input type="file" name="gambar_news" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label class="mt-2" for="">Keterangan</label>
-                                <input type="hidden" id="keterangan_news" name="keterangan_news" class="form-control" required>
-                                <trix-editor input="keterangan_news"></trix-editor>
+                                <input type="hidden" id="keterangan_news" name="keterangan_news" class="form-control" >
+                                <trix-editor input="keterangan_news" required></trix-editor>
                             </div>
                             <div class="form-group">
                                 <select class="form-select @error('is_active') is-invalid @enderror" name="is_active" required

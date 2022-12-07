@@ -58,7 +58,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <label for="">File Download</label><br>
                                 <img src="{{asset('file_download/'.$editfile->file_download)}}" style="width: 70%"
                                     id="image" alt="">
-                                <input type="file" name="file_download" class="form-control mt-2" required
+                                <input type="file" name="file_download" class="form-control mt-2"
                                     accept="file_download/*"
                                     onchange="document.getElementById('file_download').src = window.URL.createObjectURL(this.files[0])">
                             </div>

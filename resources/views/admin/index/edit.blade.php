@@ -57,7 +57,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
                             <div class="form-group">
                                 <label for="">Judul Video</label>
-                                <input type="text" id="judul" name="judul" class="form-control" placeholder="Judul Video" required
+                                <input type="text" id="judul" name="judul" class="form-control" placeholder="Judul Video"
                                     value="{{$editindex->judul}}">
                             </div>
                             <div class="form-group">

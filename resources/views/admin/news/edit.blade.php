@@ -58,7 +58,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <label for="">Gambar</label><br>
                                 <img src="{{asset('gambar_news/'.$editnews->gambar_news)}}" style="width: 70%"
                                     id="image" alt="">
-                                <input type="file" name="gambar_news" class="form-control mt-2" accept="gambar_news/*" required
+                                <input type="file" name="gambar_news" class="form-control mt-2" accept="gambar_news/*"
                                     onchange="document.getElementById('gambar_news').src = window.URL.createObjectURL(this.files[0])">
                             </div>
                             <div class="form-group">
