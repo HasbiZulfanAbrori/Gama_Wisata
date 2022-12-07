@@ -49,7 +49,7 @@
                 @endforeach
             </div>
         </div>
-        <div class="container padd100" id="News">
+        <div class="container mt-4" id="News">
             <div class="header-news mb-3">News</div>
             <div class="news-line mb-3"></div>
             @foreach($news->take(5) as $b)
@@ -68,7 +68,7 @@
             </div>
             @endforeach
         </div>
-        <div class="jumbotron padd100" id="Sosmed">
+        <div class="jumbotron mt-4" id="Sosmed">
             <div class="header-sosmed">Sosial Media</div>
             <div class="sosmed-line mb-3"></div>
             <div class="row">
@@ -106,7 +106,7 @@
                             <div class="embedsocial-hashtag" data-ref="1ab4dff5751ee7ee202f3630578c32b6837281fd"> <a
                                     class="feed-powered-by-es feed-powered-by-es-feed-new"
                                     href="https://embedsocial.com/social-media-aggregator/" target="_blank"
-                                    title="Widget by EmbedSocial"><span>→</span> </a> </div>
+                                    title="Widget by EmbedSocial"></a> </div>
                             <script>
                             (function(d, s, id) {
                                 var js;
@@ -131,7 +131,7 @@
                             <div class="embedsocial-hashtag" data-ref="1ab4dff5751ee7ee202f3630578c32b6837281fd"> <a
                                     class="feed-powered-by-es feed-powered-by-es-feed-new"
                                     href="https://embedsocial.com/social-media-aggregator/" target="_blank"
-                                    title="Widget by EmbedSocial"><span>→</span> </a> </div>
+                                    title="Widget by EmbedSocial"></a> </div>
                             <script>
                             (function(d, s, id) {
                                 var js;

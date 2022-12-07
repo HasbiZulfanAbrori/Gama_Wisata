@@ -51,14 +51,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @csrf
                             <div class="form-group">
                                 <label for="">No Telepon</label>
-                                <input type="text" id="no_telp" name="no_telp" class="form-control"
-                                    placeholder="No Telepeon" value="{{$editcontact->no_telp}}" required autofocus
-                                    value="{{ old('no_telp') }}">
+                                <input type="text" id="no_telp" name="no_telp" class="form-control" placeholder="No Telepeon" required
+                                    value="{{$editcontact->no_telp}}">
                             </div>
                             <div class="form-group">
                                 <label for="">Alamat</label>
-                                <input type="text" id="alamat" name="alamat" class="form-control" placeholder="Alamat"
-                                    value="{{$editcontact->alamat}}" required autofocus value="{{ old('alamat') }}">
+                                <input type="text" id="alamat" name="alamat" class="form-control" placeholder="Alamat" required
+                                    value="{{$editcontact->alamat}}">
                             </div>
                             <div class="form-group">
                                 <select class="form-select" name="is_active" id="is_active" required>

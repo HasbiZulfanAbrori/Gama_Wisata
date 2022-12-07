@@ -72,7 +72,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <td>{{$i->branding}}</td>
                                     <td>
                                         <a class="btn btn-primary" href="/index/{{$i->id}}/edit">Edit</a>
-                                        <a class="btn btn-danger mt-1" href="/index/{{$i->id}}/destroy">Destroy</a>
+                                        <a class="btn btn-danger delete mt-1" href="#">Destroy</a>
                                         <div>
                                             @if($i->is_active == 1)
                                             <span style="color:green">Publish</span>
@@ -112,7 +112,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- REQUIRED SCRIPTS -->
     @include('admin.template.script')
-
+    <script>
+        $('.delete').click(function(){
+            var id = $(this).attr('data-id');
+            swal({
+                title: "Apakah Anda Yakin?",
+                text: "Apakah Anda Yakin akan Menghapus Data?",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willDelete) => {
+                if (willDelete) {
+                    window.location = "/index/"+id+"/destroy"
+                    swal("Data Berhasil Dihapus", {
+                    icon: "success",
+                    });
+                } else {
+                    swal("Data Gagal Dihapus");
+                }
+            });
+        })
+    </script>
     @include('sweetalert::alert')
 
 </body>

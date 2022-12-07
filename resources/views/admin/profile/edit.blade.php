@@ -51,36 +51,36 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @csrf
                             <div class="form-group">
                                 <label for="">Tentang Kami</label>
-                                <input type="text" id="tentang_kami" name="tentang_kami" class="form-control"
-                                    placeholder="Tentang Kami" value="{{$editprofile->tentang_kami}}">
+                                <input type="text" id="tentang_kami" name="tentang_kami" class="form-control" placeholder="Tentang Kami" required
+                                    value="{{$editprofile->tentang_kami}}">
                             </div>
                             <div class="form-group">
                                 <label for="">Visi</label>
-                                <input type="text" id="visi" name="visi" class="form-control" placeholder="Visi"
+                                <input type="text" id="visi" name="visi" class="form-control" placeholder="Visi" required
                                     value="{{$editprofile->visi}}">
                             </div>
                             <div class="form-group">
                                 <label for="">Misi</label>
-                                <input type="text" id="misi" name="misi" class="form-control" placeholder="Misi"
+                                <input type="text" id="misi" name="misi" class="form-control" placeholder="Misi" required
                                     value="{{$editprofile->misi}}">
                             </div>
                             <div class="form-group">
                                 <label for="">Gambar 1</label><br>
                                 <img src="{{asset('gambar1/'.$editprofile->gambar1)}}" style="width: 70%" id="image"
                                     alt="">
-                                <input type="file" name="gambar1" class="form-control mt-2" accept="gambar1/*"
+                                <input type="file" name="gambar1" class="form-control mt-2" accept="gambar1/*" required
                                     onchange="document.getElementById('gambar1').src = window.URL.createObjectURL(this.files[0])">
                             </div>
                             <div class="form-group">
                                 <label for="">Akreditasi</label>
-                                <input type="hidden" id="akreditasi" name="akreditasi" class="form-control" value="{{$editprofile->akreditasi}}">
+                                <input type="hidden" id="akreditasi" name="akreditasi" class="form-control" value="{{$editprofile->akreditasi}}" required>
                                 <trix-editor input="akreditasi">{!!$editprofile->akreditasi!!}</trix-editor>
                             </div>
                             <div class="form-group">
                                 <label for="">Gambar 2</label><br>
                                 <img src="{{asset('gambar2/'.$editprofile->gambar2)}}" style="width: 70%" id="image"
                                     alt="">
-                                <input type="file" name="gambar2" class="form-control mt-2" accept="gambar2/*"
+                                <input type="file" name="gambar2" class="form-control mt-2" accept="gambar2/*" required
                                     onchange="document.getElementById('gambar2').src = window.URL.createObjectURL(this.files[0])">
                             </div>
                             <div class="card-footer">

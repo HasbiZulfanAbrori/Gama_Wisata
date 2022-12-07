@@ -51,14 +51,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @csrf
                             <div class="form-group">
                                 <label for="">Nama File</label>
-                                <input type="text" id="nama_file" name="nama_file" class="form-control"
+                                <input type="text" id="nama_file" name="nama_file" class="form-control" required
                                     value="{{$editfile->nama_file}}">
                             </div>
                             <div class="form-group">
                                 <label for="">File Download</label><br>
                                 <img src="{{asset('file_download/'.$editfile->file_download)}}" style="width: 70%"
                                     id="image" alt="">
-                                <input type="file" name="file_download" class="form-control mt-2"
+                                <input type="file" name="file_download" class="form-control mt-2" required
                                     accept="file_download/*"
                                     onchange="document.getElementById('file_download').src = window.URL.createObjectURL(this.files[0])">
                             </div>

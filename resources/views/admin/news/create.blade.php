@@ -50,7 +50,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <div class="form-group">
                                 <label for="nama">Judul Berita</label>
                                 <input type="text" id="judul_news" name="judul_news" class="form-control"
-                                    placeholder="Judul Berita" required autofocus value="{{ old('nama') }}">
+                                    placeholder="Judul Berita" required >
                             </div>
                             <div class="form-group">
                                 <label for="">Masukkan Gambar</label>
@@ -58,11 +58,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
                             <div class="form-group">
                                 <label class="mt-2" for="">Keterangan</label>
-                                <input type="hidden" id="keterangan_news" name="keterangan_news" class="form-control">
+                                <input type="hidden" id="keterangan_news" name="keterangan_news" class="form-control" required>
                                 <trix-editor input="keterangan_news"></trix-editor>
                             </div>
                             <div class="form-group">
-                                <select class="form-select @error('is_active') is-invalid @enderror" name="is_active"
+                                <select class="form-select @error('is_active') is-invalid @enderror" name="is_active" required
                                     id="category">
                                     <option disabled selected>--Pilih Kategori Upload--</option>
                                     <option value="1">Publish</option>

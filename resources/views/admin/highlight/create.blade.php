@@ -49,25 +49,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @csrf
                             <div class="form-group">
                                 <label for="nama">Judul Highlight</label>
-                                <input type="text" id="judul_highlight" name="judul_highlight" class="form-control"
-                                    placeholder="Judul Highlight">
+                                <input type="text" id="judul_highlight" name="judul_highlight" class="form-control" placeholder="Judul Highlight" required>
                             </div>
                             <div class="form-group">
                                 <label for="">Masukkan Gambar</label>
-                                <input type="file" name="gambar_highlight" class="form-control">
+                                <input type="file" name="gambar_highlight" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label class="mt-2" for="">Deskripsi Highlight</label>
                                 <textarea name="deskripsi_highlight" class="form-control"
-                                    placeholder="Deskripsi Highlight"></textarea>
+                                    placeholder="Deskripsi Highlight" required></textarea>
                             </div>
                             <div class="form-group">
-                                <label class="mt-2" for="">Link</label>
-                                <textarea name="link" class="form-control"
-                                    placeholder="Link"></textarea>
+                                <label for="nama">Link</label>
+                                <input type="text" name="link" class="form-control"
+                                    placeholder="link" required>
                             </div>
                             <div class="form-group">
-                                <select class="form-select @error('is_active') is-invalid @enderror" name="is_active"
+                                <select class="form-select @error('is_active') is-invalid @enderror" name="is_active" required
                                     id="category">
                                     <option disabled selected>--Pilih Kategori Upload--</option>
                                     <option value="1">Publish</option>

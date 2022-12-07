@@ -51,19 +51,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @csrf
                             <div class="form-group">
                                 <label for="">Judul News</label>
-                                <input type="text" id="judul_news" name="judul_news" class="form-control"
-                                    placeholder="Judul News" value="{{$editnews->judul_news}}">
+                                <input type="text" id="judul_news" name="judul_news" class="form-control" placeholder="Judul News" required
+                                    value="{{$editnews->judul_news}}">
                             </div>
                             <div class="form-group">
                                 <label for="">Gambar</label><br>
                                 <img src="{{asset('gambar_news/'.$editnews->gambar_news)}}" style="width: 70%"
                                     id="image" alt="">
-                                <input type="file" name="gambar_news" class="form-control mt-2" accept="gambar_news/*"
+                                <input type="file" name="gambar_news" class="form-control mt-2" accept="gambar_news/*" required
                                     onchange="document.getElementById('gambar_news').src = window.URL.createObjectURL(this.files[0])">
                             </div>
                             <div class="form-group">
                                 <label for="">Keterangan</label>
-                                <input type="hidden" id="keterangan_news" name="keterangan_news" class="form-control" value="{{$editnews->keterangan_news}}">
+                                <input type="hidden" id="keterangan_news" name="keterangan_news" class="form-control" required value="{{$editnews->keterangan_news}}">
                                 <trix-editor input="keterangan_news">{!!$editnews->keterangan_news!!}</trix-editor>    
                             </div>
                             <div class="form-group">

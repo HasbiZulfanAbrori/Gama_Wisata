@@ -49,19 +49,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @csrf
                             <div class="form-group">
                                 <label for="">Masukkan Video</label>
-                                <input type="file" name="video" class="form-control">
+                                <input type="file" name="video" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="nama">Judul Video</label>
                                 <input type="text" id="judul" name="judul" class="form-control"
-                                    placeholder="Judul Video" required autofocus value="{{ old('nama') }}">
+                                    placeholder="Judul Video" required>
                             </div>
                             <div class="form-group">
                                 <label class="mt-2" for="">Branding</label>
                                 <textarea name="branding" class="form-control" placeholder="Branding"></textarea>
                             </div>
                             <div class="form-group">
-                                <select class="form-select @error('is_active') is-invalid @enderror" name="is_active"
+                                <select class="form-select @error('is_active') is-invalid @enderror" name="is_active" required
                                     id="category">
                                     <option disabled selected>--Pilih Kategori Upload--</option>
                                     <option value="1">Publish</option>

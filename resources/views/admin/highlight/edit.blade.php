@@ -51,14 +51,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @csrf
                             <div class="form-group">
                                 <label for="">Judul</label>
-                                <input type="text" id="judul_highlight" name="judul_highlight" class="form-control"
+                                <input type="text" id="judul_highlight" name="judul_highlight" class="form-control" required
                                     value="{{$edithighlight->judul_highlight}}">
                             </div>
                             <div class="form-group">
                                 <label for="">Gambar</label><br>
                                 <img src="{{asset('gambar_highlight/'.$edithighlight->gambar_highlight)}}" style="width: 70%"
                                     id="image" alt="">
-                                <input type="file" name="gambar_highlight" class="form-control mt-2"
+                                <input type="file" name="gambar_highlight" class="form-control mt-2" required
                                     accept="gambar_highlight/*"
                                     onchange="document.getElementById('gambar_highlight').src = window.URL.createObjectURL(this.files[0])">
                             </div>
@@ -69,8 +69,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
                             <div class="form-group">
                                 <label for="">Link</label>
-                                <textarea id="link" name="link" class="form-control"
-                                    value="{{$edithighlight->link}}">{{$edithighlight->link}}</textarea>
+                                <input type="text" id="link" name="link" class="form-control" required
+                                    value="{{$edithighlight->link}}">
                             </div>
                             <div class="form-group">
                                 <select class="form-select" name="is_active" id="is_active" required>

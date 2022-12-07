@@ -54,26 +54,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
                             <div class="form-group">
                                 <label for="nama">Visi</label>
-                                <input type="text" id="visi" name="visi" class="form-control" placeholder="Visi"
-                                    required autofocus value="{{ old('nama') }}">
+                                <input type="text" id="visi" name="visi" class="form-control" placeholder="Visi" required>
                             </div>
                             <div class="form-group">
                                 <label for="nama">Misi</label>
-                                <input type="text" id="misi" name="misi" class="form-control" placeholder="Misi"
-                                    required autofocus value="{{ old('nama') }}">
+                                <input type="text" id="misi" name="misi" class="form-control" placeholder="Misi" required>
                             </div>
                             <div class="form-group">
                                 <label for="">Masukkan Gambar 1</label>
-                                <input type="file" name="gambar1" class="form-control">
+                                <input type="file" name="gambar1" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label class="mt-2" for="">Akreditasi</label>
-                                <input type="hidden" id="akreditasi" name="akreditasi" class="form-control">
+                                <input type="hidden" id="akreditasi" name="akreditasi" class="form-control" required>
                                 <trix-editor input="akreditasi"></trix-editor>
                             </div>
                             <div class="form-group">
                                 <label for="">Masukkan Gambar 2</label>
-                                <input type="file" name="gambar2" class="form-control">
+                                <input type="file" name="gambar2" class="form-control" required>
                             </div>
                     </div>
                     <div class="card-footer">

@@ -53,12 +53,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <label for="">Video</label><br>
                                 <video width="320" height="240" type="video/mp4"
                                     src="{{asset('video/'.$editindex->video)}}" autoplay muted></video>
-                                <input type="file" name="video" class="form-control">
+                                <input type="file" name="video" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="">Judul Video</label>
-                                <input type="text" id="judul" name="judul" class="form-control"
-                                    placeholder="Judul Video" value="{{$editindex->judul}}">
+                                <input type="text" id="judul" name="judul" class="form-control" placeholder="Judul Video" required
+                                    value="{{$editindex->judul}}">
                             </div>
                             <div class="form-group">
                                 <label for="">Keterangan</label>

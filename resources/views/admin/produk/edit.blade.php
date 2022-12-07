@@ -51,30 +51,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @csrf
                             <div class="form-group">
                                 <label for="">Nama Produk</label>
-                                <input type="text" id="nama_produk" name="nama_produk" class="form-control"
+                                <input type="text" id="nama_produk" name="nama_produk" class="form-control" required
                                     value="{{$editproduk->nama_produk}}">
                             </div>
                             <div class="form-group">
                                 <label for="">Gambar</label><br>
                                 <img src="{{asset('gambar_produk/'.$editproduk->gambar_produk)}}" style="width: 70%"
                                     id="image" alt="">
-                                <input type="file" name="gambar_produk" class="form-control mt-2"
+                                <input type="file" name="gambar_produk" class="form-control mt-2" required
                                     accept="gambar_produk/*"
                                     onchange="document.getElementById('gambar_produk').src = window.URL.createObjectURL(this.files[0])">
                             </div>
                             <div class="form-group">
                                 <label for="">Deskripsi Produk</label>
-                                <textarea id="deskripsi_produk" name="deskripsi_produk" class="form-control"
+                                <textarea id="deskripsi_produk" name="deskripsi_produk" class="form-control" required
                                     value="{{$editproduk->deskripsi_produk}}">{{$editproduk->deskripsi_produk}}</textarea>
-                            </div>
-                            <div class="form-group">
-                                <select class="form-select" name="is_active" id="is_active" required>
-                                    <option disabled selected>--pilih status--</option>
-                                    <option value="1" {{ $editproduk->is_active == '1' ? 'selected' : '' }}>Publish
-                                    </option>
-                                    <option value="0" {{ $editproduk->is_active == '0' ? 'selected' : '' }}>Unpublish
-                                    </option>
-                                </select>
                             </div>
                             <div class="form-group">
                                 <select class="form-select" name="is_active" id="is_active" required>

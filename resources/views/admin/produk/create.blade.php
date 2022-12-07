@@ -50,11 +50,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <div class="form-group">
                                 <label for="nama">Nama Produk</label>
                                 <input type="text" id="nama_produk" name="nama_produk" class="form-control"
-                                    placeholder="Nama Produk" required autofocus value="{{ old('nama') }}">
+                                    placeholder="Nama Produk" required>
                             </div>
                             <div class="form-group">
                                 <label for="">Masukkan Gambar</label>
-                                <input type="file" name="gambar_produk" class="form-control">
+                                <input type="file" name="gambar_produk" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label class="mt-2" for="">Deskripsi Produk</label>
@@ -62,7 +62,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     placeholder="Deskripsi Produk"></textarea>
                             </div>
                             <div class="form-group">
-                                <select class="form-select @error('is_active') is-invalid @enderror" name="is_active"
+                                <select class="form-select @error('is_active') is-invalid @enderror" name="is_active" required
                                     id="category">
                                     <option disabled selected>--Pilih Kategori Upload--</option>
                                     <option value="1">Publish</option>
