@@ -11,3 +11,4 @@
 <link rel="stylesheet" href="{{asset('')}}assets/css/jquery.dataTables.min.css" rel="stylesheet">
 <link rel="stylesheet" href="{{asset('')}}assets/css/trix.css">
 <link rel="stylesheet" href="{{asset('')}}assets/css/sweetalert2.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
