@@ -52,18 +52,20 @@
         <div class="container mt-4" id="News">
             <div class="header-news mb-3">News</div>
             <div class="news-line mb-3"></div>
-            @foreach($news->take(5) as $b)
-            <div class="news mt-3">
-                <img src="{{asset('gambar_news/'.$b->gambar_news)}}" alt="News">
-                <div class="news-title" mt-3>
-                    {{$b->judul_news}}
-                </div>
-                <div class="news-date mb-2">
-                    {{$b->created_at}}
-                </div>
-                <div class="news-text">{!!Illuminate\Support\Str::of($b->keterangan_news)->words(25)!!}</div>
-                <div class="btn">
-                    <a href="{{ route('artikel', $b->id) }}" class="btn-news">Read More</a>
+            <div>
+                @foreach($news->take(2) as $b)
+                <div class="news mt-3">
+                    <img src="{{asset('gambar_news/'.$b->gambar_news)}}" alt="News">
+                    <div class="news-title" mt-3>
+                        {{$b->judul_news}}
+                    </div>
+                    <div class="news-date mb-2">
+                        {{$b->created_at}}
+                    </div>
+                    <div class="news-text">{!!Illuminate\Support\Str::of($b->keterangan_news)->words(25)!!}</div>
+                    <div class="btn">
+                        <a href="{{ route('artikel', $b->id) }}" class="btn-news">Read More</a>
+                    </div>
                 </div>
             </div>
             @endforeach
@@ -101,8 +103,8 @@
                                             </div>
                                         </div>
                                         <div style="padding: 19% 0;"></div>
-                                        <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg
-                                                width="50px" height="50px" viewBox="0 0 60 60" version="1.1"
+                                        <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
+                                            <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1"
                                                 xmlns="https://www.w3.org/2000/svg"
                                                 xmlns:xlink="https://www.w3.org/1999/xlink">
                                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -114,7 +116,8 @@
                                                         </g>
                                                     </g>
                                                 </g>
-                                            </svg></div>
+                                            </svg>
+                                        </div>
                                         <div style="padding-top: 8px;">
                                             <div
                                                 style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
@@ -191,6 +194,43 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col-4">
+                    <div class="card">
+                        <div class="text-center">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="text-center mt-2">Instagram</h3>
+                            <blockquote class="tiktok-embed"
+                                cite="https://www.tiktok.com/@gama_wisata/video/7168764553893924123"
+                                data-video-id="7168764553893924123" style="max-width: 605px;min-width: 325px;">
+                                <section> <a target="_blank" title="@gama_wisata"
+                                        href="https://www.tiktok.com/@gama_wisata?refer=embed">@gama_wisata</a>
+                                    <p>Congratulation to our give away winner! Untuk SobatGW yang belum beruntung jangan
+                                        bersedih, nantikan give away kami selanjutnya yaa! </p> <a target="_blank"
+                                        title="♬ suara asli  - 🦋🤍"
+                                        href="https://www.tiktok.com/music/suara-asli-🦋🤍-7144911795625478938?refer=embed">♬
+                                        suara asli - 🦋🤍</a>
+                                </section>
+                            </blockquote>
+                            <script async src="https://www.tiktok.com/embed.js"></script>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="text-center">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-center mt-2">Facebook</h3>
+                        <iframe
+                            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fgamawisatajogja%2Fposts%2Fpfbid06Rv1Q7PPZCD6GjaHdD9aFKrxCj7Guij4TACCpavhMc1XJWck9ymv16ByTvSeWVQBl&show_text=true&width=500"
+                            width="500" height="784" style="border:none;overflow:hidden" scrolling="no"
+                            frameborder="0" allowfullscreen="true"
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    </div>
+                </div>
             </div>
             <div class="col-4">
                 <div class="card">
@@ -216,9 +256,9 @@
                         </script>
                     </div>
                 </div>
+            </div> -->
             </div>
         </div>
-    </div>
     </div>
     @include('frontend.template.footer')
     @include('frontend.template.script')

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    @include('frontend.template.head')
+@include('frontend.template.head')
 
 <body>
     <section id="bg-header">
@@ -18,22 +18,22 @@
         </div>
     </section>
     <div class="container">
-        @foreach($berita as $b)
+        @foreach($news as $nw)
         <div class="news mt-3">
-            <img src="{{asset('gambar_news/'.$b->gambar_news)}}" alt="News">
+            <img src="{{asset('gambar_news/'.$nw->gambar_news)}}" alt="News">
             <div class="news-title m-2">
-                {{$b->judul_news}}
+                {{$nw->judul_news}}
             </div>
             <div class="news-date mb-2 m-2">
-                {{$b->created_at}}
+                {{$nw->created_at}}
             </div>
-            <div class="news-text m-2">{!! Str::words($b->keterangan_news, 25)!!}</div>
+            <div class="news-text m-2">{!! Str::words($nw->keterangan_news, 25)!!}</div>
             <div class="btn">
-                <a href="{{ route('artikel', $b->id) }}" class="btn-news">Read More</a>
+                <a href="{{ route('artikel', $nw->id) }}" class="btn-news">Read More</a>
             </div>
         </div>
-        @endforeach
     </div>
+    @endforeach
     </div>
     @include('frontend.template.footer')
     @include('frontend.template.script')

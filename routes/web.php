@@ -33,8 +33,8 @@ Route::get('/profile', [ProfileController::class, 'profilefrontend'])->name('pro
 //     return view('news');
 // });
 
-Route::get('news',[BeritaController::class,'index'])->name('berita');
-Route::get('artikel/{id}',[ArtikelController::class,'show'])->name('artikel');
+Route::get('news',[NewsController::class,'tampil_news'])->name('news');
+Route::get('artikel/{id}',[NewsController::class,'show'])->name('artikel');
 
 
 // Route::get('/artikel', function () {

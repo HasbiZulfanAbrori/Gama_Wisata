@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 
 class BeritaController extends Controller
 {
-    public function index()
-    {
-        return view('frontend.news')
-        ->with(['berita'=>News::where('is_active', 1)->get(), 'contact_us' => Contact_Us::where('is_active', 1)->get()]);
-    }
+    // public function index()
+    // {
+    //     return view('frontend.news')
+    //     ->with(['berita'=>News::where('is_active', 1)->get(), 'contact_us' => Contact_Us::where('is_active', 1)->get()]);
+    // }
 }

@@ -9,16 +9,16 @@
     {{-- ------ --}}
     <div class="container padd100" id="artikel">
         <div class="artikel-title mb-1" style="text-align: center">
-            {{$artikel->judul_news}}
+            {{$news->judul_news}}
         </div>
         <div class="artikel-date mb-4">
-            {{$artikel->created_at}}
+            {{$news->created_at}}
         </div>
         <div class="artikel-top-img mb-3">
-            <img src="{{asset('gambar_news/'.$artikel->gambar_news)}}" alt="Logo" style="width: 600px">
+            <img src="{{asset('gambar_news/'.$news->gambar_news)}}" alt="Logo" style="width: 600px">
         </div>
         <div class="artikel-text mt-3">
-            {!!$artikel->keterangan_news!!}
+            {!!$news->keterangan_news!!}
         </div>
     </div>
     @include('frontend.template.footer')

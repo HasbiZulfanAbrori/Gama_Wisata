@@ -20,6 +20,11 @@ class NewsController extends Controller
         return view('admin.news.index',compact('news'));
     }
 
+    public function tampil_news(){
+        return view('frontend.news')
+        ->with(['news' => News::where('is_active', 1)->get(),'contact_us' => Contact_Us::where('is_active', 1)->get()]);
+    }
+
     public function contact(){
         return view('frontend.index')
         ->with(['contact_us' => Contact_Us::where('is_active', 1)->get()]);
@@ -78,7 +83,8 @@ class NewsController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('frontend.artikel')
+        ->with(['news' => News::find($id), 'contact_us' => Contact_Us::paginate(1)]);
     }
 
     /**
