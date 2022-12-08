@@ -39,8 +39,59 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
             <!-- /.content-header -->
 
-            <div class="row" style="justify-content: center">
-                <div class="col-2">
+            {{-- Jumlah data --}}
+            <div class="row" style="justify-content: center;margin: 5px">
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title" style="font-size: 20px; font-weight:bold">Data News</h4>
+                            <p class="card-text">Data...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title" style="font-size: 20px; font-weight:bold">Data File Download</h4>
+                            <p class="card-text">Data...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title" style="font-size: 20px; font-weight:bold">Data Index</h4>
+                            <p class="card-text">Data...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title" style="font-size: 20px; font-weight:bold">Data Highlight</h4>
+                            <p class="card-text">Data...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="justify-content: center;margin: 5px">
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title" style="font-size: 20px; font-weight:bold">Data Contact</h4>
+                            <p class="card-text">Data...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title" style="font-size: 20px; font-weight:bold">Data Produk</h4>
+                            <p class="card-text">Data...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title" style="font-size: 30px; font-weight:bold">John Doe</h4>
@@ -49,6 +100,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </div>
                 </div>
             </div>
+            {{-- end Jumlah Data --}}
 
             <!-- Control Sidebar -->
             <aside class="control-sidebar control-sidebar-dark">
