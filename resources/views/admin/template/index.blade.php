@@ -43,33 +43,33 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="col-2">
                     <div class="card">
                         <div class="card-body">
-                          <h4 class="card-title" style="font-size: 30px; font-weight:bold">John Doe</h4>
-                          <p class="card-text">Data...</p>
+                            <h4 class="card-title" style="font-size: 30px; font-weight:bold">John Doe</h4>
+                            <p class="card-text">Data...</p>
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
 
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-            <div class="p-3">
-                <h5>Title</h5>
-                <p>Sidebar content</p>
-            </div>
-        </aside>
-        <!-- /.control-sidebar -->
+            <!-- Control Sidebar -->
+            <aside class="control-sidebar control-sidebar-dark">
+                <!-- Control sidebar content goes here -->
+                <div class="p-3">
+                    <h5>Title</h5>
+                    <p>Sidebar content</p>
+                </div>
+            </aside>
+            <!-- /.control-sidebar -->
 
-        <!-- Main Footer -->
-        <footer class="main-footer">
-            <!-- To the right -->
-            @include('admin.template.footer')
-        </footer>
-    </div>
-    <!-- ./wrapper -->
+            <!-- Main Footer -->
+            <footer class="main-footer">
+                <!-- To the right -->
+                @include('admin.template.footer')
+            </footer>
+        </div>
+        <!-- ./wrapper -->
 
-    <!-- REQUIRED SCRIPTS -->
-    @include('admin.template.script')
+        <!-- REQUIRED SCRIPTS -->
+        @include('admin.template.script')
 
 </body>
 

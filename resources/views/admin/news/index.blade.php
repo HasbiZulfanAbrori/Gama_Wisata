@@ -21,7 +21,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <!-- Main Sidebar Container -->
         @include('admin.template.sidebar')
-        
+
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
@@ -33,7 +33,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item active">DATA NEWS</li>
                             </ol>
                         </div><!-- /.col -->
@@ -69,13 +68,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <tr>
                                     {{-- <td>{{$n->id}}.</td> --}}
                                     <td>{{$n->judul_news}}</td>
-                                    <td><img class="img-fluid" src="{{asset('gambar_news/'.$n->gambar_news)}}" style="width : 70%" alt="gambar"></td>
+                                    <td><img class="img-fluid" src="{{asset('gambar_news/'.$n->gambar_news)}}"
+                                            style="width : 70%" alt="gambar"></td>
                                     <td>{!!$n->keterangan_news!!}</td>
                                     <td>{{$n->created_at}}</td>
                                     <td>{{$n->updated_at}}</td>
                                     <td>
                                         <a class="btn btn-primary" href="/news/{{$n->id}}/edit">Edit</a>
-                                        <a class="btn btn-danger delete mt-1" data-id="{{ $n->id }}" href="#">Destroy</a>
+                                        <a class="btn btn-danger delete mt-1" data-id="{{ $n->id }}"
+                                            href="#">Destroy</a>
                                         {{-- /news/{{$n->id}}/destroy --}}
                                         <div>
                                             @if($n->is_active == 1)
@@ -117,9 +118,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- REQUIRED SCRIPTS -->
     @include('admin.template.script')
     <script>
-        $('.delete').click(function(){
-            var id = $(this).attr('data-id');
-            swal({
+    $('.delete').click(function() {
+        var id = $(this).attr('data-id');
+        swal({
                 title: "Apakah Anda Yakin?",
                 text: "Apakah Anda Yakin akan Menghapus Data?",
                 icon: "warning",
@@ -128,15 +129,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
             })
             .then((willDelete) => {
                 if (willDelete) {
-                    window.location = "/news/"+id+"/destroy"
+                    window.location = "/news/" + id + "/destroy"
                     swal("Data Berhasil Dihapus", {
-                    icon: "success",
+                        icon: "success",
                     });
                 } else {
                     swal("Data Gagal Dihapus");
                 }
             });
-        })
+    })
     </script>
     @include('sweetalert::alert')
 </body>
