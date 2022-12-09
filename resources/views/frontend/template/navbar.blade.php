@@ -24,9 +24,9 @@
                     <a class="nav-link" href="/download">Download</a>
                 </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="text" placeholder="Search">
-                <button class="btn btn-primary" type="button">Search</button>
+            <form action="/news" method="GET" class="d-flex">
+                <input class="form-control me-2" name="search" type="text" placeholder="Search">
+                <button class="btn btn-primary" type="submit">Search</button>
             </form>
         </div>
     </div>

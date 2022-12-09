@@ -20,9 +20,15 @@ class NewsController extends Controller
         return view('admin.news.index',compact('news'));
     }
 
-    public function tampil_news(){
+    public function tampil_news(Request $request){
+        
+        $news = News::latest();
+        if($request->has('search')){
+            $news = News::where('judul_news','LIKE','%' .$request->search.'%' );
+        }
+        
         return view('frontend.news')
-        ->with(['news' => News::where('is_active', 1)->get(),'contact_us' => Contact_Us::where('is_active', 1)->get()]);
+        ->with(['news' => News::where('is_active', 1)->get(), 'news' => $news->get(),'contact_us' => Contact_Us::where('is_active', 1)->get()]);
     }
 
     public function contact(){
