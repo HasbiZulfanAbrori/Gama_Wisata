@@ -200,7 +200,7 @@
                         <div class="text-center">
                         </div>
                         <div class="card-body">
-                            <h3 class="text-center mt-2">Instagram</h3>
+                            <h3 class="text-center mt-2">Tiktok</h3>
                             <blockquote class="tiktok-embed"
                                 cite="https://www.tiktok.com/@gama_wisata/video/7168764553893924123"
                                 data-video-id="7168764553893924123" style="max-width: 605px;min-width: 325px;">
