@@ -7,3 +7,11 @@
 <script src="{{asset('')}}assets/js/jquery.dataTables.min.js"></script>
 <script src="{{asset('')}}assets/js/trix.js"></script>
 <script src="{{asset('')}}assets/js/sweetalert.min.js"></script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#Table').DataTable();
+});
+</script>
